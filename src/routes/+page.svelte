@@ -14,4 +14,6 @@
 }
 </style>
 
-<canvas id='game'></canvas>
+<div class="fixed w-full h-full flex items-center m-auto bg-amber-300">
+    <h1>my website!</h1>
+</div>
