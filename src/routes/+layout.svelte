@@ -1,7 +1,7 @@
 <script>
-    let { children } = $props();
-    import "../app.css";
-    import NavBar from "$lib/navigation/nav-bar.svelte";
+  let { children } = $props();
+  import "../app.css";
+  import NavBar from "$lib/navigation/nav-bar.svelte";
 </script>
-  <NavBar></NavBar>
+<NavBar></NavBar>
   {@render children()}
