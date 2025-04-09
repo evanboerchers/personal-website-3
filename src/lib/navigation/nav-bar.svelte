@@ -2,22 +2,28 @@
 	import { Menubar } from 'bits-ui';
 	let isMobileMenuOpen = false;
 
+	export interface NavItem {
+		label: string;
+		href: string;
+	}
 
+	const { navItems }: {navItems: NavItem[]} = $props()
 </script>
 
-<nav class="px-4 py-3 flex justify-between items-center shadow-sm">
+{#snippet item(href: string, label: string)}
+			<Menubar.Menu>
+				<Menubar.Trigger>
+					<a {href}>{label}</a>
+				</Menubar.Trigger>
+			</Menubar.Menu>
+{/snippet}
+
+<nav class="fixed w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm bg-white">
 	<!-- Logo -->
 	<Menubar.Root class="flex gap-4">
-        <div class="text-xl font-bold text-blue-600">evanboerchers.dev</div>
-		<Menubar.Menu>
-			<Menubar.Trigger>
-				<!-- <a href="#about">About</a> -->
-			</Menubar.Trigger>
-		</Menubar.Menu>
-		<Menubar.Menu>
-			<Menubar.Trigger>
-				<!-- <a href="#contact">Contact</a> -->
-			</Menubar.Trigger>
-		</Menubar.Menu>
+        <div class="text-xl font-bold text-blue-600">EB</div>
+		{#each navItems as navItem}
+			{@render item(navItem.href, navItem.label)}
+		{/each}
 	</Menubar.Root>
 </nav>
