@@ -8,7 +8,7 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./ts config.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
@@ -47,6 +47,8 @@
 		]
 	},
 	"dependencies": {
+		"@icons-pack/svelte-simple-icons": "^5.0.0",
+		"@lucide/svelte": "^0.487.0",
 		"@tailwindcss/vite": "^4.1.3",
 		"bits-ui": "^1.3.17",
 		"tailwindcss": "^4.1.3",

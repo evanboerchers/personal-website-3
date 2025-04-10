@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@icons-pack/svelte-simple-icons':
+        specifier: ^5.0.0
+        version: 5.0.0(@sveltejs/kit@2.20.2(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.3)
+      '@lucide/svelte':
+        specifier: ^0.487.0
+        version: 0.487.0(svelte@5.25.3)
       '@tailwindcss/vite':
         specifier: ^4.1.3
         version: 4.1.3(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2))
@@ -580,6 +586,13 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
+  '@icons-pack/svelte-simple-icons@5.0.0':
+    resolution: {integrity: sha512-ROTn/BgVFWubOEu6WeiXKSeGZvzFZ3KrxqQcO/XeF80KGPwBMzTrA35xGgyCj4xnoDY/mWNuTjYLA/MiGD8SLw==}
+    engines: {node: '>=20', pnpm: '>=9'}
+    peerDependencies:
+      '@sveltejs/kit': ^2.5.0
+      svelte: ^4.2.0 || ^5.0.0
+
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -708,6 +721,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@lucide/svelte@0.487.0':
+    resolution: {integrity: sha512-27b/wUzWrqDJu97+1iSV2X8L2JGRWH/mAWAjHgazWxhGxVu/kS0p3SbNu6w3skNmQNEku33EKU1v44IVwULzbw==}
+    peerDependencies:
+      svelte: ^5
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2664,6 +2682,11 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
+  '@icons-pack/svelte-simple-icons@5.0.0(@sveltejs/kit@2.20.2(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.3)':
+    dependencies:
+      '@sveltejs/kit': 2.20.2(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.3)(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2))
+      svelte: 5.25.3
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -2764,6 +2787,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@lucide/svelte@0.487.0(svelte@5.25.3)':
+    dependencies:
+      svelte: 5.25.3
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
