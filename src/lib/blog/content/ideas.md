@@ -3,3 +3,4 @@
 - fastapi base crud classes
 - vscode tips and tricks
 - why inheritance sucks
+- setting up config repo
