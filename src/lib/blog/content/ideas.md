@@ -1,0 +1,5 @@
+- configuring application security through multiple users on instances. Seperate users per application
+- basic security concepts
+- fastapi base crud classes
+- vscode tips and tricks
+- why inheritance sucks
