@@ -1,8 +1,11 @@
 <script lang="ts">
-
+    const { data } = $props()
 </script>
 
-<div>
-
-    
+<div class='mt-20'>
+    {#each data.posts as post }
+        <div>
+            {post.title}
+        </div>
+    {/each}
 </div>
