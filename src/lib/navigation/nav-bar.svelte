@@ -18,7 +18,7 @@
 			</Menubar.Menu>
 {/snippet}
 
-<nav class="fixed w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm bg-white">
+<nav class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm bg-white">
 	<!-- Logo -->
 	<Menubar.Root class="flex gap-4">
         <div class="text-xl font-bold text-blue-600">EB</div>

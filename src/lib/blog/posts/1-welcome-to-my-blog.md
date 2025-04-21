@@ -2,7 +2,6 @@
 title: "Welcome to my Blog"
 description: "What my blog is all about"
 date: 2025-04-10
-slug: "test"
 tags: []
 author: "Evan Boerchers"
 image: "/images/blog/001.webp"

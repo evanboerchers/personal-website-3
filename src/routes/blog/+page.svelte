@@ -3,9 +3,9 @@
 </script>
 
 <div class='mt-20'>
-    {#each data.posts as post }
-        <div>
+    {#each data.posts as post}
+        <a href="/blog/{post.slug}">
             {post.title}
-        </div>
+        </a>
     {/each}
 </div>
