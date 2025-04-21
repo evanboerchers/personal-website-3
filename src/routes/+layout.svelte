@@ -6,7 +6,11 @@
       
   const navItems: NavItem[] = [
         {
-            label: 'About',
+            label: 'Blog',
+            href: '/blog',
+        },
+        {
+            label: 'About Me',
             href: '/about'
         },
         {
@@ -21,4 +25,6 @@
 </script>
 
 <NavBar navItems={navItems}></NavBar>
-{@render children()}
+<div id="layout" class="mt-2 mb-2 ml-4 mr-4">
+    {@render children()}
+</div>
