@@ -4,27 +4,12 @@ import typography from '@tailwindcss/typography';
 const config: Config = {
   content: [
     './src/**/*.{html,js,svelte,ts}',
-    './node_modules/bits-ui/**/*.{js,ts,svelte}', // Include Bits UI components
+    './node_modules/bits-ui/**/*.{js,ts,svelte}', 
   ],
-  darkMode: 'class', // or 'media' if you prefer system preference
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#1E40AF', // Blue-800
-          light: '#3B82F6',   // Blue-500
-          dark: '#1E3A8A',    // Blue-900
-        },
-        accent: {
-          DEFAULT: '#F59E0B', 
-          light: '#FBBF24',   
-          dark: '#B45309',    
-        },
-        surface: '#FFFFFF',
-        background: '#F9FAFB',
-        muted: '#6B7280',
-        error: '#EF4444',
-        success: '#10B981',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],

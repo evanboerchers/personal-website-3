@@ -2,8 +2,8 @@
   let { children } = $props();
   import "../app.css";
   import NavBar,{ type NavItem }  from "$lib/navigation/nav-bar.svelte";
+	import { ModeWatcher } from "mode-watcher";
 
-      
   const navItems: NavItem[] = [
         {
             label: 'Blog',
@@ -24,7 +24,10 @@
     ]
 </script>
 
-<NavBar navItems={navItems}></NavBar>
-<div id="layout" class="mt-2 mb-2 ml-4 mr-4">
-    {@render children()}
+<div id='app' class='bg-primary min-h-screen'>
+    <ModeWatcher />
+    <NavBar navItems={navItems}></NavBar>
+    <div id="layout" class="bg-red-100 mt-2 mb-2 ml-4 mr-4">
+        {@render children()}
+    </div>
 </div>

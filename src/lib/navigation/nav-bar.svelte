@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ModeToggle from '$lib/components/mode-toggle.svelte';
 	import { Menubar } from 'bits-ui';
 	let isMobileMenuOpen = false;
 
@@ -18,12 +19,15 @@
 			</Menubar.Menu>
 {/snippet}
 
-<nav class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm bg-white">
+<nav class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm">
 	<!-- Logo -->
-	<Menubar.Root class="flex gap-4">
+	<Menubar.Root class="flex">
         <div class="text-xl font-bold text-blue-600">EB</div>
-		{#each navItems as navItem}
+		<div class="flex gap-4">
+			<ModeToggle />
+			{#each navItems as navItem}
 			{@render item(navItem.href, navItem.label)}
-		{/each}
+			{/each}
+		</div>
 	</Menubar.Root>
 </nav>
