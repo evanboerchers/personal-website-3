@@ -2,13 +2,12 @@
 @import "tailwindcss";
 @import "tailwindcss/preflight";
 
-:root {
-    --color-primary: #fddddd 
+.dark {
+    --color-primary: var(--color-slate-800) 
 }
 
-@theme inline{
-    --color-primary: var(--color-slate-500) 
-    /* --color-primary: var(--color-slate-100);
+@theme static{
+    --color-primary: var(--color-slate-100);
     --color-secondary: var(--color-sky-700);
-    --color-accent: var(--color-amber-700); */
+    --color-accent: var(--color-amber-700);
 }
