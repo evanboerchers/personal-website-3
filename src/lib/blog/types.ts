@@ -1,13 +1,17 @@
-export type Post = {
+export type PostFile = {
+    metadata: PostMetadata
+}
+
+export type PostMetadata = {
     title: string,
     description: string,
-    date: string,
-    tags: Tags[]
+    date: Date,
+    tags: PostTags[]
     author: string,   
     image: string,
     publish: boolean
 }
 
-export enum Tags {
-
+export enum PostTags {
+    Personal = "personal"
 }
