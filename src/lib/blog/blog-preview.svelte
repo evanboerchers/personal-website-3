@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import BlogTag from "./blog-tag.svelte";
+	import BlogTags from "./blog-tags.svelte";
 
     interface Props {
         title: string;
@@ -14,11 +15,13 @@
 </script>
 
 <a href={href}>
-    <img src={image} alt={`${title}`}/>
-    <h1>{title}</h1>
-    <p>{date.toString()}</p>
-    <p>{description}</p>
-    {#each tags as tag}
-        <BlogTag tag={tag}/>
-    {/each}
+    <article class='flex flex-row'>
+        <img class= 'aspect-3/2 border border-border' src={image} alt={`${title}`}/>
+        <div>
+            <h1 class='text-2xl'>{title}</h1>
+            <p>{date.toString()}</p>
+            <p class=''>{description}</p>
+            <BlogTags tags={tags }/>
+        </div>
+    </article>
 </a>

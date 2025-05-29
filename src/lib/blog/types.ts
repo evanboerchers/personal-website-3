@@ -13,5 +13,6 @@ export type PostMetadata = {
 }
 
 export enum PostTags {
-    Personal = "personal"
+    Personal = "personal",
+    Opinion = "opinion"
 }

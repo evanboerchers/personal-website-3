@@ -10,4 +10,5 @@
     --color-primary: var(--color-slate-100);
     --color-secondary: var(--color-sky-700);
     --color-accent: var(--color-amber-700);
+    --color-border: var(--color-slate-400) 
 }
