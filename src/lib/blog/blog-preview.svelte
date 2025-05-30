@@ -14,13 +14,13 @@
     let { title, date, image, description, tags, href }: Props = $props()
 </script>
 
-<a href={href}>
-    <article class='flex flex-row'>
-        <img class= 'aspect-3/2 border border-border' src={image} alt={`${title}`}/>
+<a class='' href={href}>
+    <article class='flex flex-row gap-6'>
+        <img class= 'aspect-3/2 border border-border lg:w-[300px]' src={image} alt={`${title}`}/>
         <div>
             <h1 class='text-2xl'>{title}</h1>
-            <p>{date.toString()}</p>
-            <p class=''>{description}</p>
+            <p class='text-text-secondary mt-2'>{date.toString()}</p>
+            <p class='my-4'>{description}</p>
             <BlogTags tags={tags }/>
         </div>
     </article>

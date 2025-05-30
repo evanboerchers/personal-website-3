@@ -6,4 +6,4 @@
     let { tag }: Props = $props()
 </script>
 
-<p class='bg-slate-200'>{tag}</p>
+<p class='bg-secondary text-sm font-bold p-1 px-2'>{tag}</p>

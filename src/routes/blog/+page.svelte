@@ -4,17 +4,19 @@
     const { data } = $props()
 </script>
 
-<div class='mt-20'>
-    <ul>
+<div class='w-full'>
+    <ul class='max-w-[52rem] mx-auto'>
     {#each data.posts as post}
-        <BlogPreview 
-        title={post.title}
-        image={post.image}
-        date={post.date}
-        description={post.description}
-        tags={post.tags}
-        href="/blog/{post.slug}"
-        />
+        <li class='mb-10'>
+            <BlogPreview 
+            title={post.title}
+            image={post.image}
+            date={post.date}
+            description={post.description}
+            tags={post.tags}
+            href="/blog/{post.slug}"
+            />
+        </li>
     {/each}
     </ul>
 </div>

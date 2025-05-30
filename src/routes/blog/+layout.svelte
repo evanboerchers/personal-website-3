@@ -4,9 +4,11 @@
 let { children } = $props()
 </script>
 
-<div class='grid grid-cols-2 gap-4'>
-    <BlogSidebar></BlogSidebar>
-    <div>
+<div class='flex flex-row mt-20'>
+    <div class=''>
+        <BlogSidebar></BlogSidebar>
+    </div>
+    <div class='w-full'>
         {@render children()}
     </div>
 </div>
