@@ -1,6 +1,7 @@
 <script lang='ts'>
-	import Hero from "$lib/sections/hero.svelte";
 	import Button from "$lib/components/ui/button/button.svelte";
+
+	let { data } = $props()
 </script>
 
 <div class="mt-10 flex flex-col gap-4">
@@ -14,6 +15,11 @@
 	<div class="flex flex-row gap-6">
 		<div>
 			<h3>recent posts</h3>
+			<ul>
+				{#each data.posts as post}
+					<li>{post.title}</li>	
+				{/each}
+			</ul>
 		</div>
 	<div>
 			<h3>More</h3>
