@@ -4,6 +4,10 @@
 	let { data } = $props()
 </script>
 
+{#snippet header(title: string)}
+<h3 class='text-lg font-bold border-border border-b-1'>{title}</h3>
+{/snippet}
+
 <div class="mt-10 flex flex-col gap-4">
 	<h1 class="text-5xl">
 		Hi Im Evan 
@@ -12,20 +16,31 @@
 		I am Software Engineer, Fitness Enthusiast and Coffee Addict. This is the place where I share what my work and interests.
 	</h2>
 	<Button href='/blog'> My Blog </Button>
-	<div class="flex flex-row gap-6">
-		<div>
-			<h3>recent posts</h3>
-			<ul>
+	<div class="flex flex-row gap-15">
+		<section>
+			{@render header('Recent Posts')}
+			<ul class='pl-4 mt-2 list-disc'>
 				{#each data.posts as post}
-					<li>{post.title}</li>	
+				<li>{post.title}</li>	
 				{/each}
 			</ul>
-		</div>
-	<div>
-			<h3>More</h3>
-			<a href="/about">About me</a>
-			<a href="/projects">Projects</a>
-			<a href="/projects">Contact</a>
-		</div>
+		</section>
+		<section>
+			{@render header('More')}
+			<ul class='pl-4 mt-2 list-disc'>
+				<li>
+					<a href="/about">About me</a>
+				</li>
+				<li>
+					<a href="/blog">blog</a>
+				</li>
+				<li>
+					<a href="/projects">some of my projects</a>
+				</li>
+				<li>
+					<a href="/contact">connect with me</a>
+				</li>
+			</ul>
+		</section>
 	</div>
 </div>
