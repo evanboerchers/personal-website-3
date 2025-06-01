@@ -6,7 +6,7 @@
     
 </script>
 
-<Button onclick={toggleMode} class='relative items-center justify-center inline-flex'>
+<Button onclick={toggleMode} class='relative items-center justify-center inline-flex cursor-pointer hover:text-accent'>
     {#if mode.current === 'light'}
     <Moon
     class="h-[1.2rem] w-[1.2rem] transition-all opacity-0 dark:opacity-100"

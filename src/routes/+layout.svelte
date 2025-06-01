@@ -26,7 +26,9 @@
 
 <div id='app' class='bg-primary min-h-screen'>
     <ModeWatcher />
-    <NavBar navItems={navItems}></NavBar>
+    <header>
+        <NavBar navItems={navItems}></NavBar>
+    </header>
     <div id="layout" class="mt-8 mb-8 ml-16 mr-16">
         {@render children()}
     </div>
