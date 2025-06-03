@@ -1,7 +1,7 @@
 <script lang="ts">
   let { children } = $props();
   import "../app.css";
-  import NavBar,{ type NavItem }  from "$lib/navigation/nav-bar.svelte";
+  import NavBar,{ type NavItem }  from "$lib/components/navigation/nav-bar.svelte";
 	import { ModeWatcher } from "mode-watcher";
 
   const navItems: NavItem[] = [

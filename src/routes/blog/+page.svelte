@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BlogPreview from '$lib/blog/blog-preview.svelte';
+	import BlogPreview from '$lib/components/blog/blog-preview.svelte';
 
     const { data } = $props()
 </script>

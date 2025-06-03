@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import BlogTag from "./blog-tag.svelte";
-	import BlogTags from "./blog-tags.svelte";
+	import BlogTag from "../../blog/blog-tag.svelte";
+	import BlogTags from "../../blog/blog-tags.svelte";
 
     interface Props {
         title: string;
