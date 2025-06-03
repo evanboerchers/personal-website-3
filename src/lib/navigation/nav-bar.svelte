@@ -25,7 +25,9 @@
 	<Menubar.Root class="w-full">
 		<!-- TODO: Change to some max content width -->
 		<div class='flex max-w-[200rem] mx-auto justify-between py-3 px-15'>
-			<SiteIcon/>
+			<a href='/'>
+				<SiteIcon/>
+			</a>
 			<div class="flex gap-4">
 				<ModeToggle />
 				{#each navItems as navItem}

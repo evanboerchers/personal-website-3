@@ -21,7 +21,9 @@
 			{@render header('Recent Posts')}
 			<ul class='pl-4 mt-2 list-disc'>
 				{#each data.posts as post}
-				<li>{post.title}</li>	
+				<li>
+					<a href={`/${post.slug}`}>{post.title}</a>
+				</li>	
 				{/each}
 			</ul>
 		</section>
