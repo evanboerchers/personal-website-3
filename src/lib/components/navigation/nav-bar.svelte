@@ -2,14 +2,8 @@
 	import ModeToggle from '$lib/components/mode-toggle.svelte';
 	import { Menubar } from 'bits-ui';
 	import SiteIcon from './site-icon.svelte';
+	import { navItems } from '$lib/navigation';
 	let isMobileMenuOpen = false;
-
-	export interface NavItem {
-		label: string;
-		href: string;
-	}
-
-	const { navItems }: {navItems: NavItem[]} = $props()
 </script>
 
 {#snippet item(href: string, label: string)}

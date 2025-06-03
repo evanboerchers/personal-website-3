@@ -1,35 +1,18 @@
 <script lang="ts">
   let { children } = $props();
   import "../app.css";
-  import NavBar,{ type NavItem }  from "$lib/components/navigation/nav-bar.svelte";
+  import NavBar from "$lib/components/navigation/nav-bar.svelte";
 	import { ModeWatcher } from "mode-watcher";
-
-  const navItems: NavItem[] = [
-        {
-            label: 'Blog',
-            href: '/blog',
-        },
-        {
-            label: 'About Me',
-            href: '/about'
-        },
-        {
-            label: 'Projects',
-            href: '/projects'
-        },
-        {
-            label: 'Contact',
-            href: '/contact'
-        },
-    ]
+	import Footer from "$lib/components/footer.svelte";
 </script>
 
 <div id='app' class='bg-primary min-h-screen'>
     <ModeWatcher />
     <header>
-        <NavBar navItems={navItems}></NavBar>
+        <NavBar></NavBar>
     </header>
     <div id="layout" class="mt-8 mb-8 ml-16 mr-16">
         {@render children()}
     </div>
+    <Footer/>
 </div>
