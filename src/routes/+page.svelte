@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import Button from "$lib/components/ui/button/button.svelte";
+	import Link from "$lib/components/ui/button/link.svelte";
 
 	let { data } = $props()
 </script>
@@ -19,28 +20,28 @@
 	<div class="flex flex-row gap-15">
 		<section>
 			{@render header('Recent Posts')}
-			<ul class='pl-4 mt-2 list-disc'>
+			<ul class='pl-4 mt-2 list-disc marker:text-accent'>
 				{#each data.posts as post}
 				<li>
-					<a href={`/${post.slug}`}>{post.title}</a>
+					<Link href={`/${post.slug}`}>{post.title}</Link>
 				</li>	
 				{/each}
 			</ul>
 		</section>
 		<section>
 			{@render header('More')}
-			<ul class='pl-4 mt-2 list-disc'>
+			<ul class='pl-4 mt-2 list-disc marker:text-accent'>
 				<li>
-					<a href="/about">About me</a>
+					<Link href="/about">About me</Link>
 				</li>
 				<li>
-					<a href="/blog">blog</a>
+					<Link href="/blog">blog</Link>
 				</li>
 				<li>
-					<a href="/projects">some of my projects</a>
+					<Link href="/projects">some of my projects</Link>
 				</li>
 				<li>
-					<a href="/contact">connect with me</a>
+					<Link href="/contact">connect with me</Link>
 				</li>
 			</ul>
 		</section>
