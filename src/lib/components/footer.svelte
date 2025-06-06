@@ -1,6 +1,7 @@
 <script lang="ts">
     import { navItems } from '$lib/navigation';
 	import Link from '$lib/components/ui/button/link.svelte';
+	import { myLinks } from '$lib/contact';
 </script>
 
 <footer class='bg-secondary fixed left-0 bottom-0 w-full p-20 flex flex-row gap-20'>
@@ -9,21 +10,23 @@
            Pages 
         </h3>
         <ul>
-            {#each navItems as navItem}
+            {#each navItems as item}
                 <li>
-                    <Link href={navItem.href}>{navItem.label}</Link>
+                    <Link href={item.href}>{item.label}</Link>
                 </li>
             {/each}
         </ul>
     </div>
     <div>
         <h3>
-           Links 
+            Links 
         </h3>
         <ul>
-            <li>
-                <Link href={''}>{''}</Link>
-            </li>
+            {#each myLinks as item}
+                <li>
+                    <Link href={item.href}>{item.label}</Link>
+                </li>
+            {/each}
         </ul>
     </div>
     <div>
