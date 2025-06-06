@@ -1,16 +1,16 @@
 @tailwind utilities;
-@import "tailwindcss";
-@import "tailwindcss/preflight";
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
 
 .dark {
-    --color-primary: var(--color-slate-800); 
-    --color-secondary: var(--color-sky-600);
+	--color-primary: var(--color-slate-800);
+	--color-secondary: var(--color-sky-600);
 }
 
-@theme static{
-    --color-primary: var(--color-slate-100);
-    --color-secondary: var(--color-sky-700);
-    --color-accent: var(--color-amber-700);
-    --color-border: var(--color-slate-400);
-    --color-text-secondary: var(--color-gray-300)
+@theme static {
+	--color-primary: var(--color-slate-100);
+	--color-secondary: var(--color-sky-700);
+	--color-accent: var(--color-amber-700);
+	--color-border: var(--color-slate-400);
+	--color-text-secondary: var(--color-gray-300);
 }

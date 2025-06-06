@@ -1,7 +1,7 @@
-import { getMarkdownPosts } from "$lib/blog"
-import { json } from "@sveltejs/kit";
+import { getMarkdownPosts } from '$lib/blog';
+import { json } from '@sveltejs/kit';
 
 export const GET = async () => {
-    const posts = await getMarkdownPosts();
-    return  json(posts)
-}
+	const posts = await getMarkdownPosts();
+	return json(posts);
+};

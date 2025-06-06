@@ -7,25 +7,25 @@
 </script>
 
 {#snippet item(href: string, label: string)}
-			<Menubar.Menu>
-				<Menubar.Trigger class='text-lg text-bold hover:text-accent'>
-					<a {href}>{label}</a>
-				</Menubar.Trigger>
-			</Menubar.Menu>
+	<Menubar.Menu>
+		<Menubar.Trigger class="text-lg text-bold hover:text-accent">
+			<a {href}>{label}</a>
+		</Menubar.Trigger>
+	</Menubar.Menu>
 {/snippet}
 
 <nav class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm">
 	<!-- Logo -->
 	<Menubar.Root class="w-full">
 		<!-- TODO: Change to some max content width -->
-		<div class='flex max-w-[200rem] mx-auto justify-between py-3 px-15'>
-			<a href='/'>
-				<SiteIcon/>
+		<div class="flex max-w-[200rem] mx-auto justify-between py-3 px-15">
+			<a href="/">
+				<SiteIcon />
 			</a>
 			<div class="flex gap-4">
 				<ModeToggle />
 				{#each navItems as navItem}
-				{@render item(navItem.href, navItem.label)}
+					{@render item(navItem.href, navItem.label)}
 				{/each}
 			</div>
 		</div>
