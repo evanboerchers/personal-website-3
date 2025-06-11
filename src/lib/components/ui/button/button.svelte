@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { Button as ButtonPrimitive } from 'bits-ui';
+	import type { ComponentProps } from 'svelte';
 
-	interface Props {
-		children: any;
-	}
+	type ButtonPrimitiveProps = ComponentProps<typeof ButtonPrimitive.Root>;
 
-	let { children, ...props }: Props = $props();
+	let { children, ...props }: ButtonPrimitiveProps = $props();
 </script>
 
-<ButtonPrimitive.Root type="button" {...props}>
+<ButtonPrimitive.Root {...props}>
 	{@render children?.()}
 </ButtonPrimitive.Root>
