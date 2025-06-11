@@ -7,7 +7,7 @@
 <footer class="bg-secondary fixed left-0 bottom-0 w-full p-20 flex flex-row gap-20">
 	<div>
 		<h3 class="font-bold">Pages</h3>
-		<ul class="list-disc marker:text-accent">
+		<ul class="list-disc marker:text-accent pl-5">
 			{#each navItems as item}
 				<li>
 					<Link href={item.href}>{item.label}</Link>
@@ -17,7 +17,7 @@
 	</div>
 	<div>
 		<h3 class="font-bold">Links</h3>
-		<ul class="list-disc marker:text-accent">
+		<ul class="list-disc marker:text-accent pl-5">
 			{#each myLinks as item}
 				<li>
 					<Link href={item.href}>{item.label}</Link>
