@@ -34,13 +34,13 @@
 					<Link href="/about">About me</Link>
 				</li>
 				<li>
-					<Link href="/blog">blog</Link>
+					<Link href="/blog">Blog</Link>
 				</li>
 				<li>
-					<Link href="/projects">some of my projects</Link>
+					<Link href="/projects">Some of my projects</Link>
 				</li>
 				<li>
-					<Link href="/contact">connect with me</Link>
+					<Link href="/contact">Connect with me</Link>
 				</li>
 			</ul>
 		</section>
