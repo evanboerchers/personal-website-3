@@ -27,6 +27,9 @@
 	}: ButtonProps & Omit<ButtonPrimitiveProps, 'class'> = $props();
 </script>
 
-<ButtonPrimitive.Root class={clsx(baseStyle, variantClass[variant], className)} {...props}>
+<ButtonPrimitive.Root
+	class={clsx(baseStyle, variantClass[variant], className)}
+	{...props}
+>
 	{@render children?.()}
 </ButtonPrimitive.Root>

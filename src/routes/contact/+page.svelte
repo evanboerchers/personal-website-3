@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import Link from '$lib/components/ui/button/link.svelte';
+	import Link from '$lib/components/ui/link.svelte';
 </script>
 
 <div class="max-w-[500px] mx-auto">

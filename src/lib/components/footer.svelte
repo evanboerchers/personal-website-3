@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { navItems } from '$lib/navigation';
-	import Link from '$lib/components/ui/button/link.svelte';
+	import Link from '$lib/components/ui/link.svelte';
 	import { myLinks } from '$lib/contact';
 </script>
 
-<footer class="bg-secondary fixed left-0 bottom-0 w-full p-20 flex flex-row gap-20">
+<footer
+	class="bg-secondary fixed left-0 bottom-0 w-full p-20 flex flex-row gap-20"
+>
 	<div>
 		<h3 class="font-bold">Pages</h3>
 		<ul class="list-disc marker:text-accent pl-5">

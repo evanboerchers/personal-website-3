@@ -2,7 +2,10 @@ import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
 
 const config: Config = {
-	content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/bits-ui/**/*.{js,ts,svelte}'],
+	content: [
+		'./src/**/*.{html,js,svelte,ts}',
+		'./node_modules/bits-ui/**/*.{js,ts,svelte}'
+	],
 	darkMode: 'class',
 	theme: {
 		extend: {

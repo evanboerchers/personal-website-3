@@ -14,7 +14,9 @@
 	</Menubar.Menu>
 {/snippet}
 
-<nav class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm">
+<nav
+	class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm"
+>
 	<!-- Logo -->
 	<Menubar.Root class="w-full">
 		<!-- TODO: Change to some max content width -->

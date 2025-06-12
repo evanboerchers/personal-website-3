@@ -16,7 +16,11 @@
 
 <a class="" {href}>
 	<article class="flex flex-row gap-6">
-		<img class="aspect-3/2 border border-border lg:w-[300px]" src={image} alt={`${title}`} />
+		<img
+			class="aspect-3/2 border border-border lg:w-[300px]"
+			src={image}
+			alt={`${title}`}
+		/>
 		<div>
 			<h1 class="text-2xl">{title}</h1>
 			<p class="text-text-secondary mt-2">{date.toString()}</p>

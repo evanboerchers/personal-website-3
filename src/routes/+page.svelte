@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Link from '$lib/components/ui/button/link.svelte';
+	import Button from '$lib/components/ui/button/button.svelte'
+	import Link from '$lib/components/ui/link.svelte'
 
 	let { data } = $props();
 </script>
@@ -12,8 +12,8 @@
 <div class="mt-10 flex flex-col gap-4">
 	<h1 class="text-5xl">Hi Im Evan</h1>
 	<h2 class="text-xl">
-		I am Software Engineer, Fitness Enthusiast and Coffee Addict. This is the place where I share
-		what my work and interests.
+		I am Software Engineer, Fitness Enthusiast and Coffee Addict. This is the
+		place where I share what my work and interests.
 	</h2>
 	<Button href="/blog">My Blog</Button>
 	<div class="flex flex-row gap-15">

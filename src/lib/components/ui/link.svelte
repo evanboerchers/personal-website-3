@@ -5,5 +5,5 @@
 </script>
 
 <a class={clsx('underline hover:text-text-secondary', className)} {...props}>
-	{@render children()}
+	{@render children?.()}
 </a>
