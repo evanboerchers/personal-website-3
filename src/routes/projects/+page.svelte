@@ -1,6 +1,7 @@
 <script lang="ts">
 	// import CoffeeChessImg from '$lib/assets/coffee-chess.png'
 	import Link from '$lib/components/ui/link.svelte';
+	import List from '$lib/components/ui/list.svelte';
 </script>
 
 <div class="mx-auto max-w-[500px]">
@@ -30,7 +31,7 @@
 			</div>
 			<div class="mt-6 min-w-max">
 				<img src="" alt="coffee chess homescreen" />
-				<ul class="marker:text-accent mt-2 list-disc pl-4">
+				<List class="mt-2 pl-4">
 					<li>
 						<Link href="https://github.com/evanboerchers/coffee-chess"
 							>Github Repo</Link
@@ -41,7 +42,7 @@
 							>Play Coffee Chess!</Link
 						>
 					</li>
-				</ul>
+				</List>
 			</div>
 		</div>
 	</section>

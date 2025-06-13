@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Link from '$lib/components/ui/link.svelte';
+	import List from '$lib/components/ui/list.svelte';
 </script>
 
 <div class="mx-auto max-w-[500px]">
@@ -15,14 +16,14 @@
 		</section>
 		<div>
 			<h2 class="text-sm font-bold">My Links</h2>
-			<ul class="marker:text-accent list-disc pl-4">
+			<List class="pl-4">
 				<li>
 					<Link>LinkedIn</Link>
 				</li>
 				<li>
 					<Link>Github</Link>
 				</li>
-			</ul>
+			</List>
 		</div>
 	</div>
 </div>
