@@ -11,7 +11,7 @@
 	<header>
 		<NavBar></NavBar>
 	</header>
-	<div id="layout" class="mt-8 mb-8 ml-16 mr-16">
+	<div id="layout" class="mt-8 mr-16 mb-8 ml-16">
 		{@render children()}
 	</div>
 	<Footer />

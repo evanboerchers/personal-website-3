@@ -3,7 +3,7 @@
 	import Link from '$lib/components/ui/link.svelte';
 </script>
 
-<div class="max-w-[500px] mx-auto">
+<div class="mx-auto max-w-[500px]">
 	<h1 class="text-4xl">My Stuff</h1>
 	<section class="mt-8">
 		<h2 class="text-2xl">Coffee Chess</h2>
@@ -28,9 +28,9 @@
 					chess game.
 				</p>
 			</div>
-			<div class="min-w-max mt-6">
+			<div class="mt-6 min-w-max">
 				<img src="" alt="coffee chess homescreen" />
-				<ul class="pl-4 mt-2 list-disc marker:text-accent">
+				<ul class="marker:text-accent mt-2 list-disc pl-4">
 					<li>
 						<Link href="https://github.com/evanboerchers/coffee-chess"
 							>Github Repo</Link

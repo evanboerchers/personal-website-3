@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-full">
-	<ul class="max-w-[52rem] mx-auto">
+	<ul class="mx-auto max-w-[52rem]">
 		{#each data.posts as post}
 			<li class="mb-10">
 				<BlogPreview

@@ -17,7 +17,7 @@
 <a class="" {href}>
 	<article class="flex flex-row gap-6">
 		<img
-			class="aspect-3/2 border border-border lg:w-[300px]"
+			class="border-border aspect-3/2 border lg:w-[300px]"
 			src={image}
 			alt={`${title}`}
 		/>

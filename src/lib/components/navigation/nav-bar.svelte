@@ -8,19 +8,19 @@
 
 {#snippet item(href: string, label: string)}
 	<Menubar.Menu>
-		<Menubar.Trigger class="text-lg text-bold hover:text-accent">
+		<Menubar.Trigger class="text-bold hover:text-accent text-lg">
 			<a {href}>{label}</a>
 		</Menubar.Trigger>
 	</Menubar.Menu>
 {/snippet}
 
 <nav
-	class="w-full top-0 left-0 px-4 py-3 flex justify-between items-center shadow-sm"
+	class="top-0 left-0 flex w-full items-center justify-between px-4 py-3 shadow-sm"
 >
 	<!-- Logo -->
 	<Menubar.Root class="w-full">
 		<!-- TODO: Change to some max content width -->
-		<div class="flex max-w-[200rem] mx-auto justify-between py-3 px-15">
+		<div class="mx-auto flex max-w-[200rem] justify-between px-15 py-3">
 			<a href="/">
 				<SiteIcon />
 			</a>

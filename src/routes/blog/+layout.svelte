@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="flex flex-row mt-20">
+<div class="mt-20 flex flex-row">
 	<div class="">
 		<BlogSidebar></BlogSidebar>
 	</div>

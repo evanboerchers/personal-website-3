@@ -6,11 +6,11 @@
 
 <Button
 	onclick={toggleMode}
-	class="relative items-center justify-center inline-flex cursor-pointer hover:text-accent"
+	class="hover:text-accent relative inline-flex cursor-pointer items-center justify-center"
 >
 	{#if mode.current === 'light'}
 		<Moon
-			class="h-[1.2rem] w-[1.2rem] transition-all opacity-0 dark:opacity-100"
+			class="h-[1.2rem] w-[1.2rem] opacity-0 transition-all dark:opacity-100"
 		/>
 	{:else}
 		<Sun class="h-[1.2rem] w-[1.2rem] transition-all" />

@@ -4,6 +4,6 @@
 	let { children, class: className = '', ...props } = $props();
 </script>
 
-<a class={clsx('underline hover:text-text-secondary', className)} {...props}>
+<a class={clsx('hover:text-text-secondary underline', className)} {...props}>
 	{@render children?.()}
 </a>
