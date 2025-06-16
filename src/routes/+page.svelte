@@ -11,13 +11,16 @@
 {/snippet}
 
 <div class="mt-10">
-	<h1 class="text-5xl">Hi Im Evan</h1>
-	<h2 class="text-xl">
-		I am Software Engineer, Fitness Enthusiast and Coffee Addict. This is the
-		place where I share what my work and interests.
+	<h1 class="decoration-accent text-5xl font-bold underline underline-offset-8">
+		Hi Im Evan
+	</h1>
+	<h2 class="text-text-secondary mt-4 text-2xl">
+		I am Software Engineer, currently living in Victoria, British Columbia. I
+		like to share both my work and my passions, whether that be my projects or the
+		many hobbies I have.
 	</h2>
-	<Button href="/blog">My Blog</Button>
-	<div class="flex flex-row gap-15 mt-4">
+	<Button class="mt-4" href="/blog">My Blog</Button>
+	<div class="mt-8 flex flex-row gap-15">
 		<section>
 			{@render header('Recent Posts')}
 			<List class="mt-2 pl-4">
