@@ -4,7 +4,7 @@ description: 'An introduction to my blog. The utility of writing even when no on
 date: 2025-04-10
 tags: ['personal']
 author: 'Evan Boerchers'
-image: '/images/blog/001.webp'
+image: '/assets/blog/1/header.webp'
 publish: true
 ---
 
