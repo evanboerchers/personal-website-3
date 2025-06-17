@@ -26,7 +26,7 @@
 			<List class="mt-2 pl-4">
 				{#each data.posts as post}
 					<li>
-						<Link href={`/${post.slug}`}>{post.title}</Link>
+						<Link href={`/blog/${post.slug}`}>{post.title}</Link>
 					</li>
 				{/each}
 			</List>

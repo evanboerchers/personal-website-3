@@ -1,6 +1,6 @@
 ---
-title: 'Why I Started a Blog: The Utility of Shouting into the Void'
-description: 'An introduction to my blog. The utility of writing even when no one is reading.'
+title: 'Why I Started a Blog'
+description: 'An introduction to my blog. Why I want to write regardless of any readership.'
 date: 2025-06-17
 tags: ['personal']
 author: 'Evan Boerchers'
@@ -12,4 +12,4 @@ Like so many before me, I’ve succumbed to the urge to start a personal blog. M
 
 While all of this may be true, I believe there are more fundamental benefits to blogging. I see it more as a form of self-development. I’m not here to drive traffic, create social media content, or cultivate an email list—nor any of the more traditional reasons for blogging. Rather, I want to hold myself accountable. I want to learn more, better understand my knowledge and passions, and cement my thoughts through writing.
 
-For these reasons, I intend to hold myself to blogging on (fingers crossed) a semi-regular basis. I aim to write a mix of topics spanning my professional interests and knowledge of software development, as well as subjects related to my personal passions and hobbies. I hope to write interesting and insightful material—but regardless, my main goal is to learn and have fun along the way.
+For these reasons, I intend to hold myself to blogging on a semi-regular basis. I aim to write a mix of topics spanning my professional interests and knowledge of software development, as well as subjects related to my personal passions and hobbies. I hope to write interesting and insightful material—but regardless, my main goal is to learn and have fun along the way.
