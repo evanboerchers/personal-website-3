@@ -21,11 +21,11 @@
 			src={image}
 			alt={`${title}`}
 		/>
-		<div>
-			<h1 class="text-2xl">{title}</h1>
+		<section class='prose dark:prose-invert'>
+			<h1>{title}</h1>
 			<p class="text-text-secondary mt-2">{date.toString()}</p>
-			<p class="my-4">{description}</p>
-			<BlogTags {tags} />
-		</div>
+			<p>{description}</p>
+			<BlogTags class='not-prose' {tags} />
+		</section>
 	</article>
 </a>

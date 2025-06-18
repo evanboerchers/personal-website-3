@@ -6,7 +6,7 @@
 </script>
 
 <footer
-	class="bg-secondary fixed bottom-0 left-0 flex w-full flex-row gap-20 p-20"
+	class="bg-secondary flex w-full flex-row gap-20 p-20"
 >
 	<div>
 		<h3 class="font-bold">Pages</h3>

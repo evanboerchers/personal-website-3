@@ -6,22 +6,22 @@
 
 <div class="mx-auto max-w-[500px]">
 	<h1 class="text-4xl">My Stuff</h1>
-	<section class="mt-8">
-		<h2 class="text-2xl">Coffee Chess</h2>
-		<div class="flex flex-row gap-6">
+	<section class="prose dark:prose-invert mt-8">
+		<h2 class='mb-0'>Coffee Chess</h2>
+		<div class="flex flex-row">
 			<div>
-				<p class="mt-4">
+				<p>
 					Coffee Chess is a chess game,themed after my favourite hot beverage.
 					Includes both local play and open multiplayer so you can play with
 					others!
 				</p>
-				<p class="mt-4">
+				<p>
 					The codebase is organized into a monorepo with packages for the
 					client, server and core library. The client is built using with Phaser
 					game engine with Vite and Typescript. Art is a hybrid of self made and
 					AI generated. This static site is hosted on cloudflare.
 				</p>
-				<p class="mt-4">
+				<p>
 					Server side, an express server is configured with sockets.io to handle
 					multiplayer. This is containerized and hosted on a linode instance. In
 					addition I also built a generic chess-core library to handle all the
