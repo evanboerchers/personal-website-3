@@ -6,7 +6,7 @@
 	import Footer from '$lib/components/footer.svelte';
 </script>
 
-<div id="app" class="bg-primary min-h-screen">
+<div id="app" class="bg-primary min-h-screen grid grid-cols-[100%] grid-rows-[auto_1fr_auto]">
 	<ModeWatcher />
 	<header>
 		<NavBar></NavBar>
