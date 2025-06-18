@@ -1,6 +1,7 @@
 @tailwind utilities;
 @import 'tailwindcss';
 @import 'tailwindcss/preflight';
+@plugin "@tailwindcss/typography";
 
 .dark {
 	--color-primary: var(--color-slate-800);

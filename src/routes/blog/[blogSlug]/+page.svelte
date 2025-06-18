@@ -6,7 +6,7 @@
 
 <svelte:head></svelte:head>
 
-<article>
+<article class='prose dark:prose-invert'>
 	<h1>{title}</h1>
 	<Content />
 </article>
