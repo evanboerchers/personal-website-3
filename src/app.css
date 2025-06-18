@@ -3,6 +3,8 @@
 @import 'tailwindcss/preflight';
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .dark {
 	--color-primary: var(--color-slate-800);
 	--color-secondary: var(--color-sky-600);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import portrait from '$lib/assets/portrait.webp';
+	import portrait from '$assets/portrait.webp';
 </script>
 
 <article class="prose dark:prose-invert mx-auto max-w-[500px]">

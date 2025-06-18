@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="mt-20 grid gap-4 grid-rows-[100%] md:grid-cols-[var(--sidebar-width)_1fr] grid-cols-[var(--sidebar-width)_1fr_var(--sidebar-width)]">
+<div class="my-20 grid gap-4 grid-rows-[100%] md:grid-cols-[var(--sidebar-width)_1fr] grid-cols-[var(--sidebar-width)_1fr_var(--sidebar-width)]">
 	<div class="">
 		<BlogSidebar></BlogSidebar>
 	</div>

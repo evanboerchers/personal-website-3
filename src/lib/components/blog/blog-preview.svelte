@@ -1,5 +1,4 @@
 <script lang="ts">
-	import BlogTag from '$lib/components/blog/blog-tag.svelte';
 	import BlogTags from '$lib/components/blog/blog-tags.svelte';
 
 	interface Props {
