@@ -15,3 +15,9 @@
 	--color-border: var(--color-slate-400);
 	--color-text-secondary: var(--color-gray-300);
 }
+
+@layer base {
+	:root {
+		--sidebar-width: 200px;
+	}
+}
