@@ -3,7 +3,12 @@ import type { PageLoad } from '../$types';
 export const load: PageLoad = async ({ fetch, params }) => {
 	const blogSlug = params.blogSlug;
 	const post = await import(`$lib/blog/posts/${blogSlug}.md`);
-	const metadata = post.metadata;
+	const postNum =  blogSlug.split('-')[0]
+	const image = (await import(`$assets/blog/${postNum}/header.webp`)).default;
+	const metadata = {
+		...post.metadata,
+		image
+	}
 	const content: ConstructorOfATypedSvelteComponent = post.default;
 	return {
 		metadata,

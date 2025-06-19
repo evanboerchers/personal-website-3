@@ -4,7 +4,7 @@ description: 'An introduction to my blog. Why I want to write regardless of any 
 date: 2025-06-17
 tags: ['personal']
 author: 'Evan Boerchers'
-image: '/assets/blog/1/header.webp'
+image: '$assets/blog/1/cover.webp'
 publish: true
 ---
 
