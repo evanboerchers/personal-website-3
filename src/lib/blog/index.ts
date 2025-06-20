@@ -15,7 +15,6 @@ export const getMarkdownPosts = async () => {
 			blogNumToImage[blogNum] = (mod as { default: string }).default;
 		}
 	}
-	console.log(coverImageFiles);
 	const posts = Object.entries(allPostFiles).map(([path, file]) => {
 		if (file && typeof file === 'object' && 'metadata' in file) {
 			const { metadata } = file as PostFile;
