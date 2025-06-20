@@ -4,7 +4,7 @@
 	interface Props {
 		title: string;
 		image: string;
-		date: Date;
+		date: string;
 		description: string;
 		tags: string[];
 		href: string;
@@ -14,15 +14,15 @@
 </script>
 
 <a class="" {href}>
-	<article class="flex flex-row gap-6">
+	<article class="grid grid-cols-2 gap-6">
 		<img
-			class="border-border aspect-3/2 border lg:w-[300px]"
+			class="aspect-[16/9] border-border object-cover border"
 			src={image}
-			alt={`${title}`}
+			alt={title}
 		/>
 		<section class='prose dark:prose-invert'>
 			<h1>{title}</h1>
-			<p class="text-text-secondary mt-2">{date.toString()}</p>
+			<p class="text-text-secondary mt-2">{date}</p>
 			<p>{description}</p>
 			<BlogTags class='not-prose' {tags} />
 		</section>

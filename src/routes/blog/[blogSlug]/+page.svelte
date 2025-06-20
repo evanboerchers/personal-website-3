@@ -14,7 +14,7 @@
 <article id='blog' class='max-2-[500px] mx-auto prose dark:prose-invert'>
 	<h1 class='mb-2'>{title}</h1>
 	<p class='font-semibold mb-2'>{formattedDate}</p>
-	<img class='border-1 w-full aspect-3/2' src={image} alt='blog header'/>
+	<img class='border-1 w-full aspect-[16/9] object-cover' src={image} alt='blog header'/>
 	<Content />
 	<aside class='inline-block mt-6'>
 		<div class='border-y-2 flex gap-6 items-center'>

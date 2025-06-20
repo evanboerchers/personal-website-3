@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BlogPreview from '$lib/components/blog/blog-preview.svelte';
+	import { formatDate } from '$lib/utils.js';
 
 	const { data } = $props();
 </script>
@@ -11,7 +12,7 @@
 				<BlogPreview
 					title={post.title}
 					image={post.image}
-					date={post.date}
+					date={formatDate(post.date)}
 					description={post.description}
 					tags={post.tags}
 					href="/blog/{post.slug}"
