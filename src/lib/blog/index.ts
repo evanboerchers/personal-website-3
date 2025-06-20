@@ -20,8 +20,8 @@ export const getMarkdownPosts = async () => {
 		if (file && typeof file === 'object' && 'metadata' in file) {
 			const { metadata } = file as PostFile;
 			const slug = path.split('/').pop()?.replace('.md', '');
-			const blogNum = slug?.split('-').shift() ?? 1;
-			const image = blogNumToImage[blogNum] ?? null;
+			const blogNum = slug?.split('-').shift();
+			const image = blogNum ? (blogNumToImage[blogNum] ?? null) : null;
 			return {
 				...metadata,
 				slug,
