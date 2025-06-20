@@ -2,7 +2,6 @@
 	import BlogTags from '$lib/components/blog/blog-tags.svelte'; 
 	import Link from '$lib/components/ui/link.svelte'; 
 	import portrait from '$assets/portrait.webp'
-	import header from '$assets/blog/1/header.webp'
 	import { formatDate } from '$lib/utils'
 	const { data } = $props();
 	const { title, date, tags, image } = data.metadata;
