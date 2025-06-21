@@ -3,7 +3,7 @@
 
     interface LinkProps {
         children: any
-        class: string
+        class?: string
     }
 
     let { children, class: className }: LinkProps = $props()
