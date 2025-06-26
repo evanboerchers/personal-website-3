@@ -8,7 +8,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$assets: 'src/lib/assets'
+			$assets: 'src/lib/assets',
+			$content: 'src/lib/content'
 		}
 	},
 	extensions: ['.svelte', '.md']

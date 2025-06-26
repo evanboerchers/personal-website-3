@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PostTags } from '$lib/blog/types';
+	import { PostTags } from '$lib/content/blog/types.js';
 	import BlogSidebar from '$lib/components/blog/blog-sidebar.svelte';
 
 	let { children, data  } = $props();

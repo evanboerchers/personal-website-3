@@ -1,4 +1,4 @@
-import { getMarkdownPosts } from '$lib/blog';
+import { getMarkdownPosts } from '$lib/content/blog';
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {

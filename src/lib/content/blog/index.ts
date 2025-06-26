@@ -1,7 +1,7 @@
 import type { PostFile } from './types';
 
 export const getMarkdownPosts = async () => {
-	const allPostFiles = import.meta.glob('$lib/blog/posts/*.md', {
+	const allPostFiles = import.meta.glob('$content/blog/posts/*.md', {
 		eager: true
 	});
 	const coverImageFiles = import.meta.glob('$assets/blog/**/cover.webp', {
