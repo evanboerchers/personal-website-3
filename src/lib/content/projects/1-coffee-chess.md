@@ -1,0 +1,25 @@
+---
+title: 'Coffee Chess'
+links:
+  - label: 'Github'
+    href: 'https://github.com/evanboerchers/coffee-chess'
+  - label: 'Play Coffee Chess!'
+    href: 'https://coffee-chess.evanboerchers.com/'
+
+image: /projects/coffee-chess.webp
+---
+
+Coffee Chess is a chess game,themed after my favourite hot beverage.
+Includes both local play and open multiplayer so you can play with
+others!
+
+The codebase is organized into a monorepo with packages for the
+client, server and core library. The client is built using with Phaser
+game engine with Vite and Typescript. Art is a hybrid of self made and
+AI generated. This static site is hosted on cloudflare.
+
+Server side, an express server is configured with sockets.io to handle
+multiplayer. This is containerized and hosted on a linode instance. In
+addition I also built a generic chess-core library to handle all the
+game logic from a single class! This is completely reusable for any
+chess game.
