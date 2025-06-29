@@ -1,6 +1,7 @@
 ---
+layout: project
 title: 'Coffee Chess'
-links:
+links: 
   - label: 'Github'
     href: 'https://github.com/evanboerchers/coffee-chess'
   - label: 'Play Coffee Chess!'
