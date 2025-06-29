@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Moon, Sun } from '@lucide/svelte';
 	import { toggleMode, mode } from 'mode-watcher';
-	import Button from './ui/button/button.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <Button

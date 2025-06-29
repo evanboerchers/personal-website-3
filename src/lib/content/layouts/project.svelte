@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import Link from "$lib/ui/link.svelte";
-	import List from "$lib/ui/list.svelte";
+	import Link from "$lib/components/ui/link.svelte";
+	import List from "$lib/components/ui/list.svelte";
 
     interface ProjectSectionProps {
         title: string,
