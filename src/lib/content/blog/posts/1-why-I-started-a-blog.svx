@@ -3,7 +3,8 @@ layout: 'blog'
 title: 'Why I Started a Blog'
 description: 'An introduction to my blog. Why I want to write regardless of any readership.'
 date: 2025-06-17
-tags: ['personal']
+tags: 
+    - 'personal'
 author: 'Evan Boerchers'
 publish: true
 ---
