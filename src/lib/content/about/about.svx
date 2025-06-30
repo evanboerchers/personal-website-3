@@ -1,0 +1,13 @@
+<script>
+    import portrait from '$assets/portrait.webp' 
+</script>
+
+# Who Am I
+
+<img
+	class="float-right m-4 max-w-[200px] object-cover rounded-full"
+	src={portrait}
+	alt="me"
+/>
+
+My name is Evan Boerchers. I am a Software Engineer from Victoria, British Colombia. Currently I am working at Blastworks, a .
