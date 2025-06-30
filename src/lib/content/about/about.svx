@@ -10,6 +10,8 @@
 	alt="me"
 />
 
-My name is Evan Boerchers. I am a Software Engineer from Victoria, British Colombia. Currently I am working at Blastworks, a .
+My name is Evan Boerchers. I am a Software Engineer from Victoria, British Columbia. Currently, I am working at Blastworks, a small studio that produces games and a web/mobile platform. Over the five years of my professional experience, I have had the privilege of wearing many hats. From web development to data science to cloud architecture, I have a broad level of experience that has given me a holistic perspective on software development. I’m especially passionate about improving developer experience through tooling, automation, and better processes that empower teams to move faster and build better.
 
-## My 
+When I am away from my keyboard, I like to stay busy and stay active. I am passionate about maintaining a healthy lifestyle, and as such, I spend much of my time lifting weights and pursuing my fitness goals. One of my favourite things to do is rock climbing, specifically bouldering. I am a sucker for hanging off of plastic rocks.
+
+One of my personal passions is literature, particularly the non-fiction variety. I enjoy reading on the topics of history, philosophy, science, and politics. I think reading is a fundamental requirement to build strong character and a robust intellect. I enjoy conversing about such topics and am always curious to hear about what others are reading. Any recommendations?
