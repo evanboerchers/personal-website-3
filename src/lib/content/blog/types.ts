@@ -5,7 +5,7 @@ export type PostFile = {
 export type PostMetadata = {
 	title: string;
 	description: string;
-	date: Date;
+	date: string;
 	tags: PostTags[];
 	author: string;
 	image: string;

@@ -2,9 +2,9 @@
 	import Link from "$lib/components/ui/link.svelte";
 	import List from "$lib/components/ui/list.svelte";
 
-    interface ProjectSectionProps {
+    interface ProjectLayoutProps {
         title: string,
-        content: any,
+        children: any,
         links: {
             label: string,
             href: String
@@ -15,14 +15,14 @@
         }
     }
 
-    let {title, content, links, image}: ProjectSectionProps = $props()
+    let {title, children, links, image}: ProjectLayoutProps = $props()
 </script>
 
 <section class="prose dark:prose-invert mt-8">
     <h2 class='mb-0'>{title}</h2>
     <div class="flex flex-row">
         <div>
-           {@render content?.()}
+           {@render children?.()}
         </div>
         <div class="mt-6 min-w-max">
             <img src={image.src} alt={image.alt} />
