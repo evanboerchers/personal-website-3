@@ -1,6 +1,6 @@
-import type { PostFile } from './types';
+import type { PostFile, PostTag } from './types';
 
-export const getMarkdownBlogPosts = async () => {
+export const getMarkdownBlogPosts = async (tag?: PostTag) => {
 	const allPostFiles = import.meta.glob('$content/blog/posts/*.svx', {
 		eager: true
 	});
@@ -18,6 +18,7 @@ export const getMarkdownBlogPosts = async () => {
 	const posts = Object.entries(allPostFiles).map(([path, file]) => {
 		if (file && typeof file === 'object' && 'metadata' in file) {
 			const { metadata } = file as PostFile;
+			if (tag && !metadata.tags.includes(tag)) return;
 			const slug = path
 				.split('/')
 				.pop()

@@ -21,15 +21,15 @@
 			<h2 class='font-semibold border-b-1 mb-4 pb-0.5 border-border'>Recent Posts</h2>
 			<List class='pl-4'>
 				{#each posts as post}
-				<li>
-					<Link href={`/blog/${post.slug}`}>{post.title}</Link>
-				</li>
+					<li>
+						<Link href={`/blog/${post.slug}`}>{post.title}</Link>
+					</li>
 				{/each}
 			</List>
 		</div>
 		<div class='mb-4'>
 			<h2 class='mb-4 font-semibold border-b-1 pb-0.5 border-border'>Tags</h2>
-			<BlogTags {tags} />
+			<BlogTags interactive={true} {tags} />
 		</div>
 		<div>
 			<h2 class='mb-4 font-semibold border-b-1 pb-0.5 border-border'>More Links</h2>

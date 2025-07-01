@@ -7,7 +7,7 @@
 
 <article class="prose dark:prose-invert mx-auto max-w-[700px]">
 	<AboutMe/>
-	<div class=''>
+	<div class='not-prose'>
 		<h2 class="text-lg font-bold">More</h2>
 		<List class="marker:text-accent list-disc pl-5">
 			<li>
