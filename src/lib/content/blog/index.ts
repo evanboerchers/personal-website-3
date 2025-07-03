@@ -15,22 +15,25 @@ export const getMarkdownBlogPosts = async (tag?: PostTag) => {
 			blogNumToImage[blogNum] = (mod as { default: string }).default;
 		}
 	}
-	const posts = Object.entries(allPostFiles).map(([path, file]) => {
-		if (file && typeof file === 'object' && 'metadata' in file) {
-			const { metadata } = file as PostFile;
-			if (tag && !metadata.tags.includes(tag)) return;
-			const slug = path
-				.split('/')
-				.pop()
-				?.replace(/\.[^/.]+$/, '');
-			const blogNum = slug?.split('-').shift();
-			const image = blogNum ? (blogNumToImage[blogNum] ?? null) : null;
-			return {
-				...metadata,
-				slug,
-				image
-			};
-		}
-	});
+	const posts = Object.entries(allPostFiles)
+		.map(([path, file]) => {
+			if (file && typeof file === 'object' && 'metadata' in file) {
+				const { metadata } = file as PostFile;
+				if (tag && !metadata.tags.includes(tag)) return;
+				const slug = path
+					.split('/')
+					.pop()
+					?.replace(/\.[^/.]+$/, '');
+				const blogNum = slug?.split('-').shift();
+				const image = blogNum ? (blogNumToImage[blogNum] ?? null) : null;
+				return {
+					...metadata,
+					slug,
+					image
+				};
+			}
+			return;
+		})
+		.filter((post) => !!post);
 	return posts;
 };
