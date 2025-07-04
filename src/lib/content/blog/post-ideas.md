@@ -4,3 +4,5 @@
 - vscode tips and tricks
 - why inheritance sucks
 - setting up config repo
+- cn class how to(clsx and tailwind merge)
+- mdsvex tutorial
