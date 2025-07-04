@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { BlogTagEnum } from '$content/blog/types.js';
 	import BlogPreview from '$lib/components/blog/blog-preview.svelte';
 	import { formatDate } from '$lib/utils.js';
 
@@ -14,7 +15,7 @@
 					image={post.image}
 					date={formatDate(post.date)}
 					description={post.description}
-					tags={post.tags}
+					tags={post.tags.map((tag: BlogTagEnum) => {return {tag}})}
 					href="/blog/{post.slug}"
 				/>
 			</li>

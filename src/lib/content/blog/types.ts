@@ -1,18 +1,18 @@
-export type PostFile = {
-	metadata: PostMetadata;
+export type BlogFile = {
+	metadata: BlogMetadata;
 };
 
-export type PostMetadata = {
+export type BlogMetadata = {
 	title: string;
 	description: string;
 	date: string;
-	tags: PostTag[];
+	tags: BlogTagEnum[];
 	author: string;
 	image: string;
 	publish: boolean;
 };
 
-export enum PostTag {
+export enum BlogTagEnum {
 	Personal = 'personal',
 	Opinion = 'opinion'
 }

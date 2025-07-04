@@ -3,8 +3,8 @@
 	import Link from '$lib/components/ui/link.svelte'; 
 	import portrait from '$assets/portrait.webp'
 	import { formatDate } from '$lib/utils'
-	import type { PostMetadata } from '$content/blog/types';
-	interface BlogLayoutProps extends PostMetadata{
+	import type { BlogMetadata } from '$content/blog/types';
+	interface BlogLayoutProps extends BlogMetadata{
         children: any
     } 
 	const { title, date, tags, image, children }: BlogLayoutProps = $props();
@@ -28,7 +28,7 @@
 		</div>
 		<div class='mt-4 not-prose'>
 			<p class='text-xl font-semibold'>Blog Tags</p>
-			<BlogTags class='mt-4' {tags}/>
+			<BlogTags class='mt-4' tags={tags.map((tag) => {return {tag}})}/>
 			<Link class='inline-block mt-8' href='#app'>Back to Top</Link>
 		</div>
 	</aside>

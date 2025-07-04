@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { BlogTagEnum } from '$content/blog/types';
 	import BlogTags from '$lib/components/blog/blog-tags.svelte';
 
 	interface Props {
@@ -6,7 +7,10 @@
 		image: string;
 		date: string;
 		description: string;
-		tags: string[];
+		tags: {
+			tag: BlogTagEnum,
+			active?: boolean
+		}[];
 		href: string;
 	}
 

@@ -1,10 +1,14 @@
 <script lang="ts">
+	import type { BlogTagEnum } from '$content/blog/types';
 	import Link from '../ui/link.svelte';
 	import List from '../ui/list.svelte';
 	import BlogTags from './blog-tags.svelte';
 
 	interface BlogSidebarProps {
-		tags: string[];
+		tags: {
+			tag: BlogTagEnum
+			active?: boolean
+		}[];
 		posts: {
 			title: string;
 			slug: string;
