@@ -5,9 +5,7 @@
 	import List from '$lib/components/ui/list.svelte';
 </script>
 
-<footer
-	class="bg-secondary flex w-full flex-row gap-20 p-20"
->
+<footer class="bg-secondary flex w-full flex-row gap-20 p-20">
 	<div>
 		<h3 class="font-bold">Pages</h3>
 		<List class="pl-5">

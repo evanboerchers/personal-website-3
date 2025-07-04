@@ -1,14 +1,14 @@
-<script lang='ts'>
-	import clsx from "clsx";
+<script lang="ts">
+	import clsx from 'clsx';
 
-    interface LinkProps {
-        children: any
-        class?: string
-    }
+	interface LinkProps {
+		children: any;
+		class?: string;
+	}
 
-    let { children, class: className }: LinkProps = $props()
+	let { children, class: className }: LinkProps = $props();
 </script>
 
 <ul class={clsx('marker:text-accent list-disc', className)}>
-    {@render children?.()}
+	{@render children?.()}
 </ul>

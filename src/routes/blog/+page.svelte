@@ -15,7 +15,9 @@
 					image={post.image}
 					date={formatDate(post.date)}
 					description={post.description}
-					tags={post.tags.map((tag: BlogTagEnum) => {return {tag}})}
+					tags={post.tags.map((tag: BlogTagEnum) => {
+						return { tag };
+					})}
 					href="/blog/{post.slug}"
 				/>
 			</li>

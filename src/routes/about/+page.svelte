@@ -1,13 +1,13 @@
 <script lang="ts">
-	import AboutMe from '$content/about/about.svx'
+	import AboutMe from '$content/about/about.svx';
 	import Link from '$lib/components/ui/link.svelte';
 	import List from '$lib/components/ui/list.svelte';
 	import { myLinks } from '$lib/contact';
 </script>
 
 <article class="prose dark:prose-invert mx-auto max-w-[700px]">
-	<AboutMe/>
-	<div class='not-prose'>
+	<AboutMe />
+	<div class="not-prose">
 		<h2 class="text-lg font-bold">More</h2>
 		<List class="marker:text-accent list-disc pl-5">
 			<li>
@@ -22,5 +22,6 @@
 				</li>
 			{/each}
 		</List>
-		<div/>
+		<div />
+	</div>
 </article>

@@ -1,11 +1,19 @@
 <script lang="ts">
-	import clsx from 'clsx'
+	import clsx from 'clsx';
 	interface Props {
 		tag: string;
-		active?: boolean 
-		class?: string
+		active?: boolean;
+		class?: string;
 	}
-	let { tag, active, class: className }: Props = $props()
+	let { tag, active, class: className }: Props = $props();
 </script>
 
-<p class={clsx("px-2 p-1 text-sm text-white font-bold", active ? 'bg-accent' : 'bg-secondary', className)}>{tag}</p>
+<p
+	class={clsx(
+		'p-1 px-2 text-sm font-bold text-white',
+		active ? 'bg-accent' : 'bg-secondary',
+		className
+	)}
+>
+	{tag}
+</p>

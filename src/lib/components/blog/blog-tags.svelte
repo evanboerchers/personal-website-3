@@ -5,8 +5,8 @@
 
 	interface BlogTagProps {
 		tags: {
-			tag: BlogTagEnum
-			active?: boolean
+			tag: BlogTagEnum;
+			active?: boolean;
 		}[];
 		class?: string;
 		interactive?: boolean;
@@ -19,14 +19,12 @@
 	{#each tags as tag}
 		<li>
 			{#if interactive}
-				<a href={tag.active ? '/blog' : `/blog?tag=${tag.tag}` }>
-					<BlogTag {...tag}/>
+				<a href={tag.active ? '/blog' : `/blog?tag=${tag.tag}`}>
+					<BlogTag {...tag} />
 				</a>
 			{:else}
-				
-				<BlogTag {...tag}/>
+				<BlogTag {...tag} />
 			{/if}
-
 		</li>
 	{/each}
 </ul>

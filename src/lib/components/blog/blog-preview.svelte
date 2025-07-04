@@ -8,8 +8,8 @@
 		date: string;
 		description: string;
 		tags: {
-			tag: BlogTagEnum,
-			active?: boolean
+			tag: BlogTagEnum;
+			active?: boolean;
 		}[];
 		href: string;
 	}
@@ -20,15 +20,15 @@
 <a class="" {href}>
 	<article class="grid grid-cols-2 gap-6">
 		<img
-			class="aspect-[16/9] border-border object-cover border"
+			class="border-border aspect-[16/9] border object-cover"
 			src={image}
 			alt={title}
 		/>
-		<section class='prose dark:prose-invert'>
+		<section class="prose dark:prose-invert">
 			<h1>{title}</h1>
 			<p class="text-text-secondary mt-2">{date}</p>
 			<p>{description}</p>
-			<BlogTags class='not-prose' {tags} />
+			<BlogTags class="not-prose" {tags} />
 		</section>
 	</article>
 </a>

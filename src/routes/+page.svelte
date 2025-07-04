@@ -10,20 +10,21 @@
 	<h3 class="border-border border-b-1 text-lg font-bold">{title}</h3>
 {/snippet}
 
-
-<div class="mt-10 lg:grid grid-cols-2">
+<div class="mt-10 grid-cols-2 lg:grid">
 	<div>
-		<h1 class="decoration-accent text-5xl font-bold underline underline-offset-8">
+		<h1
+			class="decoration-accent text-5xl font-bold underline underline-offset-8"
+		>
 			Hi Im Evan
 		</h1>
 		<h2 class="text-text-secondary mt-4 text-2xl">
 			I am Software Engineer, currently living in Victoria, British Columbia. I
-			like to share both my work and my passions, whether that be my projects or the
-			many hobbies I have.
+			like to share both my work and my passions, whether that be my projects or
+			the many hobbies I have.
 		</h2>
 		<Button class="mt-4" href="/blog">My Blog</Button>
 	</div>
-	<div class="mt-8 flex flex-row gap-15 col-start-1">
+	<div class="col-start-1 mt-8 flex flex-row gap-15">
 		<section>
 			{@render header('Recent Posts')}
 			<List class="mt-2 pl-4">
