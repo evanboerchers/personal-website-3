@@ -14,18 +14,26 @@
 >
 	<ModeWatcher />
 	<header>
-		<NavBar></NavBar>
+		<NavBar />
 	</header>
-	{#key data.pathname}
-		<div
-			id="transition"
-			in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
-			out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
-		>
-			<div id="layout" class="mt-8 mr-16 mb-8 ml-16">
+	<div class="grid grid-cols-[100%] grid-rows-[auto_1fr_auto]">
+		{#key data.pathname}
+			<div
+				in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
+				out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
+				class="mt-8 mr-16 mb-8 ml-16"
+			>
 				{@render children?.()}
 			</div>
-			<Footer />
-		</div>
-	{/key}
+		{/key}
+		<div></div>
+		{#key data.pathname + '-footer'}
+			<div
+				in:fly={{ easing: quintInOut, y: 20, duration: 300, delay: 400 }}
+				out:fly={{ easing: quintInOut, y: 20, duration: 250 }}
+			>
+				<Footer />
+			</div>
+		{/key}
+	</div>
 </div>
