@@ -5,7 +5,8 @@
 	import { quintInOut } from 'svelte/easing';
 	import { ModeWatcher } from 'mode-watcher';
 	import Footer from '$lib/components/footer.svelte';
-	let { children, data } = $props();
+	import { page } from '$app/state';
+	let { children } = $props();
 </script>
 
 <div
@@ -17,7 +18,7 @@
 		<NavBar />
 	</header>
 	<div class="grid grid-cols-[100%] grid-rows-[auto_1fr_auto]">
-		{#key data.pathname}
+		{#key page.url.pathname}
 			<div
 				in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
 				out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
@@ -27,7 +28,7 @@
 			</div>
 		{/key}
 		<div></div>
-		{#key data.pathname + '-footer'}
+		{#key page.url.pathname + '-footer'}
 			<div
 				in:fly={{ easing: quintInOut, y: 20, duration: 300, delay: 400 }}
 				out:fly={{ easing: quintInOut, y: 20, duration: 250 }}
