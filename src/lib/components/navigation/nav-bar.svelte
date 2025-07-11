@@ -40,7 +40,9 @@
 <nav class="top-0 left-0 flex w-full items-center justify-between px-4 py-3">
 	<Menubar.Root class="w-full">
 		<!-- TODO: Change to some max content width -->
-		<div class="mx-auto flex max-w-[200rem] justify-between px-15 py-3">
+		<div
+			class="mx-auto flex max-w-[var(--content-max-width)] justify-between px-15 py-3"
+		>
 			<a href="/">
 				<SiteIcon />
 			</a>

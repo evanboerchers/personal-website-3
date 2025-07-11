@@ -6,7 +6,7 @@ export const navItems: NavItem[] = [
 		href: '/blog'
 	},
 	{
-		label: 'About Me',
+		label: 'About',
 		href: '/about'
 	},
 	{

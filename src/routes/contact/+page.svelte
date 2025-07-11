@@ -5,7 +5,7 @@
 	import { myLinks } from '$lib/contact';
 </script>
 
-<div class="mx-auto max-w-[500px]">
+<div class="mx-auto max-w-[var(--article-max-width-standard)]">
 	<h1 class="text-4xl">Get in touch</h1>
 	<div class="flex flex-col gap-4">
 		<section class="mt-4">
@@ -18,7 +18,7 @@
 		<div>
 			<h2 class="text-sm font-bold">My Links</h2>
 			<List class="pl-4">
-				{#each myLinks as item}
+				{#each myLinks as item (item.label)}
 					<li>
 						<Link href={item.href}>{item.label}</Link>
 					</li>

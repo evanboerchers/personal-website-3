@@ -2,12 +2,10 @@
     import portrait from '$assets/portrait.webp' 
 </script>
 
-# Who Am I
-
 <img
 	class="float-right m-4 max-w-[200px] object-cover rounded-full"
 	src={portrait}
-	alt="me"
+	alt="me"	
 />
 
 My name is Evan Boerchers. I am a Software Engineer from Victoria, British Columbia. Currently, I am working at Blastworks, a small studio that produces games and a web/mobile platform. Over the five years of my professional experience, I have had the privilege of wearing many hats. From web development to data science to cloud architecture, I have a broad level of experience that has given me a holistic perspective on software development. I’m especially passionate about improving developer experience through tooling, automation, and better processes that empower teams to move faster and build better.

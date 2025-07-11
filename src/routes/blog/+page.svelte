@@ -7,8 +7,8 @@
 </script>
 
 <div class="w-full">
-	<ul class="mx-auto max-w-[52rem]">
-		{#each data.posts as post}
+	<ul class="mx-auto max-w-[var(--article-max-width-standard)]">
+		{#each data.posts as post (post.slug)}
 			<li class="mb-10">
 				<BlogPreview
 					title={post.title}

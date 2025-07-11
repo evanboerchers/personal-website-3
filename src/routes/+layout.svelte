@@ -18,15 +18,17 @@
 		<NavBar />
 	</header>
 	<div class="grid grid-cols-[100%] grid-rows-[auto_1fr_auto]">
-		{#key page.url.pathname}
-			<div
-				in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
-				out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
-				class="mt-8 mr-16 mb-8 ml-16"
-			>
-				{@render children?.()}
-			</div>
-		{/key}
+		<div class="mx-auto max-w-[var(--content-max-width)]">
+			{#key page.url.pathname}
+				<div
+					in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
+					out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
+					class="mt-8 mr-16 mb-8 ml-16"
+				>
+					{@render children?.()}
+				</div>
+			{/key}
+		</div>
 		<div></div>
 		{#key page.url.pathname + '-footer'}
 			<div
