@@ -18,7 +18,7 @@
 		<NavBar />
 	</header>
 	<div class="grid grid-cols-[100%] grid-rows-[auto_1fr_auto]">
-		<div class="mx-auto max-w-[var(--content-max-width)]">
+		<div class="mx-auto w-full max-w-[var(--content-max-width)]">
 			{#key page.url.pathname}
 				<div
 					in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
