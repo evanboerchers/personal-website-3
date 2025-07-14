@@ -12,7 +12,7 @@
 
 	let { class: className }: ModeToggleProps = $props();
 
-	const iconClassName = 'h-[1.75rem] w-[1.75rem]';
+	const iconSizeClass = 'h-[1.5rem] w-[1.5rem]';
 </script>
 
 <Button
@@ -23,20 +23,20 @@
 		className
 	)}
 >
-	<div class="relative h-[1.75rem] w-[1.75rem]">
+	<div class={cn('relative', iconSizeClass)}>
 		{#if mode.current === 'light'}
 			<span
 				class="absolute inset-0"
 				in:transition={{ easing: circOut, delay: 0, duration: 300 }}
 			>
-				<Moon class={iconClassName} />
+				<Moon class={iconSizeClass} />
 			</span>
 		{:else}
 			<span
 				class="absolute inset-0"
 				in:transition={{ easing: circOut, delay: 0, duration: 300 }}
 			>
-				<Sun class={iconClassName} />
+				<Sun class={iconSizeClass} />
 			</span>
 		{/if}
 	</div>

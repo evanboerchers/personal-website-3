@@ -15,7 +15,7 @@
 {#snippet item(href: string, label: string)}
 	<Menubar.Menu>
 		<Menubar.Trigger>
-			<a {href} class="relative block text-lg">
+			<a {href} class="relative block">
 				<span
 					class={cn(
 						{ 'font-bold': isCurrent(href) },
