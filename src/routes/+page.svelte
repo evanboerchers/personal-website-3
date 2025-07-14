@@ -22,13 +22,13 @@
 			like to share both my work and my passions, whether that be my projects or
 			the many hobbies I have.
 		</h2>
-		<Button class="mt-4" href="/blog">My Blog</Button>
+		<Button variant="outline" class="mt-4" href="/blog">My Blog</Button>
 	</div>
 	<div class="col-start-1 mt-8 flex flex-row gap-15">
 		<section>
 			{@render header('Recent Posts')}
 			<List class="mt-2 pl-4">
-				{#each data.posts as post}
+				{#each data.posts as post (post.slug)}
 					<li>
 						<Link href={`/blog/${post.slug}`}>{post.title}</Link>
 					</li>

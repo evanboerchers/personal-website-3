@@ -39,7 +39,6 @@
 
 <nav class="top-0 left-0 flex w-full items-center justify-between px-4 py-3">
 	<Menubar.Root class="w-full">
-		<!-- TODO: Change to some max content width -->
 		<div
 			class="mx-auto flex max-w-[var(--content-max-width)] justify-between px-15 py-3"
 		>
@@ -47,10 +46,10 @@
 				<SiteIcon />
 			</a>
 			<div class="flex gap-4">
-				<ModeToggle />
 				{#each navItems as navItem (navItem.label)}
 					{@render item(navItem.href, navItem.label)}
 				{/each}
+				<ModeToggle class="ml-4" />
 			</div>
 		</div>
 	</Menubar.Root>
