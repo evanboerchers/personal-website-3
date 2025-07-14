@@ -2,6 +2,7 @@
 	import List from '$lib/components/ui/list.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Link from '$lib/components/ui/link.svelte';
+	import { ChevronRight } from '@lucide/svelte';
 
 	let { data } = $props();
 </script>
@@ -22,7 +23,9 @@
 			like to share both my work and my passions, whether that be my projects or
 			my many hobbies and interests.
 		</h2>
-		<Button variant="outline" class="mt-4" href="/blog">My Blog</Button>
+		<Button variant="outline" class="mt-4 pr-2" href="/blog"
+			>My Blog <ChevronRight class="ml-1" />
+		</Button>
 	</div>
 	<div class="col-start-1 mt-18 flex flex-row gap-15">
 		<section>
