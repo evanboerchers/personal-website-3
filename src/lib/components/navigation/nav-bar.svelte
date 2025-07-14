@@ -15,7 +15,7 @@
 {#snippet item(href: string, label: string)}
 	<Menubar.Menu>
 		<Menubar.Trigger>
-			<a {href} class="relative block">
+			<a {href} class="font-heading relative">
 				<span
 					class={cn(
 						{ 'font-bold': isCurrent(href) },
@@ -45,7 +45,7 @@
 			<a href="/">
 				<SiteIcon />
 			</a>
-			<div class="flex gap-4">
+			<div class="flex gap-6">
 				{#each navItems as navItem (navItem.label)}
 					{@render item(navItem.href, navItem.label)}
 				{/each}
