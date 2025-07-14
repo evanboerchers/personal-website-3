@@ -14,5 +14,6 @@ export type BlogMetadata = {
 
 export enum BlogTagEnum {
 	Personal = 'personal',
-	Opinion = 'opinion'
+	Tutorial = 'tutorial',
+	WebDevelopment = 'web development'
 }

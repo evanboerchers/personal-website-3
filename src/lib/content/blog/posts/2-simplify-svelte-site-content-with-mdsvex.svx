@@ -1,0 +1,32 @@
+---
+layout: blog
+title: 'Simplify Svelte Site Content with MDSVEX'
+description: 'How to leverage MDSVEX as a markdown renderer. Streamline how you write content for your website.'
+date: 2025-07-14
+tags:
+    - 'tutorial'
+    - 'web development'
+author: 'Evan Boerchers'
+image: '/images/blog/001.webp'
+publish: true
+---
+
+Lets face it when it comes to writing content for the web, whether it be a blog, technical documentation or any other text based document using html is a pain. The syntax is tedious and frankly just is not meant for writing large text articles. 
+
+Wouldnt it be nice to be write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple readable syntax while still beig feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
+
+In comes MDSVEX! Not only can we write and render content using markdown but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
+
+## Setup
+
+SvelteKit apps can be bootstraped to include MDSVEX out of the box using the SvelteKit CLI. If this is not the case for your app, setup is simple. Install md
+
+
+
+## Using Layouts
+
+## Apply Typography 
+
+## Using Components
+
+## Syntax Highlighting
