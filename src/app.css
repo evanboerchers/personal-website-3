@@ -5,12 +5,30 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+	}
+}
+
 .dark {
 	--color-primary: var(--color-slate-800);
 	--color-secondary: var(--color-sky-600);
 }
 
+@theme {
+	--font-sans: 'Lato', ui-sans-serif, system-ui, sans-serif;
+	--font-lato: 'Lato', sans-serif;
+	--font-roboto: 'Roboto', sans-serif;
+}
+
 @theme static {
+	--font-heading: var(--font-roboto);
 	--color-primary: var(--color-slate-100);
 	--color-secondary: var(--color-sky-700);
 	--color-accent: var(--color-amber-700);

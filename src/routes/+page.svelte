@@ -18,7 +18,7 @@
 		>
 			Hi Im Evan
 		</h1>
-		<h2 class="text-text-secondary mt-4 text-xl">
+		<h2 class="text-text-secondary mt-4 font-sans text-xl">
 			I am Software Engineer, currently living in Victoria, British Columbia. I
 			like to share both my work and my passions, whether that be my projects or
 			my many hobbies and interests.
