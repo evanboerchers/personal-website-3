@@ -45,7 +45,7 @@
 			<a href="/">
 				<SiteIcon />
 			</a>
-			<div class="flex gap-6">
+			<div class="flex items-center gap-6">
 				{#each navItems as navItem (navItem.label)}
 					{@render item(navItem.href, navItem.label)}
 				{/each}

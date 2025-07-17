@@ -1,5 +1,5 @@
 <!-- HomeIcon.svelte -->
-<div class="group inline-block h-12 w-12">
+<div class="group inline-block h-14 w-14">
 	<svg
 		viewBox="0 0 100 100"
 		class="h-full w-full"
@@ -21,10 +21,7 @@
 			y="55%"
 			text-anchor="middle"
 			dominant-baseline="middle"
-			font-size="34"
-			font-family="Segoe UI, Roboto, sans-serif"
-			fill="#f59e0b"
-			font-weight="bold"
+			class="fill-secondary font-sans text-[32px] font-bold"
 		>
 			EB
 		</text>
