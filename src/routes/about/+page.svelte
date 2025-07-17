@@ -25,6 +25,5 @@
 				</li>
 			{/each}
 		</List>
-		<div />
 	</div>
 </article>

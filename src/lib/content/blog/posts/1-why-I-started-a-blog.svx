@@ -1,7 +1,7 @@
 ---
 layout: 'blog'
 title: 'Why I Started a Blog'
-description: 'An introduction to my blog. Why I want to write regardless of any read  ership.'
+description: 'An introduction to my blog. Why I want to write regardless of any read ership.'
 date: 2025-06-17
 tags:
   - 'personal'

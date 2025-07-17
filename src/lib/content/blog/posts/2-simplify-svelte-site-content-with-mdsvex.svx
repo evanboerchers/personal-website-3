@@ -1,25 +1,24 @@
 ---
 layout: blog
-title: 'Simplify Svelte Site Content with MDSVEX'
+title: 'Simplify Svelte Site Content with MDsveX'
 description: 'How to leverage MDSVEX as a markdown renderer. Streamline how you write content for your website.'
 date: 2025-07-14
 tags:
     - 'tutorial'
     - 'web development'
 author: 'Evan Boerchers'
-image: '/images/blog/001.webp'
 publish: true
 ---
 
 Lets face it when it comes to writing content for the web, whether it be a blog, technical documentation or any other text based document, using html is a pain. The syntax is tedious and frankly just is not meant for writing large text articles. 
 
-Wouldnt it be nice to be write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple readable syntax while still being feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
+Wouldn't it be nice to be write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple readable syntax while still being feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
 
-In comes MDSVEX! Not only can we write and render content using markdown but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
+In comes MDsveX! Not only can we write and render content using markdown but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
 
 ## Setup
 
-SvelteKit apps can be bootstraped to include MDSVEX out of the box using the SvelteKit CLI. If this is not the case for your app, setup is simple. With mdsvex installed (`npm install --save-dev mdsvex`), add mdsvex as a preproccessor step and include `.svx` and/or `.md` file extendions. This can be one through the `svelte.config.cjs` file which should look something like:
+SvelteKit apps can be bootstrapped to include MDsveX out of the box using the SvelteKit CLI. If this is not the case for your app, setup is simple. With mdsvex installed (`npm install --save-dev mdsvex`), add mdsvex as a preproccessor step and include `.svx` and/or `.md` file extensions. This can be one through the `svelte.config.cjs` file which should look something like:
 
 ```js
 import { mdsvex } from 'mdsvex';
@@ -27,8 +26,13 @@ import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [vitePreprocess(), mdsvex()],
+	preprocess: [vitePreprocess(), mdsvex(
+		{
+			extensions: ['.md', '.svx']
+		}
+	)],
 	kit: {
 		adapter: adapter()
 	},
@@ -36,20 +40,55 @@ const config = {
 };
 
 export default config;
+```
+
+With this setup MDsveX will be added as a as a preprocessor step. MDsveX will compile files with the specified extensions (`.svx` and `.md`) to a proper `.svelte` component.
+
+## Rendering Content
+
+With MDsveX setup in our Svelte app the first step is to write some content for our website. Create a valid file type as listed in the config. We could keep it simple and write a markdown file
+
+```markdown
+	# My Article
+	
+	Article contents for my svelte site.
+```
+
+Or use a `.svx` formatted file to use markdown syntax as well svelte language features.
+
+```markdown
+<script lang='ts'>
+	import Component from '$lib/component.svelte' 
+</script>
+
+# My Article
+
+My fancy article with svelte components.
+
+<Component />
 
 ```
 
+ we will now be able to import and use MDsveX associated files as svelte components and use as you would any svelte component.
+
+ ```svelte
+import 
+ ```
+
+### Adding Typography
+
+
+
 ## Frontmatter
 
-Often times we will want our documents to contain metadata. This could be used to render addtional content or to provide associated data to be used in document searching or SEO. Mdsvex simplifies 
+Often times we will want our documents to contain metadata. This could be used to render additional content or to provide associated data to be used in document searching or SEO. Mdsvex simplifies 
 
 Define frontmatter at the start of your document:
 
 ```markdown
 ---
 title: My Awesome Article
-date: 2025-07-14
-publish: true
+author: 
 ---
 
 ```
@@ -61,8 +100,6 @@ The frontmatter data will automatically become available when importing your doc
 Another fantastic mdsvex feature is layouts. Instead of having to write 
 
 For instance, in our example we are rendering out content for our blog. Every blog article will follow a consistend format. Instead of having to write out the commonalities in every blog document we can instead define a common layout to be used when rendering everyblog article.
-
-## Apply Typography 
 
 ## Using Components
 
