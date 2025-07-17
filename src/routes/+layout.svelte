@@ -11,7 +11,7 @@
 
 <div
 	id="app"
-	class="bg-primary grid min-h-screen grid-cols-[100%] grid-rows-[auto_1fr_auto]"
+	class="bg-background text-on-background grid min-h-screen grid-cols-[100%] grid-rows-[auto_1fr_auto]"
 >
 	<ModeWatcher />
 	<header>

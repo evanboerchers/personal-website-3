@@ -17,8 +17,9 @@
 }
 
 .dark {
-	--color-primary: var(--color-slate-800);
-	--color-secondary: var(--color-sky-600);
+	--color-background: var(--color-slate-800);
+	--color-on-background: var(--color-white);
+	--color-on-background-variant: var(--color-neutral-300);
 }
 
 @theme {
@@ -29,11 +30,20 @@
 
 @theme static {
 	--font-heading: var(--font-roboto);
-	--color-primary: var(--color-slate-100);
-	--color-secondary: var(--color-sky-700);
-	--color-accent: var(--color-amber-700);
+
+	--color-primary: var(--color-sky-600);
+	--color-primary-variant: var(--color-sky-800);
+	--color-secondary: var(--color-amber-500);
+	--color-secondary-variant: var(--color-amber-800);
+	--color-background: var(--color-white);
+	--color-surface: var(--color-white);
+
+	--color-on-background: var(--color-black);
+	--color-on-background-variant: var(--color-neutral-500);
+	--color-on-surface: var(--color-black);
+	--color-on-primary: var(--color-white);
+	--color-on-secondary: var(--color-white);
 	--color-border: var(--color-slate-400);
-	--color-text-secondary: var(--color-gray-300);
 }
 
 @layer base {

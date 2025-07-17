@@ -25,7 +25,7 @@
 					{label}
 					{#if isCurrent(href)}
 						<span
-							class="bg-accent absolute -bottom-0.5 left-0 h-0.5 w-[100%]"
+							class="bg-secondary absolute -bottom-0.5 left-0 h-0.5 w-[100%]"
 							in:itemTransition={{ easing: circOut, delay: 0, duration: 400 }}
 							out:itemTransition={{ easing: circIn, delay: 0, duration: 400 }}
 						>

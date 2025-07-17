@@ -5,7 +5,7 @@
 	import List from '$lib/components/ui/list.svelte';
 </script>
 
-<footer class="bg-secondary">
+<footer class="bg-primary-variant text-on-primary">
 	<div class="mx-auto max-w-[var(--content-max-width)]">
 		<div class="flex flex-row justify-between p-20">
 			<div class="flex flex-row gap-20">

@@ -14,11 +14,11 @@
 <div class="mt-10 grid-cols-2 lg:grid">
 	<div>
 		<h1
-			class="decoration-accent text-5xl font-bold underline underline-offset-8"
+			class="decoration-secondary text-5xl font-bold underline underline-offset-8"
 		>
 			Hi Im Evan
 		</h1>
-		<h2 class="text-text-secondary mt-4 font-sans text-xl">
+		<h2 class="text-on-background-variant mt-4 font-sans text-xl">
 			I am Software Engineer, currently living in Victoria, British Columbia. I
 			like to share both my work and my passions, whether that be my projects or
 			my many hobbies and interests.

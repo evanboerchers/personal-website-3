@@ -10,8 +10,8 @@
 
 <p
 	class={clsx(
-		'p-1 px-2 text-sm font-bold text-white',
-		active ? 'bg-accent' : 'bg-secondary',
+		'p-1 px-2 text-sm font-bold',
+		active ? 'bg-secondary text-on-secondary' : 'bg-primary text-on-primary',
 		className
 	)}
 >

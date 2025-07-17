@@ -1,14 +1,15 @@
 <script lang="ts">
-	import clsx from 'clsx';
+	import { cn } from '$lib/utils';
+	import type { Snippet } from 'svelte';
 
 	interface LinkProps {
-		children: any;
+		children: Snippet;
 		class?: string;
 	}
 
 	let { children, class: className }: LinkProps = $props();
 </script>
 
-<ul class={clsx('marker:text-accent list-disc', className)}>
+<ul class={cn('marker:text-secondary list-disc', className)}>
 	{@render children?.()}
 </ul>
