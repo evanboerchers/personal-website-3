@@ -17,7 +17,7 @@
 			: 'grid-cols-[auto_1fr] lg:grid-cols-[20_1fr_20]'
 	)}
 >
-	<div>
+	<div class="sticky top-20 self-start">
 		<Button class="" onclick={() => (sidebarOpen = !sidebarOpen)}>
 			{#if sidebarOpen}
 				<ChevronLeft />
@@ -26,11 +26,7 @@
 			{/if}
 		</Button>
 		{#if sidebarOpen}
-			<BlogSidebar
-				class="sticky top-20 self-start"
-				tags={data.tags}
-				posts={data.posts}
-			></BlogSidebar>
+			<BlogSidebar tags={data.tags} posts={data.posts}></BlogSidebar>
 		{/if}
 	</div>
 	<div class="w-full">
