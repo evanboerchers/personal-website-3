@@ -21,7 +21,7 @@
 				</div>
 				<div>
 					<h3 class="font-bold">Links</h3>
-					<List class="marker:text-accent list-disc pl-5">
+					<List class="list-disc pl-5">
 						{#each myLinks as item (item.label)}
 							<li>
 								<Link href={item.href}>{item.label}</Link>
