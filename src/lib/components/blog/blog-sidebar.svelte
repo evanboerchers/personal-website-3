@@ -1,11 +1,13 @@
 <script lang="ts">
 	import type { BlogTagEnum } from '$content/blog/types';
 	import { cn } from '$lib/utils';
+	import type { Snippet } from 'svelte';
 	import Link from '../ui/link.svelte';
 	import List from '../ui/list.svelte';
 	import BlogTags from './blog-tags.svelte';
 
 	interface BlogSidebarProps {
+		children?: Snippet;
 		tags: {
 			tag: BlogTagEnum;
 			active?: boolean;
@@ -17,7 +19,7 @@
 		class?: string;
 	}
 
-	let { tags, posts, class: className }: BlogSidebarProps = $props();
+	let { children, tags, posts, class: className }: BlogSidebarProps = $props();
 </script>
 
 <aside class={cn('p-4', className)}>
@@ -57,4 +59,5 @@
 			</li>
 		</List>
 	</div>
+	{@render children?.()}
 </aside>

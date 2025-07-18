@@ -4,14 +4,15 @@
 	import portrait from '$assets/portrait.webp';
 	import { formatDate } from '$lib/utils';
 	import type { BlogMetadata } from '$content/blog/types';
+	import type { Snippet } from 'svelte';
 	interface BlogLayoutProps extends BlogMetadata {
-		children: any;
+		children: Snippet;
 	}
 	const { title, date, tags, image, children }: BlogLayoutProps = $props();
 	const formattedDate = formatDate(date);
 </script>
 
-<article id="blog" class="max-2-[500px] prose dark:prose-invert mx-auto">
+<article id="blog" class="prose dark:prose-invert mx-auto">
 	<h1 class="mb-2">{title}</h1>
 	<p class="mb-2 font-semibold">{formattedDate}</p>
 	<img
