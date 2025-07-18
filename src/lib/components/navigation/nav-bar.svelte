@@ -19,7 +19,7 @@
 				<span
 					class={cn(
 						{ 'font-bold': isCurrent(href) },
-						{ 'hover:text-accent': !isCurrent(href) }
+						{ 'hover:text-secondary': !isCurrent(href) }
 					)}
 				>
 					{label}
