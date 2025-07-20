@@ -22,7 +22,7 @@
 	let { children, tags, posts, class: className }: BlogSidebarProps = $props();
 </script>
 
-<aside class={cn('p-4', className)}>
+<aside class={cn(className)}>
 	<input
 		class="border-border mb-6 border-1 px-4 py-1"
 		placeholder="Search titles..."

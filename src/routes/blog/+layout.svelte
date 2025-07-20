@@ -18,16 +18,16 @@
 			: 'grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px]'
 	)}
 >
-	<div class="sticky top-20 flex flex-col items-end self-start">
+	<div class="sticky top-20 flex flex-col items-end self-start p-4">
 		<Button
 			class="mb-4 rounded-full p-2"
 			variant="outline"
 			onclick={() => (sidebarOpen = !sidebarOpen)}
 		>
 			{#if sidebarOpen}
-				<ChevronLeft class="h-7 w-7" />
+				<ChevronLeft class="h-5 w-5" />
 			{:else}
-				<ChevronRight class="h-7 w-7" />
+				<ChevronRight class="h-5 w-5" />
 			{/if}
 		</Button>
 
