@@ -12,13 +12,13 @@
 
 <div
 	class={cn(
-		'my-20 grid grid-rows-[100%] transition-[grid-template-columns] duration-300',
+		'grid grid-rows-[100%] transition-[grid-template-columns] duration-300',
 		sidebarOpen
 			? 'grid-cols-[250px_1fr] lg:grid-cols-[250px_1fr_250px]'
 			: 'grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px]'
 	)}
 >
-	<div class="sticky top-20 flex flex-col items-end self-start p-4">
+	<div class="sticky top-5 flex flex-col items-end self-start p-4">
 		<Button
 			class="mb-4 rounded-full p-2"
 			variant="outline"
@@ -40,7 +40,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="w-full">
+	<div class="w-full px-5">
 		{@render children()}
 	</div>
 	<div></div>
