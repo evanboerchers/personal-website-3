@@ -4,6 +4,8 @@
 	import { formatDate } from '$lib/utils.js';
 
 	const { data } = $props();
+	// const tag = page.url.searchParams.get('tag')
+	// const posts = $derived(tag ? data.posts.filter((post) => post.tags.includes(tag)) : data.posts)
 </script>
 
 <div class="w-full">
