@@ -14,11 +14,11 @@
 		'my-20 grid grid-rows-[100%]',
 		sidebarOpen
 			? 'grid-cols-[var(--sidebar-width)_1fr] lg:grid-cols-[var(--sidebar-width)_1fr_var(--sidebar-width)]'
-			: 'grid-cols-[auto_1fr] lg:grid-cols-[20_1fr_20]'
+			: 'grid-cols-[auto_1fr] lg:grid-cols-[20px_1fr_20px]'
 	)}
 >
-	<div class="sticky top-20 self-start">
-		<Button class="" onclick={() => (sidebarOpen = !sidebarOpen)}>
+	<div class="sticky top-20 flex flex-col items-end self-start">
+		<Button class="mb-4" onclick={() => (sidebarOpen = !sidebarOpen)}>
 			{#if sidebarOpen}
 				<ChevronLeft />
 			{:else}
@@ -29,6 +29,7 @@
 			<BlogSidebar tags={data.tags} posts={data.posts}></BlogSidebar>
 		{/if}
 	</div>
+
 	<div class="w-full">
 		{@render children()}
 	</div>
