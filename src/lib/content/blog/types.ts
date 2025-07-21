@@ -7,9 +7,12 @@ export type BlogMetadata = {
 	description: string;
 	date: string;
 	tags: BlogTagEnum[];
-	author: string;
-	image: string;
 	publish: boolean;
+};
+
+export type BlogPostData = BlogMetadata & {
+	slug: string | undefined;
+	image: string;
 };
 
 export enum BlogTagEnum {

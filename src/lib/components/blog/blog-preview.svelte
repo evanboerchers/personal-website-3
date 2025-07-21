@@ -2,7 +2,7 @@
 	import type { BlogTagEnum } from '$content/blog/types';
 	import BlogTags from '$lib/components/blog/blog-tags.svelte';
 
-	interface Props {
+	interface BlogPreviewProps {
 		title: string;
 		image: string;
 		date: string;
@@ -14,7 +14,8 @@
 		href: string;
 	}
 
-	let { title, date, image, description, tags, href }: Props = $props();
+	let { title, date, image, description, tags, href }: BlogPreviewProps =
+		$props();
 </script>
 
 <a class="" {href}>

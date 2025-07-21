@@ -1,14 +1,14 @@
 import { BlogTagEnum } from '$content/blog/types';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ fetch }) => {
-	const response = await fetch('/api/blog/posts');
+export const load: PageLoad = async ({ fetch, params }) => {
+	const tagFilter = params.tagName.replace('-', ' ');
+	const response = await fetch(`/api/blog/posts/tag/${tagFilter}`);
 	const posts = await response.json();
-	posts.slice(0, 10);
 	const tags = Object.values(BlogTagEnum).map((tag) => {
 		return {
 			tag,
-			active: false
+			active: tag === tagFilter
 		};
 	});
 	return {

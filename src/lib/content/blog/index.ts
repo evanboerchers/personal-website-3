@@ -1,6 +1,10 @@
-import type { BlogFile, BlogTag } from './types';
+import type { BlogFile, BlogPostData, BlogTag } from './types';
 
-export const getMarkdownBlogPosts = async (tag?: BlogTag) => {
+const defaultCover = '$assets/blog/default-cover.webp';
+
+export const getMarkdownBlogPosts = async (
+	tag?: BlogTag
+): Promise<BlogPostData[]> => {
 	const allPostFiles = import.meta.glob('$content/blog/posts/*.svx', {
 		eager: true
 	});
@@ -25,7 +29,9 @@ export const getMarkdownBlogPosts = async (tag?: BlogTag) => {
 					.pop()
 					?.replace(/\.[^/.]+$/, '');
 				const blogNum = slug?.split('-').shift();
-				const image = blogNum ? (blogNumToImage[blogNum] ?? null) : null;
+				const image = blogNum
+					? (blogNumToImage[blogNum] ?? defaultCover)
+					: defaultCover;
 				return {
 					...metadata,
 					slug,

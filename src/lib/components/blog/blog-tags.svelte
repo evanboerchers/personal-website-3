@@ -16,10 +16,12 @@
 </script>
 
 <ul class={clsx('flex flex-wrap gap-2', className)}>
-	{#each tags as tag}
+	{#each tags as tag (tag.tag)}
 		<li>
 			{#if interactive}
-				<a href={tag.active ? '/blog' : `/blog?tag=${tag.tag}`}>
+				<a
+					href={tag.active ? '/blog' : `/blog/tag/${tag.tag.replace(' ', '-')}`}
+				>
 					<BlogTag {...tag} />
 				</a>
 			{:else}

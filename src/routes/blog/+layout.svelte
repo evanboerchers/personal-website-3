@@ -5,18 +5,10 @@
 	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
 	import { fly } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
-	import { BlogTagEnum } from '$content/blog/types.js';
+	import { page } from '$app/state';
 
 	let { children, data } = $props();
 	let sidebarOpen = $state(true);
-	// const activeTag = page.url.searchParams.get('tag')
-	const activeTag = '';
-	const tags = Object.values(BlogTagEnum).map((tag) => {
-		return {
-			tag,
-			active: tag.toLowerCase() === activeTag
-		};
-	});
 </script>
 
 <div
@@ -45,7 +37,7 @@
 				in:fly={{ easing: quintInOut, x: 10, duration: 300 }}
 				out:fly={{ easing: quintInOut, x: 10, duration: 300 }}
 			>
-				<BlogSidebar {tags} posts={data.posts} />
+				<BlogSidebar tags={page.data.tags} posts={data.posts} />
 			</div>
 		{/if}
 	</div>
