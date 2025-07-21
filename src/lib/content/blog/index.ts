@@ -1,6 +1,5 @@
+import defaultCover from '$assets/blog/default-cover.webp';
 import type { BlogFile, BlogPostData, BlogTag } from './types';
-
-const defaultCover = '$assets/blog/default-cover.webp';
 
 export const getMarkdownBlogPosts = async (
 	tag?: BlogTag
