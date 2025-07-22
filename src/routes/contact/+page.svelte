@@ -20,7 +20,7 @@
 				</p>
 			</div>
 		</section>
-		<div>
+		<div class="p-2">
 			<h2 class="text-sm font-bold">My Links</h2>
 			<List class="pl-4">
 				{#each myLinks as item (item.label)}
