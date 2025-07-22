@@ -1,9 +1,19 @@
 import defaultCover from '$assets/blog/default-cover.webp';
-import type { BlogFile, BlogPostData, BlogTag } from './types';
+import type {
+	BlogFile,
+	BlogPostData,
+	BlogSearchEntry,
+	BlogTagEnum
+} from './types';
 
-export const getMarkdownBlogPosts = async (
-	tag?: BlogTag
-): Promise<BlogPostData[]> => {
+const pathToSlug = (path: string): string => {
+	return path
+		.split('/')
+		.pop()!
+		.replace(/\.[^/.]+$/, '');
+};
+
+export const getMarkdownBlogPosts = (tag?: BlogTagEnum): BlogPostData[] => {
 	const allPostFiles = import.meta.glob('$content/blog/posts/*.svx', {
 		eager: true
 	});
@@ -23,11 +33,8 @@ export const getMarkdownBlogPosts = async (
 			if (file && typeof file === 'object' && 'metadata' in file) {
 				const { metadata } = file as BlogFile;
 				if (tag && !metadata.tags.includes(tag)) return;
-				const slug = path
-					.split('/')
-					.pop()
-					?.replace(/\.[^/.]+$/, '');
-				const blogNum = slug?.split('-').shift();
+				const slug = pathToSlug(path);
+				const blogNum = slug.split('-').shift();
 				const image = blogNum
 					? (blogNumToImage[blogNum] ?? defaultCover)
 					: defaultCover;
@@ -42,3 +49,27 @@ export const getMarkdownBlogPosts = async (
 		.filter((post) => !!post);
 	return posts;
 };
+
+export const generateBlogSearchEntries = (): BlogSearchEntry[] => {
+	const allPostFiles = import.meta.glob('$content/blog/posts/*.svx', {
+		eager: true
+	});
+	const entries = Object.entries(allPostFiles)
+		.map(([path, file]) => {
+			if (file && typeof file === 'object' && 'metadata' in file) {
+				const { metadata } = file as BlogFile;
+				const slug = pathToSlug(path);
+				const { title, description, tags } = metadata;
+				return {
+					slug,
+					title,
+					description,
+					tags
+				};
+			}
+		})
+		.filter((post) => !!post);
+	return entries;
+};
+
+export const blogSearchEntries = generateBlogSearchEntries();

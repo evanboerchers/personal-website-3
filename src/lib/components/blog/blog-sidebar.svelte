@@ -1,10 +1,11 @@
 <script lang="ts">
-	import type { BlogTagEnum } from '$content/blog/types';
+	import type { BlogSearchEntry, BlogTagEnum } from '$content/blog/types';
 	import { cn } from '$lib/utils';
 	import type { Snippet } from 'svelte';
 	import Link from '../ui/link.svelte';
 	import List from '../ui/list.svelte';
 	import BlogTags from './blog-tags.svelte';
+	import BlogSearch from './blog-search.svelte';
 
 	interface BlogSidebarProps {
 		children?: Snippet;
@@ -16,18 +17,22 @@
 			title: string;
 			slug: string;
 		}[];
+		searchEntries: BlogSearchEntry[];
 		class?: string;
 	}
 
-	let { children, tags, posts, class: className }: BlogSidebarProps = $props();
+	let {
+		children,
+		tags,
+		posts,
+		searchEntries,
+		class: className
+	}: BlogSidebarProps = $props();
 </script>
 
 <aside class={cn(className)}>
-	<input
-		class="border-border mb-6 border-1 px-4 py-1"
-		placeholder="Search titles..."
-	/>
 	<div class="mb-4">
+		<BlogSearch {searchEntries} />
 		<h2 class="border-border mb-4 border-b-1 pb-0.5 font-semibold">
 			Recent Posts
 		</h2>

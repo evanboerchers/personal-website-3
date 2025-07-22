@@ -11,7 +11,7 @@ export type BlogMetadata = {
 };
 
 export type BlogPostData = BlogMetadata & {
-	slug: string | undefined;
+	slug: string;
 	image: string;
 };
 
@@ -20,3 +20,8 @@ export enum BlogTagEnum {
 	Tutorial = 'tutorial',
 	WebDevelopment = 'web development'
 }
+
+export type BlogSearchEntry = Pick<
+	BlogPostData,
+	'slug' | 'title' | 'description' | 'tags'
+>;

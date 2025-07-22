@@ -37,7 +37,11 @@
 				in:fly={{ easing: quintInOut, x: 10, duration: 300 }}
 				out:fly={{ easing: quintInOut, x: 10, duration: 300 }}
 			>
-				<BlogSidebar tags={page.data.tags} posts={data.posts} />
+				<BlogSidebar
+					tags={page.data.tags}
+					posts={data.posts}
+					searchEntries={data.searchEntries}
+				/>
 			</div>
 		{/if}
 	</div>
