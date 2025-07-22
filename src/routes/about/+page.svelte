@@ -2,13 +2,14 @@
 	import AboutMe from '$content/about/about.svx';
 	import Link from '$lib/components/ui/link.svelte';
 	import List from '$lib/components/ui/list.svelte';
+	import PageHeading from '$lib/components/ui/page-heading.svelte';
 	import { myLinks } from '$lib/contact';
 </script>
 
 <article
 	class="prose dark:prose-invert mx-auto max-w-[var(--article-max-width-standard)]"
 >
-	<h1>About Me</h1>
+	<PageHeading>About Me</PageHeading>
 	<AboutMe />
 	<div class="not-prose">
 		<h2 class="text-lg font-bold">More</h2>

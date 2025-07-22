@@ -17,7 +17,7 @@
 <div class="w-full">
 	<ul class="mx-auto max-w-[var(--article-max-width-standard)]">
 		{#each posts as post (post.slug)}
-			<li class="mb-10">
+			<li class="mb-16">
 				<BlogPreview
 					title={post.title}
 					image={post.image}

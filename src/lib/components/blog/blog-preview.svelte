@@ -26,7 +26,7 @@
 			alt={title}
 		/>
 		<section class="prose dark:prose-invert">
-			<h1>{title}</h1>
+			<h1 class="text-3xl font-[700]">{title}</h1>
 			<p class="text-text-secondary mt-2">{date}</p>
 			<p>{description}</p>
 			<BlogTags class="not-prose" {tags} />

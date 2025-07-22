@@ -5,17 +5,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer base {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: var(--font-heading);
-	}
-}
-
 .dark {
 	--color-background: var(--color-slate-800);
 	--color-on-background: var(--color-white);
@@ -52,5 +41,14 @@
 		--sidebar-width: 250px;
 		--article-max-width-standard: 780px;
 		--content-max-width: 1780px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
 	}
 }
