@@ -7,13 +7,17 @@
 
 <div class="mx-auto max-w-[var(--article-max-width-standard)]">
 	<h1 class="text-4xl">Get in touch</h1>
-	<div class="flex flex-col gap-4">
-		<section class="mt-4">
-			<p class="text-lg">Happy to chat! Feel free to drop me an email</p>
-			<Button class="mt-2 block" href="mailto:evan.boerchers@gmail.com"
-				>evan.boerchers@gmail.com</Button
-			>
-			<p class="text-text-secondary text-sm">No solicitation please</p>
+	<div class="mt-4 grid grid-cols-[1fr_1fr] grid-rows-[100%] gap-12">
+		<section>
+			<p class="text-lg">Happy to chat! Feel free to drop me an email.</p>
+
+			<!-- Wrap button and disclaimer in a container with inline alignment -->
+			<div class="mt-6 inline-flex flex-col items-center text-center">
+				<Button href="mailto:evan.boerchers@gmail.com">
+					evan.boerchers@gmail.com
+				</Button>
+				<p class="text-text-secondary mt-1 text-sm">No solicitation please</p>
+			</div>
 		</section>
 		<div>
 			<h2 class="text-sm font-bold">My Links</h2>
