@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Simplify Svelte Site Content with MDsveX'
-description: 'How to leverage MDSVEX as a markdown renderer. Streamline how you write content for your website.'
+description: 'How to leverage MDsveX as a markdown renderer. Streamline how you write content for your website.'
 date: 2025-07-14
 tags:
   - 'tutorial'
@@ -49,7 +49,7 @@ With this setup MDsveX will be added as a as a preprocessor step. MDsveX will co
 
 With MDsveX setup in our Svelte app the first step is to write some content for our website. Create a valid file type as listed in the config. We could keep it simple and write a markdown file
 
-```markdown
+```svx
     # My Article
 
     Article contents for my svelte site.
@@ -57,7 +57,7 @@ With MDsveX setup in our Svelte app the first step is to write some content for 
 
 Or use a `.svx` formatted file to use markdown syntax as well svelte language features.
 
-```markdown
+```svx
 <script lang='ts'>
 	import Component from '$lib/component.svelte' 
 </script>
@@ -69,34 +69,73 @@ My fancy article with svelte components.
 <Component />
 ```
 
-we will now be able to import and use MDsveX associated files as svelte components and use as you would any svelte component.
+We will now be able to import and use MDsveX associated files as svelte components and use as you would any svelte component. MDsveX will tag care of the preprocessing and our content will now be rendered as html.
 
 ```svelte
-import
+<script lang='ts'>
+	import Article from '$lib/content/article.svx'
+</script>
+
+<Article/>
 ```
 
 ### Adding Typography
 
+Our content will be rendered as html, however there will be no styling applied by default, meaning our article will just be boring plain html. Generally we want to have some default styling applied so that all text document based content will look beautiful and consistent. The best way to do this is by applying some sort of Typography. Typography is essentially a set of style rules that specify text, spacing and other properties that will make our document legible and aestetic.   
+
+There are many ways to apply typography, one way would be to make a custom typography stylesheet and apply it either site wide or to the article itself. Personally, I use a lot of [tailwindcss](https://tailwindcss.com/), tailwind provides an official [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography). Simply install the plugin and then apply a `prose` class to your article. Now all our html will have some nice default typography styling applied (feel free to customize!).
+
+```svelte
+<script lang='ts'>
+	import Article from '$lib/content/article.svx'
+</script>
+
+<Article class='prose'/>
+```
+
 ## Frontmatter
 
-Often times we will want our documents to contain metadata. This could be used to render additional content or to provide associated data to be used in document searching or SEO. Mdsvex simplifies
+Often times we will want our documents to contain metadata. This could be used to render additional content or to provide associated data to be used in document searching or SEO. Mdsvex makes this data easy to handle.
 
-Define frontmatter at the start of your document:
+Define frontmatter at the start of your document using the syntax:
 
-```markdown
+```svx
 ---
 title: My Awesome Article
-author:
+author: Fancy Dev
 ---
 ```
 
-The frontmatter data will automatically become available when importing your document.
+Frontmatter can be used in the document itself by using brackets
+
+```svx
+---
+title: My Awesome Article
+author: Fancy Dev
+---
+
+# {title}
+``` 
+
+ metadata will also be available when importing your document, by importing the `metadata` export.
+
+```svelte
+<script lang='ts'>
+	import Article from '$lib/content/article.svx'
+</script>
+
+<div class='prose'>
+    <Content/>
+    <hr/>
+    <p><b>Author:</b> {metadata.author}</p>
+</div>  
+```
 
 ## Using Layouts
 
 Another fantastic mdsvex feature is layouts. Instead of having to write
 
-For instance, in our example we are rendering out content for our blog. Every blog article will follow a consistend format. Instead of having to write out the commonalities in every blog document we can instead define a common layout to be used when rendering everyblog article.
+For instance, in our example we are rendering out content for our blog. Every blog article will follow a consistend format. Instead of having to write out the commonalities in every blog document we can instead define a common layout to be used when rendering every blog article.
 
 ## Using Components
 
