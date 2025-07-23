@@ -17,7 +17,7 @@
 		threshold: 0.3
 	});
 
-	let searchString = $state('svellmmmte');
+	let searchString = $state('');
 
 	const searchPosts = (query: string): BlogSearchEntry[] => {
 		const results = searchCollection.search(query);
