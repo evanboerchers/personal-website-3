@@ -46,7 +46,14 @@ export const getMarkdownBlogPosts = (tag?: BlogTagEnum): BlogPostData[] => {
 			}
 			return;
 		})
-		.filter((post) => !!post);
+		.filter((post) => !!post)
+		.sort((a, b) => {
+			if (a.slug <= b.slug) {
+				return 1;
+			} else {
+				return -1;
+			}
+		});
 	return posts;
 };
 
