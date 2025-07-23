@@ -12,6 +12,24 @@
 	}
 
 	let { posts, tags }: BlogListProps = $props();
+
+	const mergeTags = (
+		postTag: BlogTagEnum[]
+	): {
+		tag: BlogTagEnum;
+		active: boolean;
+	}[] => {
+		const activeMap = tags.reduce((acc, { tag, active }) => {
+			acc.set(tag, active);
+			return acc;
+		}, new Map<BlogTagEnum, boolean>());
+		return postTag.map((tag) => {
+			return {
+				tag,
+				active: activeMap.get(tag) ?? false
+			};
+		});
+	};
 </script>
 
 <div class="w-full">
@@ -23,7 +41,7 @@
 					image={post.image}
 					date={formatDate(post.date)}
 					description={post.description}
-					{tags}
+					tags={mergeTags(post.tags)}
 					href="/blog/{post.slug}"
 				/>
 			</li>
