@@ -7,6 +7,7 @@
 	import { cn } from '$lib/utils';
 	import { fade as itemTransition } from 'svelte/transition';
 	import { circOut, circIn } from 'svelte/easing';
+	import { base } from '$app/paths';
 	const isCurrent = (href: string) => {
 		return href === page.url.pathname;
 	};
@@ -42,7 +43,7 @@
 		<div
 			class="mx-auto flex max-w-[var(--content-max-width)] justify-between px-15 py-3"
 		>
-			<a href="/">
+			<a href={`${base}/`}>
 				<SiteIcon />
 			</a>
 			<div class="flex items-center gap-6">

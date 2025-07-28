@@ -3,6 +3,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Link from '$lib/components/ui/link.svelte';
 	import { ChevronRight } from '@lucide/svelte';
+	import { base } from '$app/paths';
 
 	let { data } = $props();
 </script>
@@ -23,7 +24,7 @@
 			like to share both my work and my passions, whether that be my projects or
 			my many hobbies and interests.
 		</h2>
-		<Button variant="outline" class="mt-4 pr-2" href="/blog"
+		<Button variant="outline" class="mt-4 pr-2" href={`${base}/blog`}
 			>My Blog <ChevronRight class="ml-1" />
 		</Button>
 	</div>
@@ -42,16 +43,16 @@
 			{@render header('More')}
 			<List class="mt-2 pl-4">
 				<li>
-					<Link href="/about">About me</Link>
+					<Link href={`${base}/about`}>About me</Link>
 				</li>
 				<li>
-					<Link href="/blog">Blog</Link>
+					<Link href={`${base}/blog`}>Blog</Link>
 				</li>
 				<li>
-					<Link href="/projects">Some of my projects</Link>
+					<Link href={`${base}/projects`}>Some of my projects</Link>
 				</li>
 				<li>
-					<Link href="/contact">Connect with me</Link>
+					<Link href={`${base}/contact`}>Connect with me</Link>
 				</li>
 			</List>
 		</section>

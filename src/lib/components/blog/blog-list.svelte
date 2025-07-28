@@ -2,6 +2,7 @@
 	import { BlogTagEnum, type BlogPostData } from '$content/blog/types';
 	import { formatDate } from '$lib/utils';
 	import BlogPreview from '$lib/components/blog/blog-preview.svelte';
+	import { base } from '$app/paths';
 
 	interface BlogListProps {
 		posts: BlogPostData[];
@@ -42,7 +43,7 @@
 					date={formatDate(post.date)}
 					description={post.description}
 					tags={mergeTags(post.tags)}
-					href="/blog/{post.slug}"
+					href="{base}/blog/{post.slug}"
 				/>
 			</li>
 		{/each}

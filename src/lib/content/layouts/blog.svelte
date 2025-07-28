@@ -3,9 +3,10 @@
 	import Link from '$lib/components/ui/link.svelte';
 	import portrait from '$assets/portrait.webp';
 	import { formatDate } from '$lib/utils';
-	import type { BlogMetadata } from '$content/blog/types';
+	import type { BlogPostData } from '$content/blog/types';
 	import type { Snippet } from 'svelte';
-	interface BlogLayoutProps extends BlogMetadata {
+	import { base } from '$app/paths';
+	interface BlogLayoutProps extends BlogPostData {
 		children: Snippet;
 	}
 	const { title, date, tags, image, children }: BlogLayoutProps = $props();
@@ -29,7 +30,7 @@
 					I am Evan Boerchers, a Software Engineer from Victoria, British
 					Columbia. I love writing about my knowledge and passions.
 				</p>
-				<a class="mb-4 inline-block" href="/about ">More about me</a>
+				<a class="mb-4 inline-block" href={`${base}/about`}>More about me</a>
 			</div>
 		</div>
 		<div class="not-prose mt-4">

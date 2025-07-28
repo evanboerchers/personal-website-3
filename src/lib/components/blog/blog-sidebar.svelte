@@ -6,6 +6,7 @@
 	import List from '../ui/list.svelte';
 	import BlogTags from './blog-tags.svelte';
 	import BlogSearch from './blog-search.svelte';
+	import { base } from '$app/paths';
 
 	interface BlogSidebarProps {
 		children?: Snippet;
@@ -54,13 +55,13 @@
 		</h2>
 		<List class="pl-4">
 			<li>
-				<Link href="/blog">All Posts</Link>
+				<Link href={`${base}/blog`}>All Posts</Link>
 			</li>
 			<li>
-				<Link href="/">Home</Link>
+				<Link href={`${base}/`}>Home</Link>
 			</li>
 			<li>
-				<Link href="/about">About Me</Link>
+				<Link href={`${base}/about`}>About Me</Link>
 			</li>
 		</List>
 	</div>
