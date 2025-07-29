@@ -10,4 +10,7 @@ declare global {
 	}
 }
 
+/// <reference types="@sveltejs/kit" />
+/// <reference types="mdsvex/globals" />
+
 export {};

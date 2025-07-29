@@ -1,8 +1,14 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from '../$types';
 
 export const load: PageLoad = async ({ params }) => {
 	const blogSlug = params.blogSlug;
-	const post = await import(`$content/blog/posts/${blogSlug}.svx`);
+	let post;
+	try {
+		post = await import(`$content/blog/posts/${blogSlug}.svx`);
+	} catch {
+		error(404, { message: 'Not Found' });
+	}
 	const postNum = blogSlug.split('-')[0];
 	let image: string;
 	try {
