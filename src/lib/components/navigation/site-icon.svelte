@@ -1,4 +1,3 @@
-<!-- HomeIcon.svelte -->
 <div class="group inline-block h-14 w-14">
 	<svg
 		viewBox="0 0 100 100"

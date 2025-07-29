@@ -47,4 +47,4 @@ You can preview the production build with `npm run preview`.
 - Projects section (blocked by projects)
 - Navbar graphics
 - Favicon
-- Tab titles
+- Shiki syntax highlighting
