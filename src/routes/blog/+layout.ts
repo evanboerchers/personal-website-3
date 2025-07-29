@@ -9,11 +9,13 @@ export const load: PageLoad = async ({ fetch }) => {
 	posts.slice(0, 10);
 	const tags = Object.values(BlogTagEnum).map((tag) => {
 		return {
+			pageName: 'Blog',
 			tag,
 			active: false
 		};
 	});
 	return {
+		pageName: 'Blog',
 		posts,
 		tags,
 		searchEntries

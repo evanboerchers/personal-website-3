@@ -7,8 +7,18 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import Footer from '$lib/components/footer.svelte';
 	import { page } from '$app/state';
+
+	const siteName = 'Evan Boerchers';
 	let { children } = $props();
 </script>
+
+<svelte:head>
+	<title
+		>{page.data.pageName
+			? `${page.data.pageName} | ${siteName}`
+			: siteName}</title
+	>
+</svelte:head>
 
 <div
 	id="app"

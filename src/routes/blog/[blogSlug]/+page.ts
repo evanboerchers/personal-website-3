@@ -14,8 +14,10 @@ export const load: PageLoad = async ({ params }) => {
 		...post.metadata,
 		image
 	};
+	const pageName = `${metadata.title} - Blog`;
 	const content: ConstructorOfATypedSvelteComponent = post.default;
 	return {
+		pageName,
 		metadata,
 		content
 	};
