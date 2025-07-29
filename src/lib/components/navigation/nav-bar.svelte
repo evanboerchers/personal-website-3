@@ -8,6 +8,7 @@
 	import { fade as itemTransition } from 'svelte/transition';
 	import { circOut, circIn } from 'svelte/easing';
 	import { base } from '$app/paths';
+	import Tooltip from '../ui/tooltip/tooltip.svelte';
 	const isCurrent = (href: string) => {
 		return href === page.url.pathname;
 	};
@@ -50,7 +51,12 @@
 				{#each navItems as navItem (navItem.label)}
 					{@render item(navItem.href, navItem.label)}
 				{/each}
-				<ModeToggle class="ml-4" />
+				<Tooltip>
+					{#snippet trigger()}
+						<ModeToggle class="ml-4" />
+					{/snippet}
+					Toggle Theme
+				</Tooltip>
 			</div>
 		</div>
 	</Menubar.Root>
