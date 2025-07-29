@@ -46,5 +46,5 @@ You can preview the production build with `npm run preview`.
 - Sidebar store/global state
 - Projects section (blocked by projects)
 - Navbar graphics
-- Favicon
 - Shiki syntax highlighting
+- 404 page
