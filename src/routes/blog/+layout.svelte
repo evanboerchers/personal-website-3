@@ -24,6 +24,7 @@
 			class="mb-4 rounded-full p-2"
 			variant="outline"
 			onclick={() => (sidebarOpen = !sidebarOpen)}
+			title={sidebarOpen ? 'Close sidebar' : 'Open sidebar'}
 		>
 			{#if sidebarOpen}
 				<ChevronLeft class="h-5 w-5" />

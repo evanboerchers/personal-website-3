@@ -18,7 +18,7 @@
 <Button
 	onclick={toggleMode}
 	variant="outline"
-	title={mode.current === 'light' ? 'Toggle Dark Mode' : 'Toggle Light Mode'}
+	title={mode.current === 'light' ? 'Enable dark mode' : 'Enable light Mode'}
 	class={cn(
 		'hover:text-accent relative inline-flex cursor-pointer items-center justify-center rounded-full p-2',
 		className
