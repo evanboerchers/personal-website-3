@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { BlogTagEnum } from '$content/blog/types';
 	import BlogTags from '$lib/components/blog/blog-tags.svelte';
+	import Prose from '../ui/typography/prose.svelte';
 
 	interface BlogPreviewProps {
 		title: string;
@@ -25,11 +26,13 @@
 			src={image}
 			alt={title}
 		/>
-		<section class="prose dark:prose-invert">
-			<h1 class="text-3xl font-[700]">{title}</h1>
-			<p class="text-text-secondary mt-2">{date}</p>
-			<p>{description}</p>
-			<BlogTags class="not-prose" {tags} />
+		<section>
+			<Prose>
+				<h1 class="text-3xl font-[700]">{title}</h1>
+				<p class="text-text-secondary mt-2">{date}</p>
+				<p>{description}</p>
+				<BlogTags class="not-prose" {tags} />
+			</Prose>
 		</section>
 	</article>
 </a>
