@@ -43,7 +43,10 @@ You can preview the production build with `npm run preview`.
 - Docs
 - Code blocks
 - Projects section (blocked by projects)
-- Navbar graphics
+- Navbar graphics (maybe)
 - Shiki syntax highlighting
 - Improve SEO
   - more metadata in head
+    - description
+  - robots.txt
+  - sitemap.xml
