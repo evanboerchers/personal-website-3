@@ -14,7 +14,7 @@
 		<AboutMe />
 		<div class="not-prose">
 			<h2 class="text-lg font-bold">More</h2>
-			<List class="marker:text-accent list-disc pl-5">
+			<List class="pl-5">
 				<li>
 					<Link href={`${base}/contact`}>Contact Me</Link>
 				</li>

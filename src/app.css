@@ -52,3 +52,9 @@
 		font-family: var(--font-heading);
 	}
 }
+
+@layer utilities {
+	.not-prose {
+		color: var(--color-on-background);
+	}
+}
