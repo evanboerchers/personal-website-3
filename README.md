@@ -41,9 +41,7 @@ You can preview the production build with `npm run preview`.
 
 - Deployment
 - Docs
-- Typography changes
 - Code blocks
-- Sidebar store/global state
 - Projects section (blocked by projects)
 - Navbar graphics
 - Shiki syntax highlighting

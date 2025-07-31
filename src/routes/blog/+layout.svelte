@@ -6,15 +6,15 @@
 	import { fly } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
 	import { page } from '$app/state';
+	import { sidebarStore } from '$lib/stores/sidebar.svelte';
 
 	let { children, data } = $props();
-	let sidebarOpen = $state(true);
 </script>
 
 <div
 	class={cn(
 		'grid grid-rows-[100%] transition-[grid-template-columns] duration-300',
-		sidebarOpen
+		sidebarStore.open
 			? 'grid-cols-[250px_1fr] lg:grid-cols-[250px_1fr_250px]'
 			: 'grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px]'
 	)}
@@ -23,17 +23,17 @@
 		<Button
 			class="mb-4 rounded-full p-2"
 			variant="outline"
-			onclick={() => (sidebarOpen = !sidebarOpen)}
-			title={sidebarOpen ? 'Close sidebar' : 'Open sidebar'}
+			onclick={() => (sidebarStore.open = !sidebarStore.open)}
+			title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
 		>
-			{#if sidebarOpen}
+			{#if sidebarStore.open}
 				<ChevronLeft class="h-5 w-5" />
 			{:else}
 				<ChevronRight class="h-5 w-5" />
 			{/if}
 		</Button>
 
-		{#if sidebarOpen}
+		{#if sidebarStore.open}
 			<div
 				in:fly={{ easing: quintInOut, x: 10, duration: 300 }}
 				out:fly={{ easing: quintInOut, x: 10, duration: 300 }}
