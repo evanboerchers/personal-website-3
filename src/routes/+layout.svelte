@@ -13,11 +13,12 @@
 </script>
 
 <svelte:head>
-	<title
-		>{page.data.pageName
-			? `${page.data.pageName} | ${siteName}`
-			: siteName}</title
-	>
+	<title>
+		{page.data.pageName ? `${page.data.pageName} | ${siteName}` : siteName}
+	</title>
+	{#if page.data.description}
+		<meta name="description" />{page.data.description}<meta />
+	{/if}
 </svelte:head>
 
 <div

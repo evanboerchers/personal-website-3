@@ -6,6 +6,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	posts.slice(0, 10);
 	return {
 		pageName: 'Home',
+		description: 'Home page of the personal site and blog for Evan Boerchers',
 		posts
 	};
 };

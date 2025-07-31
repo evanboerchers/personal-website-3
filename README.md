@@ -48,5 +48,3 @@ You can preview the production build with `npm run preview`.
 - Improve SEO
   - more metadata in head
     - description
-  - robots.txt
-  - sitemap.xml
