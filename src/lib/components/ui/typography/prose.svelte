@@ -12,7 +12,7 @@
 
 <div
 	class={cn(
-		'prose dark:prose-invert prose-slate max-w-[var(--article-max-width-standard)',
+		'prose dark:prose-invert prose-neutral max-w-[var(--article-max-width-standard)',
 		className
 	)}
 >
