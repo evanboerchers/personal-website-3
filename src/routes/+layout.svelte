@@ -16,8 +16,8 @@
 	<title>
 		{page.data.pageName ? `${page.data.pageName} | ${siteName}` : siteName}
 	</title>
-	{#if page.data.description}
-		<meta name="description" />{page.data.description}<meta />
+	{#if page.data.pageDescription}
+		<meta name="description" content={page.data.pageDescription} />
 	{/if}
 </svelte:head>
 

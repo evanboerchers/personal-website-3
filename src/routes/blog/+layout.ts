@@ -9,13 +9,14 @@ export const load: PageLoad = async ({ fetch }) => {
 	posts.slice(0, 10);
 	const tags = Object.values(BlogTagEnum).map((tag) => {
 		return {
-			pageName: 'Blog',
 			tag,
 			active: false
 		};
 	});
 	return {
 		pageName: 'Blog',
+		pageDescription:
+			'Explore blog posts by Evan Boerchers, a software engineer passionate about developer tooling, cloud architecture, and thoughtful writing on technology, philosophy, and more.',
 		posts,
 		tags,
 		searchEntries

@@ -39,12 +39,9 @@ You can preview the production build with `npm run preview`.
 
 ## ToDo:
 
-- Deployment
-- Docs
 - Code blocks
-- Projects section (blocked by projects)
-- Navbar graphics (maybe)
 - Shiki syntax highlighting
-- Improve SEO
-  - more metadata in head
-    - description
+- mobile
+- Projects section (blocked by projects)
+- Docs
+- Deployment

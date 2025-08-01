@@ -21,9 +21,11 @@ export const load: PageLoad = async ({ params }) => {
 		image
 	};
 	const pageName = `${metadata.title} - Blog`;
+	const pageDescription = metadata.description;
 	const content: ConstructorOfATypedSvelteComponent = post.default;
 	return {
 		pageName,
+		pageDescription,
 		metadata,
 		content
 	};
