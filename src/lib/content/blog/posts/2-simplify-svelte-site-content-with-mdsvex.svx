@@ -49,15 +49,15 @@ With this setup MDsveX will be added as a as a preprocessor step. MDsveX will co
 
 With MDsveX setup in our Svelte app the first step is to write some content for our website. Create a valid file type as listed in the config. We could keep it simple and write a markdown file
 
-```svx
-    # My Article
+```markdown
+# My Article
 
-    Article contents for my svelte site.
+Article contents for my svelte site.
 ```
 
 Or use a `.svx` formatted file to use markdown syntax as well svelte language features.
 
-```svx
+```markdown
 <script lang='ts'>
 	import Component from '$lib/component.svelte'
 </script>
@@ -71,7 +71,7 @@ My fancy article with svelte components.
 
 We will now be able to import and use MDsveX associated files as svelte components and use as you would any svelte component. MDsveX will tag care of the preprocessing and our content will now be rendered as html.
 
-```svelte
+```markdown
 <script lang="ts">
 	import Article from '$lib/content/article.svx';
 </script>
@@ -85,7 +85,7 @@ Our content will be rendered as html, however there will be no styling applied b
 
 There are many ways to apply typography, one way would be to make a custom typography stylesheet and apply it either site wide or to the article itself. Personally, I use a lot of [tailwindcss](https://tailwindcss.com/), tailwind provides an official [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography). Simply install the plugin and then apply a `prose` class to your article. Now all our html will have some nice default typography styling applied (feel free to customize!).
 
-```svelte
+```markdown
 <script lang="ts">
 	import Article from '$lib/content/article.svx';
 </script>
@@ -99,7 +99,7 @@ Often times we will want our documents to contain metadata. This could be used t
 
 Define frontmatter at the start of your document using the syntax:
 
-```svx
+```markdown
 ---
 title: My Awesome Article
 author: Fancy Dev
@@ -108,7 +108,7 @@ author: Fancy Dev
 
 Frontmatter can be used in the document itself by using brackets
 
-```svx
+```markdown
 ---
 title: My Awesome Article
 author: Fancy Dev
@@ -119,7 +119,7 @@ author: Fancy Dev
 
 metadata will also be available when importing your document, by importing the `metadata` export.
 
-```svelte
+```markdown
 <script lang="ts">
 	import Article from '$lib/content/article.svx';
 </script>
@@ -135,7 +135,7 @@ metadata will also be available when importing your document, by importing the `
 
 One of the massive benifits of MDSveX is the fact that we can write svelte code alongside our markdown. This means htat we can use Svelte components in our document just as we would anywhere else in our svelte app. Lets make a simple component that we can use in
 
-```svelte
+```markdown
 <script>
 	let count = 0;
 
@@ -150,7 +150,7 @@ One of the massive benifits of MDSveX is the fact that we can write svelte code 
 
 We can write svelte code in our SVX file, allowing us to import and use the counter.
 
-```svx
+```markdown
 <script lang='ts'>
 import Counter from '$lib/components/counter.svelte'
 </script>
@@ -173,7 +173,7 @@ Another fantastic mdsvex feature is layouts. Many times we will want our text co
 
 We can use layouts to handle this common formatting. Simply define a svelte component, with the props being the metadata properties a chilren property for the actual content of the SVX document.
 
-```svelte
+```markdown
 <script lang="ts">
 </script>
 ```
@@ -196,7 +196,7 @@ Our layouts need to be registered through the mdsvex plugin.
 
 The layout can automatiicaly be applied to our SVX document by specifying it in the `layout` frontmatter.
 
-```svx
+```markdown
 ---
 layout: article
 title: My Awesome Article

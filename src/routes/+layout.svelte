@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import '$lib/prismjs/one-dark.css';
 	import NavBar from '$lib/components/navigation/nav-bar.svelte';
 	import { fly } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
@@ -12,7 +11,7 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
+\<svelte:head>
 	<title>
 		{page.data.pageName ? `${page.data.pageName} | ${siteName}` : siteName}
 	</title>
