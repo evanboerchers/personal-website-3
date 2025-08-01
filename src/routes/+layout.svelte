@@ -11,7 +11,7 @@
 	let { children } = $props();
 </script>
 
-\<svelte:head>
+<svelte:head>
 	<title>
 		{page.data.pageName ? `${page.data.pageName} | ${siteName}` : siteName}
 	</title>
