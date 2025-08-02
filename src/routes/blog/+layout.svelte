@@ -15,8 +15,8 @@
 	class={cn(
 		'grid grid-rows-[100%] transition-[grid-template-columns] duration-300',
 		sidebarStore.open
-			? 'grid-cols-[250px_1fr] lg:grid-cols-[250px_1fr_250px]'
-			: 'grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px]'
+			? 'grid-cols-[250px_minmax(0,1fr)] lg:grid-cols-[250px_minmax(0,1fr)_250px]'
+			: 'grid-cols-[40px_minmax(0,1fr)] lg:grid-cols-[40px_minmax(0,1fr)_40px]'
 	)}
 >
 	<div class="sticky top-5 flex flex-col items-end self-start p-4">

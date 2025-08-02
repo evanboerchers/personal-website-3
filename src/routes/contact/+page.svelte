@@ -6,7 +6,7 @@
 	import { myLinks } from '$lib/contact';
 </script>
 
-<div class="mx-auto max-w-[var(--article-max-width-standard)]">
+<div class="mx-auto max-w-[var(--article-max-width)]">
 	<PageHeading class="text-4xl">Get in touch</PageHeading>
 	<div class="mt-4 grid grid-cols-[1fr_1fr] grid-rows-[100%] gap-12">
 		<section>

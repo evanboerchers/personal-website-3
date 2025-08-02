@@ -3,7 +3,7 @@
 	import PageHeading from '$lib/components/ui/page-heading.svelte';
 </script>
 
-<div class="mx-auto max-w-[var(--article-max-width-standard)]">
+<div class="mx-auto max-w-[var(--article-max-width)]">
 	<PageHeading class="text-4xl">My Stuff</PageHeading>
 	<CoffeeChess />
 </div>

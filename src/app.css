@@ -58,3 +58,11 @@
 		color: var(--color-on-background);
 	}
 }
+
+.prose {
+	@apply max-w-[var(--article-max-width)];
+}
+
+pre {
+	@apply border-border overflow-x-auto rounded-md border p-8;
+}

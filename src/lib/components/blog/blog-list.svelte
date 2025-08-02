@@ -34,7 +34,7 @@
 </script>
 
 <div class="w-full">
-	<ul class="mx-auto max-w-[var(--article-max-width-standard)]">
+	<ul class="mx-auto max-w-[var(--article-max-width)]">
 		{#each posts as post (post.slug)}
 			<li class="mb-16">
 				<BlogPreview
