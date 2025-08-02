@@ -59,10 +59,6 @@
 	}
 }
 
-.prose {
-	@apply max-w-[var(--article-max-width)];
-}
-
-pre {
-	@apply border-border overflow-x-auto rounded-md border p-8;
+.prose pre {
+	@apply border-border overflow-x-auto rounded-md border p-4 shadow-md sm:p-6 md:p-8;
 }
