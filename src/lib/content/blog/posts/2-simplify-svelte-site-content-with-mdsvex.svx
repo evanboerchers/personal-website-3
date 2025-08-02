@@ -10,11 +10,17 @@ author: 'Evan Boerchers'
 publish: true
 ---
 
+<script>
+	import { Note } from  '$svx'
+</script>
+
 Lets face it when it comes to writing content for the web, whether it be a blog, technical documentation or any other text based document, using html is a pain. The syntax is tedious and frankly just is not meant for writing large text articles.
 
 Wouldn't it be nice to be write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple readable syntax while still being feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
 
 In comes MDsveX! Not only can we write and render content using markdown but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
+
+<Note>This is a note</Note>
 
 ## Setup
 
