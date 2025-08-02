@@ -34,7 +34,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$assets: 'src/lib/assets',
-			$content: 'src/lib/content'
+			$content: 'src/lib/content',
+			$svx: 'src/lib/components/blog/content'
 		}
 	},
 	extensions: ['.svelte', '.md', '.svx']
