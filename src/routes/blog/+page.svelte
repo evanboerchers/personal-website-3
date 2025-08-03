@@ -3,4 +3,4 @@
 	const { data } = $props();
 </script>
 
-<BlogList tags={data.tags} posts={data.posts} />
+<BlogList variant="default" tags={data.tags} posts={data.posts} />

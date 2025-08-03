@@ -44,6 +44,7 @@ You can preview the production build with `npm run preview`.
 - mobile
 - Projects section style
 - complete blog
+- blog images
 - Deployment
 
 **Post**

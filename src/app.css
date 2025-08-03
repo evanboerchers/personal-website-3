@@ -16,6 +16,11 @@
 	--font-lato: 'Lato', sans-serif;
 	--font-roboto: 'Roboto', sans-serif;
 	--breakpoint-xs: 475px;
+	--breakpoints-sm: 640px;
+	--breakpoints-md: 768px;
+	--breakpoints-lg: 1024px;
+	--breakpoints-xl: 1280px;
+	--breakpoints-2xl: 1536px;
 }
 
 @theme static {

@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { BlogTagEnum, type BlogPostData } from '$content/blog/types';
 	import { formatDate } from '$lib/utils';
-	import BlogPreview from '$lib/components/blog/blog-preview.svelte';
+	import BlogPreview, {
+		type BlogPreviewVariant
+	} from '$lib/components/blog/blog-preview.svelte';
 	import { base } from '$app/paths';
 
 	interface BlogListProps {
@@ -10,9 +12,10 @@
 			tag: BlogTagEnum;
 			active: boolean;
 		}[];
+		variant?: BlogPreviewVariant;
 	}
 
-	let { posts, tags }: BlogListProps = $props();
+	let { posts, tags, variant }: BlogListProps = $props();
 
 	const mergeTags = (
 		postTag: BlogTagEnum[]
@@ -38,6 +41,7 @@
 		{#each posts as post (post.slug)}
 			<li class="mb-16">
 				<BlogPreview
+					{variant}
 					title={post.title}
 					image={post.image}
 					date={formatDate(post.date)}
