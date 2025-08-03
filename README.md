@@ -41,7 +41,6 @@ You can preview the production build with `npm run preview`.
 
 **Pre laucnch**
 
-- note blockquote
 - mobile
 - Projects section style
 - complete blog

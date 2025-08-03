@@ -7,7 +7,7 @@
 	import { circOut } from 'svelte/easing';
 
 	interface ModeToggleProps {
-		class: string;
+		class?: string;
 	}
 
 	let { class: className }: ModeToggleProps = $props();
