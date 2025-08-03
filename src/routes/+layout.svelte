@@ -34,7 +34,7 @@
 				<div
 					in:fly={{ easing: quintInOut, y: 10, duration: 300, delay: 350 }}
 					out:fly={{ easing: quintInOut, y: 10, duration: 300 }}
-					class="mx-8 mt-4 mb-16 sm:mx-16 sm:mt-8 sm:mb-32"
+					class="xs:mx-12 mx-8 mt-4 mb-32 sm:mx-16 sm:mt-8"
 				>
 					{@render children?.()}
 				</div>

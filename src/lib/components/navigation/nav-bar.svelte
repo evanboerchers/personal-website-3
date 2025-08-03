@@ -20,7 +20,7 @@
 		return href === page.url.pathname;
 	};
 
-	let menuOpen = $state(true);
+	let menuOpen = $state(false);
 </script>
 
 {#snippet item(href: string, label: string)}

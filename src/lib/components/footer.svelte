@@ -8,7 +8,7 @@
 {#snippet pages()}
 	<div>
 		<h3 class="font-bold">Pages</h3>
-		<List class="pl-5">
+		<List class="mt-2 pl-5">
 			{#each navItems as item (item.label)}
 				<li>
 					<Link href={item.href}>{item.label}</Link>
@@ -21,7 +21,7 @@
 {#snippet links()}
 	<div>
 		<h3 class="font-bold">Links</h3>
-		<List class="list-disc pl-5">
+		<List class="mt-2 list-disc pl-5">
 			{#each myLinks as item (item.label)}
 				<li>
 					<Link href={item.href}>{item.label}</Link>

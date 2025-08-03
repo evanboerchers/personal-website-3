@@ -15,6 +15,7 @@
 	--font-sans: 'Lato', ui-sans-serif, system-ui, sans-serif;
 	--font-lato: 'Lato', sans-serif;
 	--font-roboto: 'Roboto', sans-serif;
+	--breakpoint-xs: 475px;
 }
 
 @theme static {
