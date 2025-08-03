@@ -28,7 +28,7 @@
 			>My Blog <ChevronRight class="ml-1" />
 		</Button>
 	</div>
-	<div class="col-start-1 mt-18 flex flex-row gap-15">
+	<div class="col-start-1 mt-18 flex flex-col gap-15 sm:flex-row">
 		<section>
 			{@render header('Recent Posts')}
 			<List class="mt-2 pl-4">
