@@ -37,7 +37,7 @@
 
 @layer base {
 	:root {
-		font-size: 16px;
+		font-size: 17px;
 		--sidebar-width: 250px;
 		--article-max-width-standard: 780px;
 		--content-max-width: 1780px;
