@@ -4,7 +4,7 @@
 	import { navItems } from '$lib/navigation';
 	import { page } from '$app/state';
 	import { cn } from '$lib/utils';
-	import { fade as itemTransition } from 'svelte/transition';
+	import { fade as itemTransition, slide } from 'svelte/transition';
 	import { circOut, circIn } from 'svelte/easing';
 	import { base } from '$app/paths';
 	import Button from '../ui/button/button.svelte';
@@ -89,7 +89,7 @@
 			<div class="flex items-center gap-4 sm:hidden">
 				<ModeToggle />
 				<Button
-					title="Open menu"
+					title={menuOpen ? 'Close menu' : 'Open menu'}
 					variant="outline"
 					class="relative rounded-full p-2"
 					onclick={() => (menuOpen = !menuOpen)}
@@ -106,7 +106,11 @@
 {/snippet}
 
 {#snippet mobileMenu()}
-	<div class="bg-background border-border w-full border-b px-6 pb-4 sm:hidden">
+	<div
+		class="bg-background border-border w-full border-b px-6 pb-4 sm:hidden"
+		in:slide={{ easing: circIn, axis: 'y', duration: 200 }}
+		out:slide={{ easing: circIn, axis: 'y', duration: 200 }}
+	>
 		<div class="flex flex-col items-end gap-3 text-right">
 			{#each navItems as navItem (navItem.label)}
 				{@render menuItem(navItem.href, navItem.label)}
