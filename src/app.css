@@ -45,7 +45,7 @@
 	:root {
 		font-size: 17px;
 		--sidebar-width: 250px;
-		--article-max-width-standard: 780px;
+		--article-max-width: 780px;
 		--content-max-width: 1780px;
 
 		@media (min-width: 768px) {
