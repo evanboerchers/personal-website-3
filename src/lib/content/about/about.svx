@@ -3,7 +3,7 @@
 </script>
 
 <img
-	class="float-right m-4 max-w-[200px] object-cover rounded-full"
+	class="hidden sm:inline float-right m-4 max-w-[200px] object-cover rounded-full"
 	src={portrait}
 	alt="me"	
 />
