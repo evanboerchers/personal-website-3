@@ -8,7 +8,9 @@
 
 <div class="mx-auto max-w-[var(--article-max-width)]">
 	<PageHeading class="text-4xl">Get in touch</PageHeading>
-	<div class="mt-4 grid grid-cols-[1fr_1fr] grid-rows-[100%] gap-12">
+	<div
+		class="mt-4 sm:grid sm:grid-cols-[1fr_1fr] sm:grid-rows-[100%] sm:gap-12"
+	>
 		<section>
 			<p class="text-lg">Happy to chat! Feel free to drop me an email.</p>
 			<div class="mt-6 inline-flex flex-col items-center text-center">
@@ -20,9 +22,9 @@
 				</p>
 			</div>
 		</section>
-		<div class="p-2">
+		<div class="mt-4 p-2 sm:mt-0">
 			<h2 class="text-sm font-bold">My Links</h2>
-			<List class="pl-4">
+			<List class="mt-2 pl-4">
 				{#each myLinks as item (item.label)}
 					<li>
 						<Link href={item.href}>{item.label}</Link>
