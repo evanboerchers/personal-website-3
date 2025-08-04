@@ -1,0 +1,12 @@
+---
+layout: project
+title: 'Personal Blog'
+links:
+  - label: 'Github'
+    href: 'https://github.com/evanboerchers/personal-website-3'
+
+image: /projects/personal-blog.webp
+---
+
+
+This is a placeholder file for writing about my personal blog
