@@ -1,3 +1,5 @@
+// This is kinda trash. Use stores?
+
 export const breakpoints = {
 	xs: '--breakpoints-xs',
 	sm: '--breakpoints-sm',
@@ -9,7 +11,7 @@ export const breakpoints = {
 
 export type Breakpoint = keyof typeof breakpoints;
 
-let pixelBreakpoints: Record<Breakpoint, number> = {
+const pixelBreakpoints: Record<Breakpoint, number> = {
 	xs: 475,
 	sm: 640,
 	md: 768,
@@ -33,18 +35,18 @@ const getBreakpoint = (width: number) => {
 	return current;
 };
 
-export function useeBreakpoint() {
-	const styles = getComputedStyle(document.documentElement);
+export function useBreakpoint() {
+	// const styles = getComputedStyle(document.documentElement);
 
 	if (!_initialized) {
-		pixelBreakpoints = {
-			...pixelBreakpoints,
-			sm: parseInt(styles.getPropertyValue(breakpoints.sm)),
-			md: parseInt(styles.getPropertyValue(breakpoints.md)),
-			lg: parseInt(styles.getPropertyValue(breakpoints.lg)),
-			xl: parseInt(styles.getPropertyValue(breakpoints.xl)),
-			'2xl': parseInt(styles.getPropertyValue(breakpoints['2xl']))
-		};
+		// pixelBreakpoints = {
+		// 	...pixelBreakpoints,
+		// 	sm: parseInt(styles.getPropertyValue(breakpoints.sm)),
+		// 	md: parseInt(styles.getPropertyValue(breakpoints.md)),
+		// 	lg: parseInt(styles.getPropertyValue(breakpoints.lg)),
+		// 	xl: parseInt(styles.getPropertyValue(breakpoints.xl)),
+		// 	'2xl': parseInt(styles.getPropertyValue(breakpoints['2xl']))
+		// };
 		window.addEventListener('resize', () => {
 			updateBreakpoint();
 		});
