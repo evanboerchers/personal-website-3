@@ -8,5 +8,15 @@ links:
 image: /projects/personal-blog.webp
 ---
 
+The website you're viewing was built from the ground up using [SvelteKit](https://svelte.dev/docs/kit/introduction). For styling and responsive layouts, [Tailwind CSS](https://tailwindcss.com/) was used extensively.
 
-This is a placeholder file for writing about my personal blog
+Content on the site is written in a blend of Svelte and Markdown using [MDsveX](https://mdsvex.pngwn.io/), a powerful preprocessor that allows for page content to be written in a more manageable format → Read more about it: [Simplify Svelte Site Content with MDsveX](/blog/2-simplify-svelte-site-content-with-mdsvex)
+
+One of the standout features of this site is that it's entirely static—no server-side rendering required. Thanks to [Vite](https://vite.dev/) and SvelteKit's static adapter, the production build outputs a fast, lightweight static site hosted on [Cloudflare](https://www.cloudflare.com).
+
+#### Other Notable Features
+
+- **Markdown + SVX Blog System**: Blog posts are written as plain Markdown or SVX files and automatically included in the site during the build process.  
+- **Client-Side Search**: A built-in search powered by [Fuse.js](https://www.fusejs.io/) lets users quickly find blog content without hitting a server.
+
+
