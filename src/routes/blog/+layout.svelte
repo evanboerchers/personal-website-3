@@ -9,41 +9,45 @@
 	import { sidebarStore } from '$lib/stores/sidebar.svelte';
 
 	let { children, data } = $props();
-	let isMobileLayout = false;
+	let isMobileLayout = true;
 </script>
 
 {#if isMobileLayout}
 	<div class="relative">
 		{#if sidebarStore.open}
 			<div
-				class="absolute h-full w-full"
-				in:fly={{ easing: quintInOut, x: 10, duration: 300 }}
-				out:fly={{ easing: quintInOut, x: 10, duration: 300 }}
+				class="bg-background absolute h-full w-full"
+				in:fly={{ easing: quintInOut, x: -100, duration: 300 }}
+				out:fly={{ easing: quintInOut, x: -100, duration: 300 }}
 			>
-				<Button
-					class="mb-4 rounded-full p-2"
-					variant="outline"
-					onclick={() => (sidebarStore.open = !sidebarStore.open)}
-					title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
-				>
-					<ChevronLeft class="h-5 w-5" />
-				</Button>
-				<BlogSidebar
-					tags={page.data.tags}
-					posts={data.posts}
-					searchEntries={data.searchEntries}
-				/>
+				<div class="sticky top-6">
+					<Button
+						class="mb-4 rounded-full p-2"
+						variant="outline"
+						onclick={() => (sidebarStore.open = !sidebarStore.open)}
+						title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
+					>
+						<ChevronLeft class="h-5 w-5" />
+					</Button>
+					<BlogSidebar
+						tags={page.data.tags}
+						posts={data.posts}
+						searchEntries={data.searchEntries}
+					/>
+				</div>
 			</div>
 		{:else}
-			<div class="absolute top-0 left-0">
-				<Button
-					class="mb-4 rounded-full p-2"
-					variant="outline"
-					onclick={() => (sidebarStore.open = !sidebarStore.open)}
-					title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
-				>
-					<ChevronRight class="h-5 w-5" />
-				</Button>
+			<div class="absolute h-full">
+				<div class="sticky top-6">
+					<Button
+						class="absolute -right-2 mb-4 rounded-r-full p-2"
+						variant="default"
+						onclick={() => (sidebarStore.open = !sidebarStore.open)}
+						title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
+					>
+						<ChevronRight class="h-5 w-5" />
+					</Button>
+				</div>
 			</div>
 		{/if}
 		<div class="w-full px-5">
@@ -59,7 +63,7 @@
 				: 'grid-cols-[40px_minmax(0,1fr)] lg:grid-cols-[40px_minmax(0,1fr)_40px]'
 		)}
 	>
-		<div class="sticky top-5 flex flex-col items-end self-start p-4">
+		<div class="sticky top-6 flex flex-col items-end self-start p-4">
 			<Button
 				class="mb-4 rounded-full p-2"
 				variant="outline"
@@ -75,8 +79,8 @@
 
 			{#if sidebarStore.open}
 				<div
-					in:fly={{ easing: quintInOut, x: 10, duration: 300 }}
-					out:fly={{ easing: quintInOut, x: 10, duration: 300 }}
+					in:fly={{ easing: quintInOut, x: -10, duration: 300 }}
+					out:fly={{ easing: quintInOut, x: -10, duration: 300 }}
 				>
 					<BlogSidebar
 						tags={page.data.tags}
