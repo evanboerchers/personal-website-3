@@ -42,13 +42,13 @@ function createBreakpointStore(): Writable<Breakpoint> {
 	const { subscribe, set, update } = store;
 
 	if (typeof window !== 'undefined') {
-		readCssBreakpoints(); // Override defaults with actual values
+		readCssBreakpoints();
 
 		const handleResize = () => {
 			set(getBreakpoint(window.innerWidth));
 		};
 
-		handleResize(); // Set initial
+		handleResize();
 		window.addEventListener('resize', handleResize);
 		window.addEventListener('orientationchange', handleResize);
 	}

@@ -10,7 +10,7 @@
 	const variantClass = {
 		default: 'bg-primary text-on-primary hover:bg-primary/90',
 		outline:
-			'border-[0.1rem] border-primary text-primary hover:border-secondary hover:text-secondary'
+			'border-[0.125rem] border-primary text-primary hover:border-secondary hover:text-secondary'
 	} as const;
 
 	type ButtonVariant = keyof typeof variantClass;

@@ -46,7 +46,7 @@
 
 <footer class="bg-primary-variant text-on-primary">
 	<div class="mx-auto max-w-[var(--content-max-width)]">
-		<div class="hidden flex-row justify-between p-16 sm:flex md:p-20">
+		<div class="hidden flex-row justify-between p-16 sm:flex sm:p-12 md:p-20">
 			<div class="flex flex-row gap-10 md:gap-20">
 				{@render pages()}
 				{@render links()}
