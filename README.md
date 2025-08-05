@@ -39,17 +39,16 @@ You can preview the production build with `npm run preview`.
 
 ## ToDo:
 
-**Pre laucnch**
+**Pre launch**
 
-- mobile
-  - mobile blog bar
 - Projects section style
-- complete blog
-- blog images
+- only make complete blogs publish
 - Deployment
 
 **Post**
 
+- blog images
+- complete blog
 - code block headers
 - Docs
 - Add projects

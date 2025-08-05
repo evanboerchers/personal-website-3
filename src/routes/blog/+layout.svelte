@@ -7,9 +7,16 @@
 	import { quintInOut } from 'svelte/easing';
 	import { page } from '$app/state';
 	import { sidebarStore } from '$lib/stores/sidebar.svelte';
+	import { breakpoint, type Breakpoint } from '$lib/stores/breakpoints';
 
 	let { children, data } = $props();
-	let isMobileLayout = true;
+	let currentBreakpoint = $state<Breakpoint>('sm');
+
+	breakpoint.subscribe((value) => {
+		currentBreakpoint = value;
+	});
+
+	let isMobileLayout = $derived(['xs', 'sm'].includes(currentBreakpoint));
 </script>
 
 {#if isMobileLayout}
@@ -32,6 +39,7 @@
 						</Button>
 					</div>
 					<BlogSidebar
+						class="p-4"
 						tags={page.data.tags}
 						posts={data.posts}
 						searchEntries={data.searchEntries}
@@ -46,7 +54,7 @@
 			>
 				<div class="sticky top-6">
 					<Button
-						class="absolute -right-2 mb-4 rounded-r-full p-2"
+						class="xs:right-2 absolute -right-2 mb-4 overflow-hidden rounded-r-full p-2 pl-6 sm:right-6"
 						variant="default"
 						onclick={() => (sidebarStore.open = !sidebarStore.open)}
 						title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}

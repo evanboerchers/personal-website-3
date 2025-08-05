@@ -1,12 +1,20 @@
-// import { getCurrentBreakpoint } from "$lib/breakpoints";
+import { browser } from '$app/environment';
+import { get } from 'svelte/store';
+import { breakpoint } from './breakpoints';
 
 let _sidebarOpen = $state(true);
 
-// if (getCurrentBreakpoint() === 'sm') {
-// 	_sidebarOpen = false;
-// } else {
-// 	_sidebarOpen = true;
-// }
+if (browser) {
+	const current = get(breakpoint);
+	if (current === 'xs' || current === 'sm') {
+		_sidebarOpen = false;
+	}
+	breakpoint.subscribe((bp) => {
+		if (bp === 'xs' || bp === 'sm') {
+			_sidebarOpen = false;
+		}
+	});
+}
 
 export const sidebarStore = {
 	get open() {
