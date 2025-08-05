@@ -42,7 +42,6 @@ You can preview the production build with `npm run preview`.
 **Pre launch**
 
 - Projects section style
-- only make complete blogs publish
 - Deployment
 
 **Post**
