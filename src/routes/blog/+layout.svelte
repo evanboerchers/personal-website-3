@@ -17,18 +17,20 @@
 		{#if sidebarStore.open}
 			<div
 				class="bg-background absolute h-full w-full"
-				in:fly={{ easing: quintInOut, x: -100, duration: 300 }}
-				out:fly={{ easing: quintInOut, x: -100, duration: 300 }}
+				in:fly={{ easing: quintInOut, x: -100, duration: 400 }}
+				out:fly={{ easing: quintInOut, x: -100, duration: 400 }}
 			>
-				<div class="sticky top-6">
-					<Button
-						class="mb-4 rounded-full p-2"
-						variant="outline"
-						onclick={() => (sidebarStore.open = !sidebarStore.open)}
-						title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
-					>
-						<ChevronLeft class="h-5 w-5" />
-					</Button>
+				<div class="sticky top-6 p-4">
+					<div class="flex flex-col items-end">
+						<Button
+							class="mb-4 rounded-full p-2"
+							variant="outline"
+							onclick={() => (sidebarStore.open = !sidebarStore.open)}
+							title={sidebarStore.open ? 'Close sidebar' : 'Open sidebar'}
+						>
+							<ChevronLeft class="h-5 w-5" />
+						</Button>
+					</div>
 					<BlogSidebar
 						tags={page.data.tags}
 						posts={data.posts}
@@ -37,7 +39,11 @@
 				</div>
 			</div>
 		{:else}
-			<div class="absolute h-full">
+			<div
+				class="absolute h-full"
+				in:fly={{ easing: quintInOut, x: -100, duration: 300 }}
+				out:fly={{ easing: quintInOut, x: -100, duration: 300 }}
+			>
 				<div class="sticky top-6">
 					<Button
 						class="absolute -right-2 mb-4 rounded-r-full p-2"
