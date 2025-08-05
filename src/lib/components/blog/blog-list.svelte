@@ -5,6 +5,7 @@
 		type BlogPreviewVariant
 	} from '$lib/components/blog/blog-preview.svelte';
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
 
 	interface BlogListProps {
 		posts: BlogPostData[];
@@ -12,10 +13,10 @@
 			tag: BlogTagEnum;
 			active: boolean;
 		}[];
-		variant?: BlogPreviewVariant;
 	}
 
-	let { posts, tags, variant }: BlogListProps = $props();
+	let { posts, tags }: BlogListProps = $props();
+	let variant = $state<BlogPreviewVariant>('stacked');
 
 	const mergeTags = (
 		postTag: BlogTagEnum[]
@@ -34,9 +35,35 @@
 			};
 		});
 	};
+
+	function getVariant(width: number): BlogPreviewVariant {
+		return width > 640 ? 'default' : 'stacked';
+	}
+
+	function updateVariant(width: number) {
+		variant = getVariant(width);
+	}
+
+	let width = 0;
+
+	let blogContainerEl: HTMLElement | null = null;
+
+	onMount(() => {
+		if (!blogContainerEl) return;
+
+		const observer = new ResizeObserver(([entry]) => {
+			const newWidth = entry.contentRect.width;
+			if (newWidth !== width) {
+				width = newWidth;
+				updateVariant(width);
+			}
+		});
+		observer.observe(blogContainerEl);
+		return () => observer.disconnect();
+	});
 </script>
 
-<div class="w-full">
+<div class="w-full" bind:this={blogContainerEl}>
 	<ul class="mx-auto max-w-[var(--article-max-width)]">
 		{#each posts as post (post.slug)}
 			<li class="mb-16">
