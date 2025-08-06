@@ -71,13 +71,13 @@
 {:else}
 	<div
 		class={cn(
-			'grid grid-rows-[100%] transition-[grid-template-columns] duration-300',
+			'grid grid-rows-[100%] gap-4 transition-[grid-template-columns] duration-300',
 			sidebarStore.open
 				? 'grid-cols-[var(--sidebar-width)_minmax(0,1fr)] xl:grid-cols-[var(--sidebar-width)_minmax(0,1fr)_var(--sidebar-width)]'
 				: 'grid-cols-[40px_minmax(0,1fr)] xl:grid-cols-[40px_minmax(0,1fr)_40px]'
 		)}
 	>
-		<div class="sticky top-6 flex flex-col items-end self-start p-4">
+		<div class="sticky top-6 flex flex-col items-end self-start px-4">
 			<Button
 				class="mb-4 rounded-full p-2"
 				variant="outline"
