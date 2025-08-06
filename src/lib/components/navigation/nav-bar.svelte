@@ -74,7 +74,7 @@
 {#snippet topContent()}
 	<div class="w-full">
 		<div
-			class="mx-auto flex max-w-[var(--content-max-width)] justify-between px-6 py-3 md:px-14"
+			class="mx-auto flex max-w-[var(--nav-bar-max-width)] justify-between px-6 py-3 md:px-14"
 		>
 			<a href={`${base}/`}>
 				<SiteIcon />

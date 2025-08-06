@@ -20,16 +20,16 @@
 	let { title, children, links, image }: ProjectLayoutProps = $props();
 </script>
 
-<section class="mt-8">
-	<Prose>
+<section class="mt-8 w-full">
+	<Prose class="max-w-none">
 		<h2 class="mb-0">{title}</h2>
-		<div class="flex flex-row">
+		<div class="grid w-full grid-cols-2 gap-12">
 			<div>
 				{@render children?.()}
 			</div>
-			<div class="mt-6 min-w-max">
-				<img src={image.src} alt={image.alt} />
-				<List class="mt-2 pl-4">
+			<div class="not-prose">
+				<img class="border-border border" src={image.src} alt={image.alt} />
+				<List class="mt-4 pl-4">
 					{#each links as link (link.label)}
 						<li>
 							<Link href={link.href}>{link.label}</Link>

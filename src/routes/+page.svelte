@@ -12,7 +12,7 @@
 	<h3 class="border-border border-b-1 text-lg font-bold">{title}</h3>
 {/snippet}
 
-<div class="mt-10 grid-cols-2 lg:grid">
+<div class="mt-10 grid-cols-[2fr_1fr] lg:grid">
 	<div>
 		<h1
 			class="decoration-secondary text-5xl font-bold underline underline-offset-8"

@@ -4,8 +4,6 @@ title: 'Personal Blog'
 links:
   - label: 'Github'
     href: 'https://github.com/evanboerchers/personal-website-3'
-
-image: /projects/personal-blog.webp
 ---
 
 The website you're viewing was built from the ground up using [SvelteKit](https://svelte.dev/docs/kit/introduction). For styling and responsive layouts, [Tailwind CSS](https://tailwindcss.com/) was used extensively.
