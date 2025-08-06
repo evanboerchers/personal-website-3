@@ -44,7 +44,7 @@
 @layer base {
 	:root {
 		font-size: 17px;
-		--sidebar-width: 300px;
+		--sidebar-width: 275px;
 		--article-max-width: 780px;
 		--nav-bar-max-width: 1536px;
 		--content-max-width: 1536px;
