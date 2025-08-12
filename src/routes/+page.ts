@@ -5,9 +5,17 @@ export const load: PageLoad = async ({ fetch }) => {
 	const posts = await response.json();
 	posts.slice(0, 10);
 	return {
-		pageName: 'Home',
-		pageDescription:
-			'Home page of the personal site and blog for Evan Boerchers',
+		title: 'Evan Boerchers',
+		description:
+			'Personal blog of Evan Boerchers, a software engineer from Victoria BC, Canada. Read articles, explore projects and learn more about Evan Boerchers.',
+		keywords: [
+			'Evan',
+			'Boerchers',
+			'blog',
+			'software',
+			'engineer',
+			'developer'
+		],
 		posts
 	};
 };

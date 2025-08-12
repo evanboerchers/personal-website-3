@@ -31,6 +31,9 @@ const config = {
 		})
 	],
 	kit: {
+		prerender: {
+			origin: 'https://evanboerchers.com'
+		},
 		adapter: adapter(),
 		alias: {
 			$assets: 'src/lib/assets',

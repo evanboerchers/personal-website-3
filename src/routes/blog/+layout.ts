@@ -14,9 +14,6 @@ export const load: PageLoad = async ({ fetch }) => {
 		};
 	});
 	return {
-		pageName: 'Blog',
-		pageDescription:
-			'Explore blog posts by Evan Boerchers, a software engineer passionate about developer tooling, cloud architecture, and thoughtful writing on technology, philosophy, and more.',
 		posts,
 		tags,
 		searchEntries

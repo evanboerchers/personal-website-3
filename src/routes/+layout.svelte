@@ -6,19 +6,11 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import Footer from '$lib/components/footer.svelte';
 	import { page } from '$app/state';
-
-	const siteName = 'Evan Boerchers';
+	import Seo from 'sk-seo';
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<title>
-		{page.data.pageName ? `${page.data.pageName} | ${siteName}` : siteName}
-	</title>
-	{#if page.data.pageDescription}
-		<meta name="description" content={page.data.pageDescription} />
-	{/if}
-</svelte:head>
+<Seo />
 
 <div
 	id="app"

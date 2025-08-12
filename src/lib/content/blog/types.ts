@@ -7,6 +7,7 @@ export type BlogMetadata = {
 	description: string;
 	date: string;
 	tags: BlogTagEnum[];
+	keywords: string[];
 	publish: boolean;
 };
 

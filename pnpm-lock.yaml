@@ -111,6 +111,9 @@ importers:
       shiki:
         specifier: ^3.9.1
         version: 3.9.1
+      sk-seo:
+        specifier: ^0.5.4
+        version: 0.5.4
       svelte:
         specifier: ^5.37.2
         version: 5.37.2
@@ -2330,6 +2333,9 @@ packages:
   sirv@3.0.1:
     resolution: {integrity: sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==}
     engines: {node: '>=18'}
+
+  sk-seo@0.5.4:
+    resolution: {integrity: sha512-+FxJj+3O17jgzem4bzwU1ucdJjkPw57W9RiKxnqm7foKKTNzYPHeCVl+6rvV0n9MTigmzKzDY15tZ6stQ8L4ZA==}
 
   slice-ansi@5.0.0:
     resolution: {integrity: sha512-FC+lgizVPfie0kkhqUScwRu1O/lF6NOgJmlCgK+/LYxDCTk8sGelYaHDhFcDN+Sn3Cv+3VSa4Byeo+IMCzpMgQ==}
@@ -4740,6 +4746,8 @@ snapshots:
       '@polka/url': 1.0.0-next.29
       mrmime: 2.0.1
       totalist: 3.0.1
+
+  sk-seo@0.5.4: {}
 
   slice-ansi@5.0.0:
     dependencies:

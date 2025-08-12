@@ -5,7 +5,8 @@ description: 'An introduction to my blog. Why I want to write regardless of any 
 date: 2025-06-17
 tags:
   - 'personal'
-author: 'Evan Boerchers'
+keywords:
+  - 'blog'
 publish: true
 ---
 

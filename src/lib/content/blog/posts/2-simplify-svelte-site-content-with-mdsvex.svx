@@ -6,7 +6,11 @@ date: 2025-07-14
 tags:
   - 'tutorial'
   - 'web development'
-author: 'Evan Boerchers'
+keywords:
+  - 'tutorial'
+  - 'svelte'
+  - 'mdsvex'
+  - 'web'
 publish: false
 ---
 
