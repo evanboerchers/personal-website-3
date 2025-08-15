@@ -204,7 +204,7 @@ Our layouts need to be registered through the mdsvex plugin.
 ...
 ```
 
-The layout can automatiicaly be applied to our SVX document by specifying it in the `layout` frontmatter.
+The layout can automatically be applied to our SVX document by specifying it in the `layout` frontmatter.
 
 ```markdown
 ---

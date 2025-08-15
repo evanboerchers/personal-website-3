@@ -33,7 +33,7 @@ export const getMarkdownBlogPosts = (tag?: BlogTagEnum): BlogPostData[] => {
 			if (file && typeof file === 'object' && 'metadata' in file) {
 				const { metadata } = file as BlogFile;
 				if (tag && !metadata.tags.includes(tag)) return;
-				if (metadata.publish !== true) return;
+				if (!import.meta.env.DEV && metadata.publish !== true) return;
 				const slug = pathToSlug(path);
 				const blogNum = slug.split('-').shift();
 				const image = blogNum
@@ -66,7 +66,7 @@ export const generateBlogSearchEntries = (): BlogSearchEntry[] => {
 		.map(([path, file]) => {
 			if (file && typeof file === 'object' && 'metadata' in file) {
 				const { metadata } = file as BlogFile;
-				if (metadata.publish !== true) return;
+				if (!import.meta.env.DEV && metadata.publish !== true) return;
 				const slug = pathToSlug(path);
 				const { title, description, tags } = metadata;
 				return {
