@@ -16,6 +16,7 @@ publish: false
 
 <script>
 	import { Note } from  '$svx'
+	import { Link } from  '$svx'
 </script>
 
 Lets face it when it comes to writing content for the web, whether it be a blog, technical documentation or any other text based document, using html is a pain. The syntax is tedious and frankly just is not meant for writing large text articles.
@@ -24,7 +25,7 @@ Wouldn't it be nice to be write content for our website in a language better sui
 
 In comes MDsveX! Not only can we write and render content using markdown but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
 
-<Note>This is a note</Note>
+<Note>Check out the <Link href='https://evanboerchers.github.io/mdsvex-tutorial'>tutorial site</Link> for a live demonstration of this guide in action. You can also view the full source code on <Link href='https://github.com/evanboerchers/mdsvex-tutorial'>GitHub</Link>.</Note>
 
 ## Setup
 
@@ -166,8 +167,10 @@ import Counter from '$lib/components/counter.svelte'
 </script>
 
 ---
+
 title: My Awesome Article
 author: Fancy Dev
+
 ---
 
 # {title}
@@ -212,13 +215,56 @@ layout: article
 title: My Awesome Article
 author: Fancy Dev
 ---
-
 ```
 
 Now we we render our article, with the layout component already applied as a parent to the article content.
 
-<!-- ## Syntax Highlighting -->
+## Syntax Highlighting
+
+Often times code blocks will be used in our document. This necessitates the need for syntax highlighting. MDSveX adds this functionality by default using [Prismjs](https://prismjs.com/). However, prism is an older library and I recommend using [Shiki](https://shiki.matsu.io/). To configure this you can add a custom highlight function to the mdsvex plugin.
+
+```js
+import { createHighlighter } from 'shiki';
+
+const theme = 'one-dark-pro';
+const highlighter = await createHighlighter({
+	themes: [theme],
+	langs: ['javascript', 'typescript', 'markdown', 'svelte']
+});
+
+mdsvex({
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const html = escapeSvelte(
+				highlighter.codeToHtml(code, { lang, theme })
+			);
+			return `{@html \`${html}\` }`;
+		}
+	}
+})
+
+```
+
+## Rehype and Remark
+
+At its core MDSveX is built on top of the [unified](https://unifiedjs.com/) ecosystem. This means that useful plugins can be added to allow even further customization. You can use [remark](https://github.com/remarkjs) to customize the transformation of your documents markdown and [rehype](http://github.com/rehypejs/rehype) to customize the HTML transform.
+
+
+Remark and rehype plugins can be slotted into the mdsvex configuration.
+
+```js
+mdsvex(
+	{
+		remarkPlugins: [someRemarkPlugin]
+		rehypePlugins: [someRehypePlugin]
+	}
+)
+```
+
+<Note>
+	I have had issues using some remark and rehype plugins, it is not a flawless integration. Additionally the maintainers have expressed the desire to move away from unified. Current and future support for this toolchain in MDsveX is questionable.
+</Note>
 
 ## Conclusion
- 
+
 We have covered how to setup your svelte app with mdsvex. Hopefully I have demonstrated the power of this plugin and how to leverage it to create clean easy to work with content for your website. Obviously there is more work that can be done to create an effectice content system for your website, but I hope this tutorial has unlocked the potential of mdsvex in your Svelte applications.
