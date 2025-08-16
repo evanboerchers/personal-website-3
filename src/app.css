@@ -34,8 +34,8 @@
 	--color-secondary-variant: var(--color-amber-800);
 	--color-background: var(--color-white);
 	--color-surface: var(--color-white);
-	--color-code-background: var(--color-neutral-400);
-	--color-code-border: var(--color-neutral-400);
+	--color-code-background: var(--color-neutral-200);
+	--color-code-border: var(--color-neutral-300);
 
 	--color-on-background: var(--color-black);
 	--color-on-background-variant: var(--color-neutral-600);
