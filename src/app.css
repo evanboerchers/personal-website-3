@@ -9,6 +9,8 @@
 	--color-background: var(--color-slate-800);
 	--color-on-background: var(--color-white);
 	--color-on-background-variant: var(--color-neutral-300);
+	--color-code-background: var(--color-neutral-800);
+	--color-code-border: var(--color-neutral-600);
 }
 
 @theme {
@@ -32,6 +34,8 @@
 	--color-secondary-variant: var(--color-amber-800);
 	--color-background: var(--color-white);
 	--color-surface: var(--color-white);
+	--color-code-background: var(--color-neutral-400);
+	--color-code-border: var(--color-neutral-400);
 
 	--color-on-background: var(--color-black);
 	--color-on-background-variant: var(--color-neutral-600);
@@ -71,6 +75,22 @@
 	}
 }
 
-.prose pre {
-	@apply border-border overflow-x-auto rounded-md border p-4 shadow-md sm:p-6 md:p-8;
+.prose {
+	code {
+		@apply bg-code-background border-code-border inline-block rounded-sm border px-[0.3em] py-[0.125em] align-baseline leading-tight font-[200] whitespace-nowrap;
+	}
+
+	pre {
+		@apply border-code-border overflow-x-auto rounded-md border p-4 shadow-md sm:p-6 md:p-8;
+
+		code {
+			@apply rounded-none border-none p-0 whitespace-pre;
+			background: none;
+		}
+	}
+
+	code::before,
+	code::after {
+		content: '';
+	}
 }
