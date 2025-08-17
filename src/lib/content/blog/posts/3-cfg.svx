@@ -1,0 +1,10 @@
+---
+layout: blog
+title: 'cfg'
+description: ''
+date: 2025-08-16
+tags:
+  - 'tutorial'
+keywords:
+publish: false
+---
