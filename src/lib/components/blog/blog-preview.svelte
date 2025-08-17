@@ -32,7 +32,7 @@
 	{#if variant === 'stacked'}
 		<article class="flex w-full flex-col">
 			<img
-				class="border-border aspect-[16/9] border object-cover"
+				class="border-border aspect-[9/6] w-full border object-cover"
 				src={image}
 				alt={title}
 			/>
@@ -46,7 +46,7 @@
 	{:else}
 		<article class="grid grid-cols-2 gap-6">
 			<img
-				class="border-border mt-2 aspect-[16/9] border object-cover"
+				class="border-border mt-2 aspect-[9/6] w-full border object-cover"
 				src={image}
 				alt={title}
 			/>
