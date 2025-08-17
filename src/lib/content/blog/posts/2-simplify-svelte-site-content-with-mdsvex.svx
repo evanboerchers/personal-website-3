@@ -11,7 +11,10 @@ keywords:
   - 'svelte'
   - 'mdsvex'
   - 'web'
-publish: false
+  - 'sveltekit'
+  - 'svx'
+  - 'markdown'
+publish: true
 ---
 
 <script>
@@ -19,17 +22,17 @@ publish: false
 	import { Link } from  '$svx'
 </script>
 
-Lets face it when it comes to writing content for the web, whether it be a blog, technical docs or any other text based document, using html is a pain. The syntax is tedious and frankly just is not meant for writing large text articles.
+Let's face it, when it comes to writing content for the web, whether it's a blog, technical doc or any other text-based document, using HTML is a pain. The syntax is tedious and frankly just is not meant for writing large text articles.
 
-Wouldn't it be nice to be write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple readable syntax while still being feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
+Wouldn't it be nice to write content for our website in a language better suited for text documents? Personally I adore Markdown, it has simple, readable syntax while still being feature rich. Being able to write content for our Svelte site with markdown would greatly improve our quality of life.
 
-Introducing **MDsveX**! Not only can we write and render content using markdown, but we can also integrate seamlessly with svelte to render out components and other svelte code in the same document.
+Introducing **MDsveX**! Not only can we write and render content using markdown, but we can also integrate seamlessly with Svelte to render out components and other Svelte code in the same document.
 
 <Note>Check out the <Link href='https://evanboerchers.github.io/mdsvex-tutorial'>tutorial site</Link> for a live demonstration of this guide in action. You can also view the its source code on <Link href='https://github.com/evanboerchers/mdsvex-tutorial'>GitHub</Link>.</Note>
 
 ## Setup
 
-SvelteKit apps can be bootstrapped to include MDsveX out of the box using the SvelteKit CLI. If you have not done this, setup is still simple. Install MDSveX &mdash; `npm install --save-dev mdsvex` &mdash; then add MDSveX as a preproccessor step, specifying `.svx` and/or `.md` as valid file extensions. This can be done through the `svelte.config.cjs`:
+SvelteKit apps can be bootstrapped to include MDsveX out of the box using the SvelteKit CLI. If you haven't done this, setup is still simple. Install MDsveX &mdash; `npm install --save-dev mdsvex` &mdash; then add MDsveX as a preprocessor step, specifying `.svx` and/or `.md` as valid file extensions. This can be done through the `svelte.config.cjs`:
 
 ```js
 import { mdsvex } from 'mdsvex';
@@ -46,7 +49,7 @@ const config = {
 export default config;
 ```
 
-By adding MDsveX to the config, files with the specified extensions, in this case `.svx` and `.md` will have there contents transformed to a proper sveltified output. The svelte compiler can then handle them as they would any other `.svelte` file.
+By adding MDsveX to the config, files with the specified extensions, in this case `.svx` and `.md` will have their contents transformed to a proper Sveltified output. The Svelte compiler can then handle them as they would any other `.svelte` file.
 
 ## Rendering Content
 
@@ -55,10 +58,10 @@ With MDsveX setup in our Svelte app the first step is to write some content for 
 ```svelte
 # My Article
 
-Article contents for my svelte site.
+Article contents for my Svelte site.
 ```
 
-Or use go with a `.svx` type file to use both markdown and svelte in the same file.
+Or go with a `.svx` file to use both markdown and Svelte in the same file.
 
 ```svelte
 <script lang='ts'>
@@ -67,12 +70,12 @@ Or use go with a `.svx` type file to use both markdown and svelte in the same fi
 
 # My Article
 
-My fancy article with svelte components.
+My fancy article with Svelte components.
 
-<Component />
+<Component/>
 ```
 
-We will now be able to import and use MDsveX associated files as svelte components and use them as you would any svelte component.
+We can now import and use MDsveX files as Svelte components and use them as you would any Svelte component.
 
 ```svelte
 <script lang="ts">
@@ -84,9 +87,9 @@ We will now be able to import and use MDsveX associated files as svelte componen
 
 ### Adding Typography
 
-Our MDSveX file content will now be rendered on our website as html, however, there will be no styling applied by default, making our article boring and plain. Generally we want to have some beautifal document styling applied to all our text based web content. The best way to do this is by applying some sort of [Typography](https://en.wikipedia.org/wiki/Web_typography).
+Our MDsveX file content will now be rendered on our website as HTML, however, there will be no styling applied by default, making our article boring and plain. Generally we want to have some beautiful document styling applied to all our text-based web content. The best way to do this is by applying some kind of [typography](https://en.wikipedia.org/wiki/Web_typography).
 
-There are many ways to apply typography, one way would be to make a custom typography stylesheet and apply it either site wide or to the article itself. Personally, I use a lot of [tailwindcss](https://tailwindcss.com/), tailwind provides an official [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography). Simply install and configure the plugin. Then add the `prose` class to your article. Now all our html will have some nice default typography styling applied (feel free to customize).
+There are many ways to apply typography, one way would be to make a custom typography stylesheet and apply it either site wide or to the article itself. Personally, I use a lot of [Tailwind CSS](https://tailwindcss.com/), Tailwind provides an official [Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography). Simply install and configure the plugin. Then add the `prose` class to your article. Now all our HTML will have some nice default typography styling applied (feel free to customize).
 
 ```svelte
 <script lang="ts">
@@ -98,7 +101,7 @@ There are many ways to apply typography, one way would be to make a custom typog
 
 ## Using Frontmatter
 
-Often times we will want our documents to contain metadata. This could be used to render additional content or to provide related data to be used in document searching or SEO. MdsveX makes this data easy to handle.
+Oftentimes we will want our documents to contain metadata. This could be used to render additional content or to provide related data to be used in document searching or SEO. MDsveX makes this data easy to handle.
 
 Define frontmatter by enclosing a yaml block in `---` characters:
 
@@ -109,7 +112,7 @@ author: Fancy Dev
 ---
 ```
 
-Frontmatter can be used in the document itself by using brackets
+Frontmatter can be used in the document itself by referencing it in brackets.
 
 ```svelte
 ---
@@ -136,7 +139,7 @@ Metadata will also be available when importing your document, by importing the `
 
 ## Using Svelte Components
 
-One of the benefits of MDsveX is the fact that we can write svelte code alongside our markdown. This means that we can use Svelte components in our document just as we would anywhere else in our svelte app. For instance this simple counter component can be used in our `.svx` file in the same way it would anywhere else in our app.
+One of the benefits of MDsveX is that we can write Svelte code alongside our markdown. This means that we can use Svelte components in our document just as we would anywhere else in our Svelte app. For instance, this simple counter component can be used in our `.svx` file in the same way it would anywhere else in our app.
 
 ```svelte
 <script>
@@ -151,7 +154,7 @@ One of the benefits of MDsveX is the fact that we can write svelte code alongsid
 <button on:click={increment}> Click me </button>
 ```
 
-Write out the svelte code to import and render our counter.
+Now import and render the counter component in Svelte.
 
 ```svelte
 <script lang='ts'>
@@ -167,16 +170,16 @@ author: Fancy Dev
 
 # {title}
 
-Here is a svelte component inserted alongside markdown!
+Here is a Svelte component inserted alongside markdown!
 
 <Counter />
 ```
 
 ## Applying Layouts
 
-Most of the time we will want our text content to contain similiar components or have have consistent formatting. Rather than having to handle this for every MDsveX document we write we can instead create some generic layouts and then apply it to all or specifc files. 
+Most of the time we will want our text content to contain similar components or have consistent formatting. Rather than handling this for every MDsveX document we write, we can instead create some generic layouts and then apply it to all or specific files. 
 
-To create a layout simply create a svelte component that has `children` as a prop as well as any metadata you want to use in the layout. For example we can create a simple svelte component to act as a layout for an article:
+To create a layout, create a Svelte component that has `children` as a prop as well as any metadata you want to use in the layout. For example we can create a simple Svelte component to act as a layout for an article:
 
 ```svelte
 <script lang="ts">
@@ -189,12 +192,12 @@ To create a layout simply create a svelte component that has `children` as a pro
 	{@render children?.()}
 	<hr/>
     <p><b>Author:</b> {author}</p>
-</arrticle>
+</article>
 
 <ComponentExample/>
 ```
 
-The children prop will be the sveltified MDsveX file content, and the author prop will come from the frontmatter. To start using this layout register it through the mdsvex plugin.
+The children prop will be the Sveltified MDsveX file content, and the author prop will come from the frontmatter. To start using this layout register it through the MDsveX plugin.
 
 ```js
 	mdsvex({
@@ -204,7 +207,7 @@ The children prop will be the sveltified MDsveX file content, and the author pro
 	})
 ```
 
-The layout can automatically be applied to MDsveX document by specifying it in the `layout` frontmatter.
+The layout can automatically be applied to a MDsveX document by specifying it in the `layout` frontmatter.
 
 ```svelte
 ---
@@ -214,11 +217,11 @@ author: Fancy Dev
 ---
 ```
 
-Now, when we import and use our MDsveX document it will be automatically inserted into specified layout component.
+Now, when we import and use our MDsveX document, it will be automatically inserted into the specified layout component.
 
 ## Syntax Highlighting
 
-Often times we will want to use code blocks in our content. This necessitates the need for [syntax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting). MDsveX adds this functionality by default using [Prismjs](https://prismjs.com/). However, prism is an older library and I recommend using [Shiki](https://shiki.matsu.io/) instead. To configure this you can add a custom highlight function to the MdsveX configuration.
+Code blocks are a very common item to include in our content. This creates the need for [syntax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting). MDsveX adds this functionality by default using [Prismjs](https://prismjs.com/). However, Prism is an older library and I recommend using [Shiki](https://shiki.matsu.io/) instead. To configure this you can add a custom highlight function to the MDsveX configuration.
 
 ```js
 import { createHighlighter } from 'shiki';
@@ -244,7 +247,7 @@ mdsvex({
 
 ## Rehype and Remark
 
-At its core MDSveX is built on top of the [unified](https://unifiedjs.com/) ecosystem. This means that useful plugins can be added to allow even further customization. You can use [remark](https://github.com/remarkjs) to customize the transformation of your documents markdown and [rehype](http://github.com/rehypejs/rehype) to customize the HTML transform.
+At its core MDSveX is built on top of the [unified](https://unifiedjs.com/) ecosystem. This means that useful plugins can be added to allow further customization. You can use [remark](https://github.com/remarkjs) to customize the transformation of your document's markdown and [rehype](http://github.com/rehypejs/rehype) to customize the HTML transform.
 
 Remark and rehype plugins can be slotted into the MDSveX configuration.
 
@@ -258,9 +261,9 @@ mdsvex(
 ```
 
 <Note>
-	I have had issues using some remark and rehype plugins, it is not a flawless integration. Additionally the maintainers have expressed the desire to move away from unified. Current and future support for this toolchain in MDsveX is questionable.
+	I have had issues using some remark and rehype plugins, it is not a flawless integration. Additionally the maintainers have expressed the desire to move away from unified. Future support for this toolchain in MDsveX is questionable.
 </Note>
 
 ## Conclusion
 
-We have covered how to setup your svelte app with MDsveX. Hopefully I have demonstrated the power of this tool and how to leverage it to make writing content for your website much easier. Obviously there is more work that can be done to create an effectice content system for your website, but I hope this tutorial has unlocked the potential of MDsveX in your Svelte applications.
+We have covered how to setup your Svelte app with MDsveX. Hopefully, I have demonstrated the power of this tool and how to leverage it to make writing content for your website much easier. Obviously there is more work to be done to create an effective content system for your website, but I hope this tutorial has unlocked the potential of MDsveX in your Svelte applications.
