@@ -74,7 +74,7 @@
 			'grid grid-rows-[100%] gap-4 transition-[grid-template-columns] duration-300',
 			sidebarStore.open
 				? 'grid-cols-[var(--sidebar-width)_minmax(0,1fr)] xl:grid-cols-[var(--sidebar-width)_minmax(0,1fr)_var(--sidebar-width)]'
-				: 'grid-cols-[40px_minmax(0,1fr)] xl:grid-cols-[40px_minmax(0,1fr)_40px]'
+				: 'grid-cols-[0px_minmax(0,1fr)] xl:grid-cols-[40px_minmax(0,1fr)_40px]'
 		)}
 	>
 		<div class="sticky top-6 flex flex-col items-end self-start px-4">
