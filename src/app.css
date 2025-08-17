@@ -36,6 +36,7 @@
 	--color-surface: var(--color-white);
 	--color-code-background: var(--color-neutral-200);
 	--color-code-border: var(--color-neutral-300);
+	--color-code-text: var(--color-amber-600);
 
 	--color-on-background: var(--color-black);
 	--color-on-background-variant: var(--color-neutral-600);
@@ -77,7 +78,7 @@
 
 .prose {
 	code {
-		@apply bg-code-background border-code-border inline-block rounded-sm border px-[0.3em] py-[0.125em] align-baseline leading-tight font-[200] whitespace-nowrap;
+		@apply bg-code-background text-code-text inline-block rounded-sm px-[0.3em] align-baseline leading-tight font-[200] whitespace-nowrap;
 	}
 
 	pre {

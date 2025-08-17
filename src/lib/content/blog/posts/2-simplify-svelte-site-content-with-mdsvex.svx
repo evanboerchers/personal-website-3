@@ -182,23 +182,27 @@ Here is a svelte component inserted alongside markdown!
 
 ## Applying Layouts
 
-Another fantastic mdsvex feature is layouts. Many times we will want our text content to contain similiar components or have have consistent formatting. Rather than having to having to handle this for every SVX document we write we can instead create some generic layouts and then apply it to our SVX documents. For instance, our current basic example is rendering an Article, we are also doing a simple rendering the author below the article. We want all our articles to include the author name at the bottom. We also would want to automatically apply our typography class, and perhaps some additional padding to the article.
-
-We can use layouts to handle this common formatting. Simply define a svelte component, with the props being the metadata properties a chilren property for the actual content of the SVX document.
+Most of the time we will want our text content to contain similiar components or have have consistent formatting. Rather than having to having to handle this for every SVX document we write we can instead create some generic layouts and then apply it to our SVX documents. We can create a simple layout component that will wrap our document. For example we can create a simple layout for an article:
 
 ```svelte
 <script lang="ts">
+	import { ComponentExample } from '$lib/components'
 </script>
+
+<article class='article-style'>
+	{@render children}
+</arrticle>
+
+<ComponentExample/>
 ```
 
-Our layouts need to be registered through the mdsvex plugin.
+This any document that uses this layout will have its contents inserted into as a child and rendered accordingly. Our layouts need to be registered through the mdsvex plugin.
 
 ```js
 	mdsvex({
 		layout: {
 			article: 'src/lib/layout/article.svelte',
-		},
-		extensions: ['.md', '.svx']
+		}
 	})
 ```
 
