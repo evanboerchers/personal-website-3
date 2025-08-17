@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: 'Simplify Svelte Site Content with MDsveX'
-description: 'How to leverage MDsveX as a markdown renderer. Streamline how you write content for your website.'
-date: 2025-07-14
+description: 'Learn how to simplify content creation in your SvelteKit projects with MDsveX. This guide covers setup, frontmatter, layouts, components, typography, and syntax highlighting, showing how Markdown and Svelte can work together seamlessly. Unlock a cleaner, more efficient way to write and manage content for your site.'
+date: 2025-08-16
 tags:
   - 'tutorial'
   - 'web development'
