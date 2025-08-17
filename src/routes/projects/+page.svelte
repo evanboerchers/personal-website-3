@@ -30,8 +30,13 @@
 			<h1>Other Stuff</h1>
 			<List>
 				<li>
-					<Link>Website</Link> showing how sorting algorithms work in real time.
-					Built with Reactjs source on <Link href="">Github</Link>
+					<Link href="https://evanboerchers.github.io/sorting-visualization/"
+						>Website</Link
+					> showing how sorting algorithms work in real time. Built with Reactjs
+					source on <Link
+						href="https://evanboerchers.github.io/sorting-visualization/"
+						>Github</Link
+					>
 				</li>
 			</List>
 		</Prose>
