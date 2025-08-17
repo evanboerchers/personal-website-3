@@ -56,23 +56,19 @@ By adding MDsveX to the config, files with the specified extensions, in this cas
 With MDsveX setup in our Svelte app the first step is to write some content for our website. Create a valid MDsveX file. We can keep it simple for now and write a markdown file:
 
 ```svelte
-# My Article
-
-Article contents for my Svelte site.
+# My Article Article contents for my Svelte site.
 ```
 
 Or go with a `.svx` file to use both markdown and Svelte in the same file.
 
 ```svelte
-<script lang='ts'>
-	import Component from '$lib/component.svelte'
+<script lang="ts">
+	import Component from '$lib/component.svelte';
 </script>
 
-# My Article
+# My Article My fancy article with Svelte components.
 
-My fancy article with Svelte components.
-
-<Component/>
+<Component />
 ```
 
 We can now import and use MDsveX files as Svelte components and use them as you would any Svelte component.
@@ -106,19 +102,19 @@ Oftentimes we will want our documents to contain metadata. This could be used to
 Define frontmatter by enclosing a yaml block in `---` characters:
 
 ```svelte
----
-title: My Awesome Article
-author: Fancy Dev
+--- 
+title: My Awesome Article 
+author: Fancy Dev 
 ---
 ```
 
 Frontmatter can be used in the document itself by referencing it in brackets.
 
 ```svelte
----
-title: My Awesome Article
-author: Fancy Dev
----
+--- 
+title: My Awesome Article 
+author: Fancy Dev 
+--- 
 
 # {title}
 ```
@@ -157,16 +153,14 @@ One of the benefits of MDsveX is that we can write Svelte code alongside our mar
 Now import and render the counter component in Svelte.
 
 ```svelte
-<script lang='ts'>
-import Counter from '$lib/components/counter.svelte'
+<script lang="ts">
+	import Counter from '$lib/components/counter.svelte';
 </script>
 
----
-
-title: My Awesome Article
-author: Fancy Dev
-
----
+--- 
+title: My Awesome Article 
+author: Fancy Dev 
+--- 
 
 # {title}
 
@@ -177,7 +171,7 @@ Here is a Svelte component inserted alongside markdown!
 
 ## Applying Layouts
 
-Most of the time we will want our text content to contain similar components or have consistent formatting. Rather than handling this for every MDsveX document we write, we can instead create some generic layouts and then apply it to all or specific files. 
+Most of the time we will want our text content to contain similar components or have consistent formatting. Rather than handling this for every MDsveX document we write, we can instead create some generic layouts and then apply it to all or specific files.
 
 To create a layout, create a Svelte component that has `children` as a prop as well as any metadata you want to use in the layout. For example we can create a simple Svelte component to act as a layout for an article:
 
@@ -188,32 +182,32 @@ To create a layout, create a Svelte component that has `children` as a prop as w
 	import { author, children} = $props()
 </script>
 
-<article class='article-style'>
+<article class="article-style">
 	{@render children?.()}
-	<hr/>
-    <p><b>Author:</b> {author}</p>
+	<hr />
+	<p><b>Author:</b> {author}</p>
 </article>
 
-<ComponentExample/>
+<ComponentExample />
 ```
 
 The children prop will be the Sveltified MDsveX file content, and the author prop will come from the frontmatter. To start using this layout register it through the MDsveX plugin.
 
 ```js
-	mdsvex({
-		layout: {
-			article: 'src/lib/layout/article.svelte',
-		}
-	})
+mdsvex({
+	layout: {
+		article: 'src/lib/layout/article.svelte'
+	}
+});
 ```
 
 The layout can automatically be applied to a MDsveX document by specifying it in the `layout` frontmatter.
 
 ```svelte
----
-layout: article
-title: My Awesome Article
-author: Fancy Dev
+--- 
+layout: article 
+title: My Awesome Article 
+author: Fancy Dev 
 ---
 ```
 
@@ -224,6 +218,7 @@ Now, when we import and use our MDsveX document, it will be automatically insert
 Code blocks are a very common item to include in our content. This creates the need for [syntax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting). MDsveX adds this functionality by default using [Prismjs](https://prismjs.com/). However, Prism is an older library and I recommend using [Shiki](https://shiki.matsu.io/) instead. To configure this you can add a custom highlight function to the MDsveX configuration.
 
 ```js
+import { escapeSvelte, mdsvex } from 'mdsvex';
 import { createHighlighter } from 'shiki';
 
 const theme = 'one-dark-pro';
@@ -241,8 +236,7 @@ mdsvex({
 			return `{@html \`${html}\` }`;
 		}
 	}
-})
-
+});
 ```
 
 ## Rehype and Remark
