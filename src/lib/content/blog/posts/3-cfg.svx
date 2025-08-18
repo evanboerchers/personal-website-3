@@ -1,10 +1,23 @@
 ---
 layout: blog
-title: 'cfg'
+title: 'Master Dotfile Management with Git Bare Repositories'
 description: ''
 date: 2025-08-16
 tags:
+  - 'git'
   - 'tutorial'
 keywords:
+  - 'git'
+  - 'bare'
+  - 'repository'
+  - 'dotfile'
+  - 'management'
+  - 'configuration'
+  - 'settings'
 publish: false
 ---
+
+Resources:
+
+https://www.youtube.com/watch?v=tBoLDpTWVOM&ab_channel=DistroTube
+https://www.atlassian.com/git/tutorials/dotfiles
