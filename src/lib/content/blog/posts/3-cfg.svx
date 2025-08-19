@@ -17,6 +17,19 @@ keywords:
 publish: false
 ---
 
+<script>
+
+import { Note } from '$svx'
+
+</script>
+
+Managing the various dotfiles that configure our development environments can be a pain, especially when setting up a new machine. Whether it be your local machine or a remote VM on the cloud, you want the system you are working on to be configured to your workflow with your settings. On top of that you probably want to keep all your settings synced. This is a challenging problem to address but I have a solution that I have 
+
+<Note>
+  A bare repository
+<Note/>
+
+
 Resources:
 
 https://www.youtube.com/watch?v=tBoLDpTWVOM&ab_channel=DistroTube
