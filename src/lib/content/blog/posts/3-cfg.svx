@@ -27,7 +27,7 @@ Managing the various dotfiles that configure our development environments can be
 
 <Note>
   A bare repository
-<Note/>
+</Note>
 
 
 Resources:

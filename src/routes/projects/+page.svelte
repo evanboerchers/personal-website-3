@@ -10,7 +10,7 @@
 </script>
 
 <div class="mx-auto max-w-[var(--project-max-width)]">
-	<section class="border-primary-variant border-b pb-8">
+	<section class="border-primary-variant border-b">
 		<PageHeading class="text-4xl">My Stuff</PageHeading>
 		<CoffeeChess
 			image={{
@@ -25,7 +25,7 @@
 			}}
 		/>
 	</section>
-	<section class="mt-12">
+	<section class="mt-16">
 		<Prose>
 			<h1>Other Stuff</h1>
 			<List>
@@ -36,6 +36,22 @@
 					source on <Link
 						href="https://evanboerchers.github.io/sorting-visualization/"
 						>Github</Link
+					>
+				</li>
+			</List>
+		</Prose>
+	</section>
+	<section class="mt-16">
+		<Prose>
+			<h1>Games and Game Jams</h1>
+			I enjoy working on small game projects and participating in game jams.
+			<List>
+				<li>
+					<Link href="https://evanboerchers.github.io/asteroids/"
+						>Asteroids</Link
+					>, a remake of the classic Asteroids arcade game. My first time
+					working with Godot, source on <Link
+						href="https://github.com/evanboerchers/asteroids">Github</Link
 					>
 				</li>
 			</List>
