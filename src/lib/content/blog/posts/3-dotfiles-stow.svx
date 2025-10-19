@@ -34,6 +34,10 @@ You can read about using a bare repository to manage dotfiles on this [Atlassian
 
 ## What is GNU Stow?
 
+If you are looking for a very long and dry read you could read about GNU stow from the [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). But honestly it is not that complicated. Stow is basically justa sym link manager. It importantly it can take thins from one directory and symlinnks them to another target directoy. 
+
 ## A Dotfiles Repository
 
-## Using GNU Stow
+We will want a central place to store our dotfiles. Specifically, a place that can be shared accross machines. The solution is obvious, it is Github. We will make a repository with all our dotfiles in it. Importantly 
+
+### Using GNU Stow
