@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: 'Master Dotfile Management with Git Bare Repositories'
-description: ''
-date: 2025-08-16
+title: 'Manage Dotfiles with GNU Stow'
+description: 'How you can use GNU Stow to create a single effective dotfiles management system. Setup your systems fast and consistent by sharing your dotfiles to a central git repositoring.'
+date: 2025-10-28
 tags:
   - 'git'
   - 'tutorial'
@@ -34,10 +34,66 @@ You can read about using a bare repository to manage dotfiles on this [Atlassian
 
 ## What is GNU Stow?
 
-If you are looking for a very long and dry read you could read about GNU stow from the [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). But honestly it is not that complicated. Stow is basically justa sym link manager. It importantly it can take thins from one directory and symlinnks them to another target directoy. 
+If you are looking for a very long, dry, but thorough read, you could read the [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). But honestly it is not that complicated. Stow is basically just a sym link manager. Importantly to our use case it can manage a symlink from one directory to another, allowing us to store our dotfiles somewhere else while keeping them available in our users home directory.
+
+## Using GNU Stow
+
+Firstly, please install `stow` using your favorite package manager.
+
+Stow will allow us to keep our user dotfiles in one location and symlink them into our users home directoy. Lets say we are storing a dotfile as follows:
+
+```bash
+~/dotfiles/
+└── git/
+    └── .gitconfig
+```
+
+In order to use this `.gitconfig` it needs to exist in our `$HOME` directory. This can be managed by using stow.
+
+```bash
+stow -d ~/dotfiles/git -t $HOME
+```
+
+This will symlink the contents of the `git` directory into the home directory. This means that `.gitconfig` will now be present in the users home directory.
 
 ## A Dotfiles Repository
 
-We will want a central place to store our dotfiles. Specifically, a place that can be shared accross machines. The solution is obvious, it is Github. We will make a repository with all our dotfiles in it. Importantly 
+With the help of stash we can symlink our dotfiles for various packages in a git repository. This way all our dotfiles can be shared accross machines using git. We can create a repository called `dotfiles` and organize our dotfiles into 'packages' responsible for configuring specific or related tools. 
 
-### Using GNU Stow
+```bash
+~/dotfiles/
+└── git/
+    └── .gitconfig
+└── bash/
+    └── .bashrc
+    └── .profile
+└── vim/
+    └── .vimrc
+```
+
+Now whenever we want to bootstrap a new machine with all our dotfiles we can simply run a few commands.
+
+Clone the repository:
+
+```bash
+cd ~
+git clone git@github.com:<github-user>/dotfiles
+```
+
+Stow the desired packages:
+
+```bash
+stow -d dotfiles/ -t $HOME git bash vim 
+```
+
+The result is a home directory with all our dotfiles exactly where we need them!
+
+```bash
+~/
+└── .gitconfig
+└── .bashrc
+└── .profile
+└── .vimrc
+```
+
+

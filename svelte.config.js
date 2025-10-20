@@ -6,7 +6,7 @@ import { createHighlighter } from 'shiki';
 const theme = 'one-dark-pro';
 const highlighter = await createHighlighter({
 	themes: [theme],
-	langs: ['javascript', 'typescript', 'markdown', 'svelte']
+	langs: ['javascript', 'typescript', 'markdown', 'svelte', 'shellscript']
 });
 
 /** @type {import('@sveltejs/kit').Config} */
