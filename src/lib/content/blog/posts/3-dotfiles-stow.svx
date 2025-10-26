@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Manage Dotfiles with GNU Stow'
-description: 'How you can use GNU Stow to create a single effective dotfiles management system. Setup your systems fast and consistent by sharing your dotfiles to a central git repositoring.'
+description: 'How you can use GNU Stow to create a single effective dotfiles management system. Set up your systems quickly and consistently by sharing your dotfiles in a central Git repository.'
 date: 2025-10-28
 tags:
   - 'tutorial'
@@ -23,24 +23,24 @@ import { Note, Link } from '$svx'
 
 </script>
 
-Every developer who works on Linux likely has a plethora of dotfiles used to customize and configure their machine exactly how they want it. Whether it be a .bashrc or a .vimrc these files turn your linux experience from boring and limited to customized and feature rich. But what happens when we want to bootstrap a new machine, or when we ssh into a server and want it to have all these customizations we worked so hard to make? We clearly need an effective way to share and sync our dotfiles across systems.
+Every developer who works on Linux likely has a plethora of dotfiles used to customise and configure their machine exactly how they want it. Whether it's a .bashrc or a .vimrc, these files turn your Linux experience from boring and limited to customised and feature-rich. But what happens when we bootstrap a new machine or SSH into a server and want it to have all these customisations we worked so hard to make? We clearly need an effective way to share and sync our dotfiles across systems.
 
-There are many ways to manage dotfiles, previously I have used the bare repositories method. Recently, however, I have swapped to use GNU Stow to facilitate dotfile management. In my opinion GNU Stow in conjunction with git provides the most simple and effective solution for dotfile management.
+There are many ways to manage dotfiles. Previously, I used the bare repository method. Recently, however, I have switched to using GNU Stow to facilitate dotfile management. In my opinion, GNU Stow in conjunction with Git provides the simplest and most effective solution for dotfile management.
 
 <Note> 
-If you would like to read about using a bare repository to manage dotfiles, see this <Link href="https://www.atlassian.com/git/tutorials/dotfiles">Atlassian blog post</Link>
+If you would like to read about using a bare repository to manage dotfiles, see this <Link href="https://www.atlassian.com/git/tutorials/dotfiles">Atlassian blog post</Link>.
 </Note>
 
 ## What is GNU Stow?
 
-If you are looking for a very long, dry, but thorough read, you could read the GNU Stow [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). Lets not over complicate it though \&emdash Stow is basically just a symlink link manager. Importantly for our use case, it can manage a symlink from one directory to another, allowing us to store our dotfiles in a location of our choosing, while keeping them available in our users home directory.
+If you are looking for a very long, dry, but thorough read, you can read the GNU Stow [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). Let’s not overcomplicate it though — Stow is basically just a symbolic link manager. For our use case it can manage symlinks from one directory to another, letting us store our dotfiles in a location of our choosing while keeping them available in the user’s home directory.
 
 
 ## Using GNU Stow
 
-Firstly, please install `stow` using your favourite package manager.
+First, install `stow` using your favourite package manager.
 
-Stow will allow us to keep our user dotfiles in one location and symlink them into our users home directoy. Lets say we are storing a dotfile as follows:
+Stow allows us to keep our dotfiles in one location and symlink them into the user’s home directory. For example:
 
 ```bash
 ~/dotfiles/
@@ -48,17 +48,17 @@ Stow will allow us to keep our user dotfiles in one location and symlink them in
     └── .gitconfig
 ```
 
-In order to use this `.gitconfig` it needs to exist in our `$HOME` directory. This can be managed by using stow.
+To use this `.gitconfig`, it needs to exist in `$HOME`. Stow handles this:
 
 ```bash
 stow -d ~/dotfiles/git -t $HOME
 ```
 
-This will symlink the contents of the `git` directory into the home directory. This means that `.gitconfig` will now be present in the users home directory, and git will now be configured with this config file.
+This symlinks the contents of the `git` directory into the home directory. `.gitconfig` is now present there and Git is configured with it.
 
 ## A Dotfiles Repository
 
-With the help of stash we can symlink our dotfiles for various packages in a git repository. This way all our dotfiles can be shared accross machines using git. We can create a repository called `dotfiles` and organize our dotfiles into 'package' directories. These 'packages' are responsible for configuring specific or related tools. For instance we might call our packages, git, bash, vim, etc.
+With the help of Stow we can symlink our dotfiles for various packages in a Git repository. This way, all our dotfiles can be shared across machines using Git. We can create a repository called `dotfiles` and organise our dotfiles into 'package' directories. These 'packages' are responsible for configuring specific or related tools. For instance, we might call our packages git, bash, vim, etc.
 
 ```bash
 ~/dotfiles/
@@ -71,7 +71,7 @@ With the help of stash we can symlink our dotfiles for various packages in a git
     └── .vimrc
 ```
 
-Now whenever we want to bootstrap a new machine with all our dotfiles we can simply run a few commands.
+Now, whenever we want to bootstrap a new machine with all our dotfiles, we can run a few commands.
 
 Clone the repository:
 
@@ -86,7 +86,7 @@ Stow the desired packages:
 stow -d dotfiles/ -t $HOME git bash vim 
 ```
 
-The result is a home directory with all our dotfiles exactly where we need them!
+The result is a home directory with all our dotfiles exactly where we need them.
 
 ```bash
 ~/
