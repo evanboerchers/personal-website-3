@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: 'Manage Dotfiles with GNU Stow'
+title: 'Managing Dotfiles with GNU Stow'
 description: 'How you can use GNU Stow to create an effective dotfiles management system. Set up systems quickly and consistently by sharing dotfiles in a central Git repository.'
-date: 2025-10-28
+date: 2025-10-26
 tags:
   - 'tutorial'
   - 'linux'
@@ -15,7 +15,7 @@ keywords:
   - 'management'
   - 'configuration'
   - 'settings'
-publish: false
+publish: true
 ---
 
 <script>
