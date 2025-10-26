@@ -5,6 +5,7 @@ description: 'How you can use GNU Stow to create an effective dotfiles managemen
 date: 2025-10-28
 tags:
   - 'tutorial'
+  - 'linux'
 keywords:
   - 'git'
   - 'gnu'

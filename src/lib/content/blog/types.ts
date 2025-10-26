@@ -19,7 +19,8 @@ export type BlogPostData = BlogMetadata & {
 export enum BlogTagEnum {
 	Personal = 'personal',
 	Tutorial = 'tutorial',
-	WebDevelopment = 'web development'
+	WebDevelopment = 'web development',
+	Linux = 'linux'
 }
 
 export type BlogSearchEntry = Pick<
