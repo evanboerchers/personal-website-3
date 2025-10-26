@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Manage Dotfiles with GNU Stow'
-description: 'How you can use GNU Stow to create a single effective dotfiles management system. Set up your systems quickly and consistently by sharing your dotfiles in a central Git repository.'
+description: 'How you can use GNU Stow to create an effective dotfiles management system. Set up systems quickly and consistently by sharing dotfiles in a central Git repository.'
 date: 2025-10-28
 tags:
   - 'tutorial'
@@ -23,9 +23,9 @@ import { Note, Link } from '$svx'
 
 </script>
 
-Every developer who works on Linux likely has a plethora of dotfiles used to customise and configure their machine exactly how they want it. Whether it's a .bashrc or a .vimrc, these files turn your Linux experience from boring and limited to customised and feature-rich. But what happens when we bootstrap a new machine or SSH into a server and want it to have all these customisations we worked so hard to make? We clearly need an effective way to share and sync our dotfiles across systems.
+Every Linux developer likely has a plethora of dotfiles to customise and configure their machine exactly how they want it. Whether it's a .bashrc or a .vimrc, these files turn your Linux experience from boring and limited to customised and feature-rich. But what happens when we want to bootstrap a new machine, or SSH into a server and have all the customisations we worked hard to create? We clearly need an effective way to share and sync our dotfiles across systems.
 
-There are many ways to manage dotfiles. Previously, I used the bare repository method. Recently, however, I have switched to using GNU Stow to facilitate dotfile management. In my opinion, GNU Stow in conjunction with Git provides the simplest and most effective solution for dotfile management.
+There are many ways to manage dotfiles. Previously I used the bare repository method. Recently, however, I switched to GNU Stow. In my opinion, Stow together with Git provides the simplest and most effective solution.
 
 <Note> 
 If you would like to read about using a bare repository to manage dotfiles, see this <Link href="https://www.atlassian.com/git/tutorials/dotfiles">Atlassian blog post</Link>.
@@ -33,14 +33,14 @@ If you would like to read about using a bare repository to manage dotfiles, see 
 
 ## What is GNU Stow?
 
-If you are looking for a very long, dry, but thorough read, you can read the GNU Stow [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). Let’s not overcomplicate it though — Stow is basically just a symbolic link manager. For our use case it can manage symlinks from one directory to another, letting us store our dotfiles in a location of our choosing while keeping them available in the user’s home directory.
+If you want a long, dry but thorough explanation, read the GNU Stow [official documentation](https://www.gnu.org/software/stow/manual/stow.html#Introduction). Let’s not overcomplicate it though — Stow is basically a symbolic link manager. For our use case, it creates and manages symlinks from one directory to another, letting us store dotfiles where we choose while keeping them available in the user’s home directory.
 
 
 ## Using GNU Stow
 
 First, install `stow` using your favourite package manager.
 
-Stow allows us to keep our dotfiles in one location and symlink them into the user’s home directory. For example:
+Stow lets us keep dotfiles in one location and symlink them into the user’s home directory. For example:
 
 ```bash
 ~/dotfiles/
@@ -48,17 +48,17 @@ Stow allows us to keep our dotfiles in one location and symlink them into the us
     └── .gitconfig
 ```
 
-To use this `.gitconfig`, it needs to exist in `$HOME`. Stow handles this:
+Git expects this file in `$HOME`; Stow places it there for us.
 
 ```bash
 stow -d ~/dotfiles/git -t $HOME
 ```
 
-This symlinks the contents of the `git` directory into the home directory. `.gitconfig` is now present there and Git is configured with it.
+This symlinks the contents of the `git` directory into the home directory. `.gitconfig` is now present there, and Git will use it.
 
 ## A Dotfiles Repository
 
-With the help of Stow we can symlink our dotfiles for various packages in a Git repository. This way, all our dotfiles can be shared across machines using Git. We can create a repository called `dotfiles` and organise our dotfiles into 'package' directories. These 'packages' are responsible for configuring specific or related tools. For instance, we might call our packages git, bash, vim, etc.
+With Stow we can symlink our dotfiles for various packages in a Git repository. This way all our dotfiles can be shared across machines using Git. We can create a repository called `dotfiles` and organise our dotfiles into 'package' directories. These 'packages' configure specific or related tools. For instance, we might call our packages git, bash, vim, etc.
 
 ```bash
 ~/dotfiles/
@@ -71,7 +71,7 @@ With the help of Stow we can symlink our dotfiles for various packages in a Git 
     └── .vimrc
 ```
 
-Now, whenever we want to bootstrap a new machine with all our dotfiles, we can run a few commands.
+Now, whenever we want to bootstrap a new machine with all our dotfiles, we just run a few commands.
 
 Clone the repository:
 
